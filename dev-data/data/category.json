@@ -1,0 +1,57 @@
+[
+  {
+    "_id": "60fd61685379eb199c9f178b",
+    "category_name": "Korean-Chinese",
+    "slug": "korean-chinese"
+  },
+  {
+    "_id": "60fd62cbe77e3d1a014acdec",
+    "category_name": "Seafood",
+    "slug": "seafood"
+  },
+  {
+    "_id": "60fd62d2e77e3d1a014acdee",
+    "category_name": "BBQ",
+    "slug": "bbq"
+  },
+  {
+    "_id": "60fd62d7e77e3d1a014acdf0",
+    "category_name": "Pork",
+    "slug": "pork"
+  },
+  {
+    "_id": "60fd62dde77e3d1a014acdf2",
+    "category_name": "Chicken",
+    "slug": "chicken"
+  },
+  {
+    "_id": "60fd62e4e77e3d1a014acdf4",
+    "category_name": "Side",
+    "slug": "side"
+  },
+  {
+    "_id": "60fd62ece77e3d1a014acdf6",
+    "category_name": "Soup/Stew",
+    "slug": "soupstew"
+  },
+  {
+    "_id": "60fd62f5e77e3d1a014acdf8",
+    "category_name": "A la carte",
+    "slug": "a-la-carte"
+  },
+  {
+    "_id": "60fd62fce77e3d1a014acdfa",
+    "category_name": "Dessert",
+    "slug": "dessert"
+  },
+  {
+    "_id": "60fd6305e77e3d1a014acdfc",
+    "category_name": "Beverage",
+    "slug": "beverage"
+  },
+  {
+    "_id": "60fd630ce77e3d1a014acdfe",
+    "category_name": "Alcohol",
+    "slug": "alcohol"
+  }
+]
