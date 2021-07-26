@@ -1,0 +1,53 @@
+[
+{
+    "_id": "60fe3135d6932e1093b56251",
+    "first_name": "Gerald",
+    "last_name": "Hui",
+    "contact": 92705657,
+    "email": "geraldishandsome@gmail.com",
+    "username": "gerald",
+    "password": "$2b$08$WU/QXcjahugVkVzDu6Dv0e4UxSUYuPVI3jUczgUoS6i.eyzjPjSwq",
+    "address": "123 tampines street 11 #01-23",
+    "postal_code": 520123,
+    "birthday": "18 Aug 1997",
+    "__v": 0
+},
+{
+    "_id": "60fe3215d6932e1093b56253",
+    "first_name": "HyunJung",
+    "last_name": "Oh",
+    "contact": 81713726,
+    "email": "hyunjung.agnes.oh@gmail.com",
+    "username": "hjolauren",
+    "password": "$2b$08$1Apu1OTFGWU/uDmV.bPVDu1sZL22agZTx1JoxQ2VndwqpEivjD78a",
+    "address": "111 paris ris grove",
+    "postal_code": 518170,
+    "birthday": "20 Jan 1993",
+    "__v": 0
+},
+{
+    "_id": "60fe3277d6932e1093b56255",
+    "first_name": "Sean",
+    "last_name": "Leong",
+    "contact": 90683343,
+    "email": "yuanchen34@gmail.com",
+    "username": "sean994",
+    "password": "$2b$08$GhE6sOIALDRDU/k1dzecme4CqK344WY/5r1Rs803A0Q3MbTllWHTK",
+    "address": "26 Jln Sentosa",
+    "postal_code": 509739,
+    "birthday": "2 June 1994",
+    "__v": 0
+}, {
+    "_id": "60fe32e7d6932e1093b56257",
+    "first_name": "Gordon",
+    "last_name": "Chia",
+    "contact": 87530119,
+    "email": "gordonishandsome@gmail.com",
+    "username": "gordon",
+    "password": "$2b$08$p92B8ENwgyJsbeLuufTAdO72zPyCz.O3EJIe3JCTkSNK3hnIsPu7S",
+    "address": "Tuas Link",
+    "postal_code": 630333,
+    "birthday": "11 October 1995",
+    "__v": 0
+}
+]
