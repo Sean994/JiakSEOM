@@ -1,0 +1,2062 @@
+[
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Kimchi Fried rice",
+    "name": "Kimchi Fried rice",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Kimchi", "Rice"],
+    "price": 16,
+    "item_img": "https://previews.123rf.com/images/dsy88/dsy881310/dsy88131000001/22794335-%EA%B9%80%EC%B9%98-%EB%B3%B6%EC%9D%8C%EB%B0%A5.jpg",
+    "description": "Kimchi fried rice with fried egg"
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Chamisul",
+    "name": "Soju",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Soju", "Alcohol"],
+    "price": 18,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/500_50d66eef-a6c6-474d-84c3-9cde63c25c66.jpg?v=1607350958",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "ChumChurum",
+    "name": "Soju",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Soju", "Alcohol"],
+    "price": 18,
+    "item_img": "https://company.lottechilsung.co.kr/common/images/product_view0201_bh2.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Hite",
+    "name": "Beer",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Alcohol", "Beer"],
+    "price": 14,
+    "item_img": "https://leemart.sg/wp-content/uploads/2020/05/Hite-355ml-1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Cass",
+    "name": "Beer",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Alcohol", "Beer"],
+    "price": 14,
+    "item_img": "https://dimg.donga.com/wps/NEWS/IMAGE/2020/12/16/104468840.1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Seng Maggolli (original)",
+    "name": "Rice Wine",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Rice", "Alcohol"],
+    "price": 25,
+    "item_img": "https://www.ekn.kr/mnt/file/202106/20210630001240171_1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "Coke",
+    "name": "Coke",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Drink"],
+    "price": 3,
+    "item_img": "http://th1.tmon.kr/thumbs/image/3cc/3fa/d56/475318fb7_700x700_95_FIT.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "SikHye",
+    "name": "Sweet Rice Drink",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Drink", "Rice"],
+    "price": 3,
+    "item_img": "https://takeaway.jangwon.sg/wp-content/uploads/2020/04/%E1%84%89%E1%85%B5%E1%86%A8%E1%84%92%E1%85%A6.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "BongBong",
+    "name": "Grape Drink",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Drink", "Grape"],
+    "price": 3,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/600_5254c747-efb3-4184-86fd-e3ef6dd755b2.jpg?v=1614595492",
+    "description": null
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Shrimp Fried rice",
+    "name": "Shrimp Fried rice",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Seafood", "Rice", "Jjajang", "Shrimp"],
+    "price": 15,
+    "item_img": "https://image.freepik.com/free-photo/shrimp-fried-rice-with-tomatoes-carrots-and-scallions-on-the-plate_1150-27187.jpg",
+    "description": "Shrimp fried rice with jjajang sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Jjajangmyeon",
+    "name": "Black bean noodle",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Noodle", "Black Bean"],
+    "price": 12,
+    "item_img": "https://img-cf.kurly.com/shop/data/goodsview/20201012/gv10000126356_1.jpg",
+    "description": "Black Soybean Sauce Noodles"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Itaewon udong",
+    "name": "Seafood udon",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Shrimp", "Seafood", "Noodle"],
+    "price": 15,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2017/12/08/705ad2b00f4ee22f2f1c4b59fc8a5cd91.jpg",
+    "description": "Itaewon style fried meat % shrimp soy sauce noodle"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Jjamppong",
+    "name": "Seafood noodle",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Seafood", "Vegetable"],
+    "price": 15,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2017/10/22/aaeb2a235b89ac305ba919e33da2e6331.jpg",
+    "description": "Chinese style with vegetables & seafood noodles"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Seafood Jjajangmyeon",
+    "name": "Seafood black bean noodle",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Seafood", "Noodles"],
+    "price": 28,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxOTAxMTVfMTA0/MDAxNTQ3NTQ2OTExMzEw.BE6h4HTVTEmoTfaujLy3vRrNHMT8Y8mNXvRsO7z5EkYg.xFBh_8harlQfFImwlHvHP7w6Yvi5n-JvkZQZHiDYzuYg.JPEG.playlike/18-11-24-16-31-18-855_photo.jpg?type=w800",
+    "description": "Black Soybean Sauce Noodles with seafood"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Yangjangpi",
+    "name": "Seafood meat salad",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Seafood", "Vegetable", "Mushroom"],
+    "price": 38,
+    "item_img": "https://upload.wikimedia.org/wikipedia/commons/7/79/Yangjangpi.jpg",
+    "description": "Assorted Seafood and vegetables, mushroom with mustard sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Yusanseul",
+    "name": "Stir fry vegetables mushrooms",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Seafood", "Mushroom"],
+    "price": 38,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_6A0201C5A104CC5C3018299FFCD09508.jpg",
+    "description": "Stri-fried Shreded seafood and mushroom with oyster sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Sweet chili prawn",
+    "name": "Seafood prawn",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Shrimp", "Seafood"],
+    "price": 35,
+    "item_img": "https://img-cf.kurly.com/shop/data/goodsview/20200518/gv40000095873_1.jpg",
+    "description": "Deep fried prawn with sweet chili sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Tangsuyuk",
+    "name": "Sweet Sour Beef / Pork",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Pork"],
+    "price": 25,
+    "item_img": "https://t1.daumcdn.net/liveboard/realfood/33f2dfa47b3e472bb782011ab4376194.JPG",
+    "description": "Sweet and sour pork"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Kkanpunggi",
+    "name": "Chinese Garlic Fried Chicken",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Chicken"],
+    "price": 35,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2018/11/10/d0881f710b5d7f5c2ce3343b654ce7a01.jpg",
+    "description": "Deep fried chicken thighs in Hot pepper sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Yuringi",
+    "name": "Hot and Sour Fried Chicken",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Chicken"],
+    "price": 38,
+    "item_img": "https://cloudfront.haemukja.com/vh.php?url=https://d1hk7gw6lgygff.cloudfront.net/uploads/direction/image_file/56642/org_resized___1.png&convert=jpgmin&rt=600",
+    "description": "Oriental fried chicken with Hot chili and sour sauce"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Jokbal",
+    "name": "Braised Pork Trotters",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Pork", "Kimchi", "Vegetable"],
+    "price": 45,
+    "item_img": "https://www.bigjungbo.com/files/attach/images/163/126/095/008/3bf3120159b818bf40e4a72fcdfb2815.jpg",
+    "description": "Deep boiled pig trotters, eaten with a radish kimchi, sauce and wrapped in greens"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Bossam",
+    "name": "Boiled Pork with Spice",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Pork", "Kimchi", "Vegetable"],
+    "price": 35,
+    "item_img": "http://www.seoul-taxi.com/files/attach/images/215/707/50710ea259fe3196345071f378b00475.jpg",
+    "description": "Boiled pork belly, eaten with a radish kimchi, sauce and wrapped in greens"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Fried Dumplings",
+    "name": "Fried Dumplings",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Pork", "Dumpling", "Fried"],
+    "price": 10,
+    "item_img": "https://www.shinsegaefood.com/uimages/2017/11/15/%EB%B0%B1%EC%A7%AC%EB%BD%95%EA%B5%B0%EB%A7%8C%EB%91%90-%EB%88%84%EB%81%BC.png",
+    "description": "Fried King Dumpling"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Seafood pancake",
+    "name": "Seafood pancake",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Seafood", "Onion"],
+    "price": 25,
+    "item_img": "https://static.wixstatic.com/media/95961e_f264856fbd1746f79473e927b48e59d9~mv2.jpg/v1/fill/w_865,h_551,al_c,q_85,usm_0.66_1.00_0.01/95961e_f264856fbd1746f79473e927b48e59d9~mv2.jpg",
+    "description": "Seafood Spring Onion Pancake"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Kimchi pancake",
+    "name": "Kimchi pancake",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Kimchi"],
+    "price": 22,
+    "item_img": "https://m.cj.co.kr/images/theKitchen/PHON/0000002558/0000011686/0000002558.jpg",
+    "description": "Kimchi Pancake"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Jhapchae",
+    "name": "Glass noodles",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Noodle", "Pork", "Chicken", "Vegetable"],
+    "price": 20,
+    "item_img": "https://aocs.inu.ac.kr/sboard/data/image/201606301148242375.jpg",
+    "description": "Stir-fried glass noodles and meat, vegetables"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Tteokbokki",
+    "name": "Rice Cakes",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Rice Cake"],
+    "price": 20,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxOTA3MDJfMTUw/MDAxNTYyMDUwNzMxNTY3.G8aGGcWuX71iGK9Qth93Ok6I25k_89tobuI4nNFsx7Eg.3NBhnUdHyeGF6UmdcmhMmPY3mo0ueUEyfmX3zqFHQW8g.JPEG.heeju001/%EA%B5%AD%EB%AC%BC%EB%96%A1%EB%B3%B6%EC%9D%B4%EB%A7%8C%EB%93%9C%EB%8A%94%EB%B2%95.JPG?type=w800",
+    "description": "Stir-fried korean red chili paste rice cake"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "BuDaeJjiGae",
+    "name": "Army Stew",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Noodle", "Vegetable", "Meat"],
+    "price": 38,
+    "item_img": "http://img3.tmon.kr/cdn3/deals/2019/07/19/2232636650/option_img-5dd03.jpg",
+    "description": "Army stew [2~3 pax]"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "SamGaeTang",
+    "name": "Ginseng Chicken Soup",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Chicken"],
+    "price": 18,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxODA3MTZfMjIy/MDAxNTMxNjY4MDc3MzM0.lQq0VsDl1q1KMXalwwQv550uqI2UcrwrDwXbBYc-X2Ag.e4yut6TTI8le_6SeThElxQHLyB6OWvTIF7Ya2PJXQ6Ug.JPEG.saeragem/%EC%A0%84%EB%B3%B5%EC%82%BC%EA%B3%84%ED%83%951.jpg?type=w800",
+    "description": "Ginseng Chicken Soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Spicy Beef Soup",
+    "name": "Spicy Beef Soup",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Beef"],
+    "price": 18,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/6020e2d57b040da45f25c9710dc1e07a.jpg?v=1624432609",
+    "description": "Spicy Beef Soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Kimchi Jjigae",
+    "name": "Kimchi Stew",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Kimchi", "Pork"],
+    "price": 13,
+    "item_img": "https://kfood.hyangyeon.sg/wp-content/uploads/2020/04/%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C2.jpg",
+    "description": "Kimchi & Pork Soup In Clay Pot"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Mini Army stew",
+    "name": "Mini Army Stew",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Noodles", "Vegetables", "Meat"],
+    "price": 18,
+    "item_img": "http://img3.tmon.kr/cdn3/deals/2019/07/19/2232636650/option_img-5dd03.jpg",
+    "description": "Mini size Army Stew"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "DoenJangJjiGae",
+    "name": "Soybean Paste Stew",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Bean Curd", "Vegetable", "Stew"],
+    "price": 13,
+    "item_img": "https://kfood.hyangyeon.sg/wp-content/uploads/2020/04/%EB%90%9C%EC%9E%A5%EC%B0%8C%EA%B0%9C-1.jpg",
+    "description": "Traditional Korean Bean Paste Stew with Bean curd & vegetables"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Chadol doenjang",
+    "name": "Beef Brisket Stew",
+    "restaurant_id": "60fe44403731471b031b10c8",
+    "tags": ["Stew", "Soybean", "Vegetable"],
+    "price": 15,
+    "item_img": "http://image.auction.co.kr/itemimage/20/98/cb/2098cb0636.jpg",
+    "description": "Soybean Paste Stew with vegetable"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "BiBimBap",
+    "name": "BiBimBap",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Beef", "Rice", "Vegetable"],
+    "price": 15,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2018/10/03/355b5cd5c3beb1a775c82ee425dcd1931.jpg",
+    "description": "Rice with beef and vegetable"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "MulNaengMyun",
+    "name": "Chilli Buckwheat Noodle Soup",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Noodle", "Buckwheat"],
+    "price": 18,
+    "item_img": "http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1170/S1555404786098.jpg",
+    "description": "Chili Buckwheat Noodle Soup"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "BiBimNaengMyun",
+    "name": "Spicy Chilled Buckwheat Noodles",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Noodle", "Buckwheat"],
+    "price": 18,
+    "item_img": "https://www.yorivery.com/data/goods/20/07/30//1000000905/1000000905_detail_388.jpg",
+    "description": "Spicy Chilled Buckwheat Noodles"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Garlic Chicken",
+    "name": "Garlic Fried Chicken",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Chicken", "Garlic", "Fried"],
+    "price": 35,
+    "item_img": "https://pbs.twimg.com/media/B0Oh4odCAAAUvtd.jpg",
+    "description": "Fried chicken coated with garlic sauce, served with our special homemade sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Jjajangmyeon",
+    "name": "Black bean noodle",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Black Bean", "Noodle"],
+    "price": 12,
+    "item_img": "http://www.worldincanada.com/wp-content/uploads/2016/04/jajangmyun.jpg",
+    "description": "Black Soybean Sauce Noodles"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Jjampong",
+    "name": "Seafood Noodle",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Seafood", "Vegetable"],
+    "price": 15,
+    "item_img": "https://image.fmkorea.com/files/attach/new/20190306/486616/1446086320/1648710855/e063f3c0902682de99b1c860e0283aa4.jpg",
+    "description": "Chinese style with vegetables & seafood noodles"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Shrimp Fried rice",
+    "name": "Shrimp Fried rice",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Shrimp", "Rice", "Jjajang"],
+    "price": 12,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2016/02/22/04dcf4d335c595184e0030bae7af0b251.jpg",
+    "description": "Shrimp fried rice with jjajang sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Seafood Jjajangmyeon",
+    "name": "Seafood black bean noodle",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Noodle", "Seafood"],
+    "price": 27,
+    "item_img": "https://cdn.crowdpic.net/detail-thumb/thumb_d_4024ED1E3D765026D4633EBDFCC0DEF0.jpg",
+    "description": "Black Soybean Sauce Noodles with seafood"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Tangsuyuk",
+    "name": "Sweet Sour Beef / Pork",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork"],
+    "price": 30,
+    "item_img": "https://ext.fmkorea.com/files/attach/new/20201206/3655304/1752685054/3243555077/99b983892094b5c6d2fc3736e15da7d1.jpg",
+    "description": "Sweet and sour pork"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Seafood Udon",
+    "name": "Seafood Udon",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Seafood", "Noodle"],
+    "price": 15,
+    "item_img": "https://img.freepik.com/free-photo/seafood-udon-ramen-japanese-flavor_1205-9176.jpg?size=626&ext=jpg&ga=GA1.2.97330396.1622246400",
+    "description": "A korean noodle dish made with various types of seafood"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Yuringi",
+    "name": "Hot and Sour Fried Chicken",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Chicken"],
+    "price": 38,
+    "item_img": "https://static.wtable.co.kr/image/production/service/recipe/344/51d9008b-042f-4fdb-aa07-998a084ad6e7.jpg?size=1024x",
+    "description": "Oriental fried chicken with Hot chili and sour sauce"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Kkanpunggi",
+    "name": "Sweet Chili Prawn",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Shrimp", "Prawn", "Seafood"],
+    "price": 35,
+    "item_img": "http://www.fsnews.co.kr/news/photo/201105/4416_3190_2746.jpg",
+    "description": "Sweet Chili Prawn Deep Fried Prawn with Sweet Chili Sauce"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Jokbal",
+    "name": "Pig Trotter",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork", "Kimchi", "Vegetable"],
+    "price": 23,
+    "item_img": "http://image.auction.co.kr/itemimage/1e/b2/5b/1eb25ba876.jpg",
+    "description": "Deep boiled pig trotters, eaten with a radish kimchi, sauce and wrapped in greens"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Bossam",
+    "name": "Steam Pork Belly",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork", "Kimchi", "Vegetable"],
+    "price": 23,
+    "item_img": "https://image.bada.io/files//upload/2021/05/24/4610502_0.webp?v=60ab6ab0ef56c",
+    "description": "Boiled pork belly, eaten with a radish kimchi, sauce and wrapped in greens"
+  },
+  {
+    "category_id": "60fd62cbe77e3d1a014acdec",
+    "kor_name": "Nalchi al Bab",
+    "name": "Flying Fish Roe with Rice",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Fish", "Rice"],
+    "price": 15,
+    "item_img": "https://live.staticflickr.com/8045/8373733200_82cfc43951_b.jpg",
+    "description": "Flying Fish Roe with Rice"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Gunmandu",
+    "name": "Fried Dumplings",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork", "Dumpling", "Fried"],
+    "price": 10,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2015/11/03/ca654152bb5ed8a9521ec901ab5c34211.jpg",
+    "description": "Fried King Dumpling 8pcs"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "DDukBoki",
+    "name": "Spicy Rice Cakes",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Rice Cake"],
+    "price": 18,
+    "item_img": "hhttps://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Korean.snacks-Tteokbokki-08.jpg/1200px-Korean.snacks-Tteokbokki-08.jpg",
+    "description": "Spicy Rice Cakes"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Gong Ki Bab",
+    "name": "White Rice",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Rice"],
+    "price": 2,
+    "item_img": "https://t3.ftcdn.net/jpg/01/25/78/44/360_F_125784448_9obOcf7cX90YCjqAQZZ3Tk6ebWQFzJMy.jpg",
+    "description": "White Rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "SeolRungTang",
+    "name": "Beef Bone Soup",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Beef"],
+    "price": 18,
+    "item_img": "http://th2.tmon.kr/thumbs/image/d06/2d3/4a6/1165706d0_700x700_95_FIT.jpg",
+    "description": "Beef Bone Soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "SamGaeTang",
+    "name": "Ginseng Chicken Soup",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Chicken"],
+    "price": 18,
+    "item_img": "https://cdn.imweb.me/thumbnail/20200924/0d863f21d04ce.jpg",
+    "description": "Ginseng Chicken Soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Kimchi Jjigae",
+    "name": "Kimchi Stew",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork", "Kimchi"],
+    "price": 13,
+    "item_img": "http://www.chungjungone.com/upload/knowhow/table/20200314_171845318_69942.jpg",
+    "description": "Kimchi & Pork Soup In Clay Pot"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Sundubu Jjigae",
+    "name": "Spicy Soft Tofu Stew",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Seafood", "Stew", "Rice"],
+    "price": 13,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2017/12/27/edd739fdab97c72b3a2bf9cd812daf671.jpg",
+    "description": "Seafood stew comes with rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "DoinJangJjiGae",
+    "name": "Soybean Paste Stew",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Soybean", "Stew", "Vegetable", "eafood"],
+    "price": 13,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2017/04/26/ddd495fd432955701068e1a21a0d33211.jpg",
+    "description": "Soybean Paste Stew with vegetable & seafood"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "HongHabTang",
+    "name": "Mussel Soup",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Mussel", "Seafood"],
+    "price": 30,
+    "item_img": "https://post-phinf.pstatic.net/MjAxNzEyMTNfOTIg/MDAxNTEzMTUyMTM1NTQ0.0El-KbVrHq0E3wsK6QDxUlUslr-3klPEAW-SmJh5mMYg.TYvyGaSwCc-gQ63Qoa3FBUr9GdmjDwjkbU26RVkEnC0g.JPEG/20171211_05.jpg?type=w1200",
+    "description": "Mussel Soup for 2 pax"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "BbeHaeJangGuk",
+    "name": "Pork Rib Soup",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork", "Rice"],
+    "price": 18,
+    "item_img": "https://upload.wikimedia.org/wikipedia/commons/e/e2/KOCIS_Gamjatang%2C_pork-on-the-bone_soup_with_potatoes_%285029033934%29.jpg",
+    "description": "Pork Rib Soup with rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Yukgaejang",
+    "name": "Spicy Beef Soup",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Beef", "Rice"],
+    "price": 18,
+    "item_img": "http://foodyap.co.kr/shopimages/goldplate1/040001000001.jpg?1560837597",
+    "description": "Spicy Beef Soup with rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "BuDaeJjiGae",
+    "name": "Army Stew",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Stew", "Pork"],
+    "price": 38,
+    "item_img": "http://foodyap.co.kr/shopimages/goldplate1/066001000008.jpg?1560850364",
+    "description": "Army stew [2~3 pax]"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "GamJaTang",
+    "name": "Pork Rib Stew",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork", "Rice"],
+    "price": 38,
+    "item_img": "https://i.imgur.com/2ZpaFn6.jpg",
+    "description": "Pork Rib Soup with rice"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Haemulpajeon",
+    "name": "Seafood Pancake",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Seafood"],
+    "price": 18,
+    "item_img": "https://cdn.crowdpic.net/detail-thumb/thumb_d_1E15EAAB825434F960BDF0E4F8912296.jpg",
+    "description": "Seafood Pancake"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Kimchi Jeon",
+    "name": "Kimchi Pancake",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Kimchi"],
+    "price": 14,
+    "item_img": "https://i1.wp.com/chopchopchoi.com/wp-content/uploads/2019/06/kimchi-pizza-1346285_640.jpg?fit=640%2C480&ssl=1",
+    "description": "Kimchi Pancake"
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "Coke",
+    "name": "Coke",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Drink", "Sweet"],
+    "price": 3,
+    "item_img": "http://th1.tmon.kr/thumbs/image/3cc/3fa/d56/475318fb7_700x700_95_FIT.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "Sprite",
+    "name": "Sprite",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Drink", "Sweet"],
+    "price": 3,
+    "item_img": "http://image.auction.co.kr/itemimage/16/5c/ba/165cba7b21.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "Fanta Orange",
+    "name": "Orange Soda",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Drink", "Sweet"],
+    "price": 3,
+    "item_img": "http://image.auction.co.kr/itemimage/17/1f/96/171f969696.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "Sikhye",
+    "name": "Sweet Rice Drink",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Drink", "Sweet"],
+    "price": 3,
+    "item_img": "https://post-phinf.pstatic.net/MjAxOTAxMjhfNDYg/MDAxNTQ4NjU4Mzg0Mjgx.3qCb4GMO604_IvEiLLFg574Hb_u_6ufI3Y7ydhftkW0g.SqJyeoqhTtBAp__gnSshOZWzrSRQqU3U3SevYlpN2yog.JPEG/GettyImages-jv10934636.jpg?type=w1200",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "BongBong",
+    "name": "Grape Drink",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Drink", "Sweet"],
+    "price": 3,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/600_5254c747-efb3-4184-86fd-e3ef6dd755b2.jpg?v=1614595492",
+    "description": null
+  },
+  {
+    "category_id": "60fd6305e77e3d1a014acdfc",
+    "kor_name": "SSaekSSaek",
+    "name": "Orange Soda",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Drink", "Sweet"],
+    "price": 3,
+    "item_img": "https://kfood.hyangyeon.sg/wp-content/uploads/2020/07/%EC%8C%95%EC%8C%95.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Tiger",
+    "name": "Beer",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Alcohol", "Beer"],
+    "price": 7,
+    "item_img": "http://product.hstatic.net/1000343598/product/upload_55a5e227685e40ab8525db204168ce48_grande.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Tsingtao",
+    "name": "Beer",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Alcohol", "Beer"],
+    "price": 7,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/20160116_162/xoddlcjsrnr_14529193696318g0h7_JPEG/image__2015_677513_14369295022026847.jpg?type=w2",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Cass",
+    "name": "Beer",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Alcohol", "Beer"],
+    "price": 7,
+    "item_img": "https://dimg.donga.com/wps/NEWS/IMAGE/2020/12/16/104468840.1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Terra",
+    "name": "Beer",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Alcohol", "Beer"],
+    "price": 7,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/files/500_ff388a38-1281-49f9-bdf9-9413fec4e3f9.jpg?v=1621236719",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Maggolli",
+    "name": "Rice Wine",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Rice", "Alcohol"],
+    "price": 7,
+    "item_img": "https://blog.kakaocdn.net/dn/cQ6XSa/btq0VoeOOEK/v92ddBOc51nNQ2r4iz15f0/img.png",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Maggolli (Peach)",
+    "name": "Rice Wine",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Rice", "Alcohol"],
+    "price": 8,
+    "item_img": "https://img.freepik.com/free-photo/raw-fresh-meat-ribeye-steak-entrecote-of-black-angus-prime-meat-with-ingredients-set-on-black-stone_249006-10275.jpg?size=626&ext=jpg&ga=GA1.2.1386122959.1623715200",
+    "description": null
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "GgokSal",
+    "name": "Prime Beef",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Beef"],
+    "price": 42,
+    "item_img": "https://lh3.googleusercontent.com/proxy/ixtmwDEMaIlzCcMAIQeDygsQVeaHELJaVtppvnV9c_XRk0w7pvVDigrmX-OQagqhxA6WIE3UnGk2yKUqreAAHtqd-QoMWqxxj6CzDjSQTSjcmB1QTfY",
+    "description": "Prime Beef"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "YangNyumGalbi",
+    "name": "Marinated Prime Beef Short Rib",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Beef"],
+    "price": 43,
+    "item_img": "https://impshop.kr/ishop/data/item/1573625974/7Z6Y7LCs7ZWc7Jqw.png",
+    "description": "Marinated Prime Beef Short Rib"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "DeungSim",
+    "name": "Ribeye",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Beef"],
+    "price": 39,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxODA3MTBfMjQg/MDAxNTMxMTkxNzMxMDAz.Hx01zMQhDPFr_ltRd-POMXtNboQSQYs67nfiKgebkCsg.M650nmWlQQj_QFIye-maeUDawM2LvpbgoGlu-w0niNIg.JPEG.yanghann/%EC%86%8C%EA%B3%A0%EA%B8%B0_%ED%95%9C%EC%9A%B0_%EA%BD%83%EB%93%B1%EC%8B%AC_%EC%83%88%EC%9A%B0%EC%82%B4.jpg?type=w800",
+    "description": "Ribeye"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "SaengSamGyupSal",
+    "name": "Sliced Pork Belly",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork"],
+    "price": 20,
+    "item_img": "https://img.freepik.com/free-photo/pork-belly-in-a-pan-with-pepper-seeds-tomatoes-and-spices_1150-22014.jpg?size=626&ext=jpg&ga=GA1.2.2075113639.1618617600",
+    "description": "Sliced Pork Belly"
+  },
+  {
+    "category_id": "60fd62cbe77e3d1a014acdec",
+    "kor_name": "SaengMokSal",
+    "name": "Pork Collar",
+    "restaurant_id": "60fe44b63731471b031b10ca",
+    "tags": ["Pork"],
+    "price": 20,
+    "item_img": "https://static.megamart.com/product/image/0385/03854808/03854808_1_960.jpg",
+    "description": "Pork Collar"
+  },
+  {
+    "category_id": "60fd62cbe77e3d1a014acdec",
+    "kor_name": "Saewoo Gui",
+    "name": "Black tiger prawn",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Prawn", "Seafood"],
+    "price": 49,
+    "item_img": "https://previews.123rf.com/images/huangyailah/huangyailah1405/huangyailah140500001/28189321-%EC%83%88%EC%9A%B0-%EA%B5%AC%EC%9D%B4.jpg",
+    "description": "Black tiger prawn (10 pcs)"
+  },
+  {
+    "category_id": "60fd62cbe77e3d1a014acdec",
+    "kor_name": "Gwanja Gui",
+    "name": "Diver's scallop",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Scallop", "Seafood"],
+    "price": 38,
+    "item_img": "http://t1.daumcdn.net/liveboard/kurly/b50252e047454ec5b33a76a6030c5db4.JPG",
+    "description": "Diver's scallop (6 pcs)"
+  },
+  {
+    "category_id": "60fd62cbe77e3d1a014acdec",
+    "kor_name": "Jeonbok Gui",
+    "name": "Abalone",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Abalone", "Seafood"],
+    "price": 59,
+    "item_img": "https://i.ytimg.com/vi/15iYtzGGMBI/hqdefault.jpg",
+    "description": "Abalone"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Haemulpajeon",
+    "name": "Seafood Pancake",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Prawn", "Clam", "Mussel", "Squid", "Seafood"],
+    "price": 25,
+    "item_img": "http://casavill.kr/wp-content/uploads/2021/02/tc00240029607_l.jpg",
+    "description": "Crispy spring onion pancake topping with prawn, clam, mussel and squid"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Buchu Jeon",
+    "name": "Chive pancake",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Onion"],
+    "price": 22,
+    "item_img": "https://i.pinimg.com/originals/a6/7d/68/a67d68b54c1f46737c59857c78fc5672.jpg",
+    "description": "Chive pancake"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Gul Jeon",
+    "name": "Oyster pancake",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Oyster", "Fried", "Seafood"],
+    "price": 28,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2018/12/14/9827f3c6519cff324cba4a8b3b3b93521.jpg",
+    "description": "Pan fried fresh oyster pancake with pickled radish, lotus roots"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Japchae",
+    "name": "Stir-fried glass noodle",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Noodle", "Vegetable", "Beef"],
+    "price": 25,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2017/11/14/a2d4839b5743d121d4d2b46fdbc9aa5b1.jpg",
+    "description": "Stir-fried glass noodle with vegetables and beef"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Bossam",
+    "name": "Steamed pork belly",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Pork", "Kimchi"],
+    "price": 45,
+    "item_img": "https://img.siksinhot.com/article/1605170892582417.jpg",
+    "description": "Steamed pork belly, pickled wild garlic leaves, perilla leaves and kimchi"
+  },
+  {
+    "category_id": "60fd62cbe77e3d1a014acdec",
+    "kor_name": "Yeoneo Gui",
+    "name": "Pan seared salmon",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Salmon", "Fish", "Seafood"],
+    "price": 45,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2017/01/26/1e3b1085ca6b7f2ca6315f020d09532b1.jpg",
+    "description": "Pan seared salmon with citron soy sauce"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Haemul Ddukboki",
+    "name": "Spicy rice cake",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Rice Cake", "Mussel", "Clam", "Prawn", "Vegetable"],
+    "price": 36,
+    "item_img": "http://hansando.godohosting.com/yamtable_cdn/data/goods/21/01/01/1000000449/1000000449_detail_058.jpg",
+    "description": "Spicy rice cake with mussel, clam, prawn, vegetables"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Sunduboo Jjigae",
+    "name": "Spicy Silken tofu soup",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Tofu", "Mussel", "Prawn", "Clam", "Squid", "Beef"],
+    "price": 18,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/20141022_4/witchyoli_1413946698763mnlsd_JPEG/DSC01775.JPG?type=w2",
+    "description": "Silken tofu, mussel, prawn, clams, squid in spicy beef soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "DoinJangJjiGae",
+    "name": "Bean paste soup",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Beef"],
+    "price": 18,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2016/10/31/c8594dc2a7a28ebf6c94f4499a31c7df1.jpg",
+    "description": "Traditional bean paste soup with beef"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Galbi Tang",
+    "name": "Short rib soup",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Beef", "Noodle"],
+    "price": 25,
+    "item_img": "https://img-cf.kurly.com/shop/data/goodsview/20200803/gv40000025492_1.jpg",
+    "description": "Short rib soup, ginseng, ginko, red date, glass noodle"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Dolsot Bibimbab",
+    "name": "Hot Bibimbap",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Vegetable", "Rice"],
+    "price": 22,
+    "item_img": "https://static.educalingo.com/img/ko/800/dolsotbibimbab.jpg",
+    "description": "Mixed vegetables on rice served in hot stone bowl"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Yukhoi Bibimbab",
+    "name": "Bibimbap with fresh beef",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Vegetable", "Rice", "Beef"],
+    "price": 30,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAyMTAyMjJfMTU1/MDAxNjEzOTU2MTgxODE4.aLXmjGfPgUo5s9YCoO8_5Ikuu0oVKH7jb1IKqrPpC7kg.LMxGq9Bvmdmst5A82nHVrxPUV3_-McheQcx6PWUwn1og.JPEG.be2141st/SE-a86b8410-d464-4099-a0de-eb59d85a142d.jpg?type=w800",
+    "description": "Mixed vegetables on rice served in hot stone bowl. Topped with seasoned fresh beef and york"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Haemul Kalguksu",
+    "name": "Hand-cut wheat noodle in seafood",
+    "restaurant_id": "60fe44f53731471b031b10cc",
+    "tags": ["Seafood", "Mussel", "Clam", "Prawn", "Noodle"],
+    "price": 19,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_C79ACCB997014DCE96998797007B69AC.jpg",
+    "description": "Hand-cut wheat noodle in seafood soup, mussel, clam, prawn"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Fried Chicken (S)",
+    "name": "Fried Chicken (S)",
+    "restaurant_id": "60fe452a3731471b031b10ce",
+    "tags": ["Fried", "Chicken"],
+    "price": 15,
+    "item_img": "https://image.fmkorea.com/files/attach/new/20180407/486616/877016823/1008099836/a9a33541b046364bdcb992ed8f874f64.png",
+    "description": "Original Fried Chicken -Small"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Fried Chicken (L)",
+    "name": "Fried Chicken (S)",
+    "restaurant_id": "60fe452a3731471b031b10ce",
+    "tags": ["Fried", "Chicken"],
+    "price": 26,
+    "item_img": "https://image.fmkorea.com/files/attach/new/20180407/486616/877016823/1008099836/a9a33541b046364bdcb992ed8f874f64.png",
+    "description": "Original Fried Chicken -Large"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Spicy Fried Chicken (S)",
+    "name": "Spicy Fried Chicken (S)",
+    "restaurant_id": "60fe452a3731471b031b10ce",
+    "tags": ["Fried", "Chicken"],
+    "price": 17,
+    "item_img": "https://data.ygosu.com/upload_files/board_yeobgi/1235298/59914d5482e23.jpg",
+    "description": "Spicy Fried Chicken -Small"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Spicy Fried Chicken (L)",
+    "name": "Spicy Fried Chicken (L)",
+    "restaurant_id": "60fe452a3731471b031b10ce",
+    "tags": ["Fried", "Chicken"],
+    "price": 28,
+    "item_img": "https://data.ygosu.com/upload_files/board_yeobgi/1235298/59914d5482e23.jpg",
+    "description": "Spicy Fried Chicken -Large"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Soysauce Chicken (S)",
+    "name": "Soysauce Chicken (S)",
+    "restaurant_id": "60fe452a3731471b031b10ce",
+    "tags": ["Chicken"],
+    "price": 17,
+    "item_img": "https://as2.ftcdn.net/v2/jpg/01/28/44/55/1000_F_128445566_faZyKHZkTTu9bHecoXNECkiCX2m8vvkQ.jpg",
+    "description": "Soysauce Chicken -Small"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Soysauce Chicken (L)",
+    "name": "Soysauce Chicken (L)",
+    "restaurant_id": "60fe452a3731471b031b10ce",
+    "tags": ["Chicken"],
+    "price": 28,
+    "item_img": "https://as2.ftcdn.net/v2/jpg/01/28/44/55/1000_F_128445566_faZyKHZkTTu9bHecoXNECkiCX2m8vvkQ.jpg",
+    "description": "Soysauce Chicken -Large"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Cheese ball",
+    "name": "Cheese ball",
+    "restaurant_id": "60fe452a3731471b031b10ce",
+    "tags": ["Side", "Cheese"],
+    "price": 10,
+    "item_img": "https://crcf.cookatmarket.com/product/images/2020/07/kela_1594007924_9366_720.jpg",
+    "description": "Cheese ball 5 pcs"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Original Fried Chicken (S)",
+    "name": "Original Fried Chicken (S)",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Fried", "Chicken"],
+    "price": 20,
+    "item_img": "http://www.newscj.com/news/photo/202004/newscj_%EC%B2%9C%EC%A7%80%EC%9D%BC%EB%B3%B4_724514_750707_338.jpg",
+    "description": "Original Fried Chicken -Small"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Original Fried Chicken (L)",
+    "name": "Original Fried Chicken (L)",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Fried", "Chicken"],
+    "price": 35,
+    "item_img": "http://www.newscj.com/news/photo/202004/newscj_%EC%B2%9C%EC%A7%80%EC%9D%BC%EB%B3%B4_724514_750707_338.jpg",
+    "description": "Original Fried Chicken -Large"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Cheese Sprinkle Chicken (S)",
+    "name": "Cheese Sprinkle Chicken (S)",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Cheese", "Chicken"],
+    "price": 35,
+    "item_img": "http://www.econovill.com/news/photo/201911/376452_284476_248.jpg",
+    "description": "Cheese Sprinkle Chicken (S)"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Cheese Sprinkle Chicken (L)",
+    "name": "Cheese Sprinkle Chicken (L)",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Cheese", "Chicken"],
+    "price": 45,
+    "item_img": "http://www.econovill.com/news/photo/201911/376452_284476_248.jpg",
+    "description": "Cheese Sprinkle Chicken (L)"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Honey Shiock Chicken (S)",
+    "name": "Honey Shiock Chicken (S)",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Honey", "Chicken"],
+    "price": 25,
+    "item_img": "https://img.extmovie.com/files/attach/images/148/841/704/060/253473f8f58d2fae95879d7b305a538c.jpg",
+    "description": "Honey Shiock Chicken (S)"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Honey Shiock Chicken (L)",
+    "name": "Honey Shiock Chicken (L)",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Honey", "Chicken"],
+    "price": 40,
+    "item_img": "hhttps://img.extmovie.com/files/attach/images/148/841/704/060/253473f8f58d2fae95879d7b305a538c.jpg",
+    "description": "Honey Shiock Chicken (L)"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Gopchang Jungol",
+    "name": "Spicy beef intestine stew",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Beef", "Stew"],
+    "price": 48,
+    "item_img": "https://ai.esmplus.com/foodjang01/images/221500263_b_1.jpg",
+    "description": "Spicy beef intestine stew"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "O Deng Bar",
+    "name": "Fish cake soup",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Fish"],
+    "price": 40,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2016/12/02/dbd73e6d5327feec3c2a8ee8aa6900871.jpg",
+    "description": "Fish cake soup"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Jjim Dak",
+    "name": "Soy steamed chicken",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Chicken"],
+    "price": 48,
+    "item_img": "https://images.squarespace-cdn.com/content/v1/52efff1fe4b0877bde888e3e/1606396705490-4ZM19FZF36MEBSHYVMCB/home-bongchu.jpg",
+    "description": "Soy steamed chicken"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Chulpan Dakbal",
+    "name": "Chicken feet on grill",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Chicken"],
+    "price": 38,
+    "item_img": "https://newsimg.sedaily.com/2018/03/11/1RWXS6QQWS_1.jpg",
+    "description": "Chicken feet on grill"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Soon Dae",
+    "name": "Korean blood sausage",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Sausage", "Blood"],
+    "price": 25,
+    "item_img": "https://t1.daumcdn.net/liveboard/dailylife/946d34355aab4a4a922de5215f8dc3ce.jpg",
+    "description": "Korean blood sausage"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Fried webfoot octopus",
+    "name": "Frid webfoot octopus",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Octopus", "Seafood"],
+    "price": 18,
+    "item_img": "https://imagescdn.gettyimagesbank.com/500/201905/a11354693.jpg",
+    "description": "Fried webfoot octopus"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Dongtae Jun",
+    "name": "Pollack fish pancake",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Fish", "Seafood"],
+    "price": 22,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxODA5MjJfMTY3/MDAxNTM3NTc2ODYxODcz.xjMeVpkGGymzHM18FytnHXw7SLFOgCG2R7GVxYUIiJ8g.ATcmOOCAFQrdsyyeP9M4gifAA2wmbw7JG880hWG7bGog.JPEG.king940/image_4362023821537576830226.jpg?type=w800",
+    "description": "Pollack fish pancake"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "YangNyumGalbi",
+    "name": "Marinated Prime Beef Short Rib",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Beef"],
+    "price": 38,
+    "item_img": "https://chosunhwarojib.com/upload/menu_01/2020_03_24/hero_dKI1T_2020_03_24_13_01_37.jpg",
+    "description": "Marinated beef ribs"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Dweji Galbi",
+    "name": "Marinated Pork",
+    "restaurant_id": "60fe455a3731471b031b10d0",
+    "tags": ["Pork"],
+    "price": 25,
+    "item_img": "http://img.danawa.com/prod_img/500000/907/916/img/12916907_1.jpg?shrink=360:360&_v=20201215164159",
+    "description": "Marinated Pork"
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Injeolmi Bingsu",
+    "name": "Injeolmi Bingsu",
+    "restaurant_id": "60fe45a93894b41c1818b050",
+    "tags": ["Dessert", "Rice Cake", "Bingsu"],
+    "price": 19.5,
+    "item_img": "http://www.ypsori.com/news/photo/201507/7267_6594_1041.JPG",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Oreo Bingu",
+    "name": "Oreo Bingsu",
+    "restaurant_id": "60fe45a93894b41c1818b050",
+    "tags": ["Dessert", "Oreo", "Bingsu"],
+    "price": 16.5,
+    "item_img": "https://pbs.twimg.com/media/CMl42z5VAAEwSNX.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Strawberry Bingsu",
+    "name": "Strawberry Bingsu",
+    "restaurant_id": "60fe45a93894b41c1818b050",
+    "tags": ["Strawberry", "Bingsu", "Dessert"],
+    "price": 20,
+    "item_img": "https://dev-paris.shoplic.store/wp-content/uploads/201223_%E1%84%8B%E1%85%AE%E1%84%8B%E1%85%B2%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%87%E1%85%B5%E1%86%BC%E1%84%89%E1%85%AE-1280x1280.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Watermelon Bingsu",
+    "name": "Watermelon Bingsu",
+    "restaurant_id": "60fe45a93894b41c1818b050",
+    "tags": ["Watermelon", "Bingsu", "Dessert"],
+    "price": 19.5,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxODA2MDRfMTgg/MDAxNTI4MTEwOTEzMTQ3.olCEoCqMwmRVFdW2zGExO85aVL0sDYNx5s6s5iTxJwIg.H1ps6WMg1cklqNTTrZ-og2SFqrPGXSph6Pk8nOxN6Bog.JPEG.sm4863/IMG_4696.JPG?type=w800",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Hotteok",
+    "name": "Korean Sweet pancake",
+    "restaurant_id": "60fe45dc3894b41c1818b052",
+    "tags": ["Sweet", "Fried", "Dessert"],
+    "price": 3.9,
+    "item_img": "https://m.cj.co.kr/images/theKitchen/PHON/0000001635/0000006022/0000001635.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Injeolmi Toast",
+    "name": "Injeolmi Toast",
+    "restaurant_id": "60fe45dc3894b41c1818b052",
+    "tags": ["Rice Cake", "Sweet", "Dessert"],
+    "price": 6.9,
+    "item_img": "https://static.wtable.co.kr/image/production/service/recipe/172/812c7ba2-22be-4ffb-a389-061db2ed37e6.jpg?size=1024x",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Red Bean Bingsu",
+    "name": "Red Bean Bingsu",
+    "restaurant_id": "60fe45dc3894b41c1818b052",
+    "tags": ["Red Bean", "Bingsu", "Dessert"],
+    "price": 14.9,
+    "item_img": "https://www.paris.co.kr/wp-content/uploads/201223_%E1%84%8B%E1%85%AE%E1%84%8B%E1%85%B2%E1%84%91%E1%85%A1%E1%87%80%E1%84%87%E1%85%B5%E1%86%BC%E1%84%89%E1%85%AE-1280x1280.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Choco Banana",
+    "name": "Choco Banana",
+    "restaurant_id": "60fe45dc3894b41c1818b055",
+    "tags": ["Chocolate", "Banana", "Dessert"],
+    "price": 16.9,
+    "item_img": "https://www.smlounge.co.kr/old_data/mlounge/contents/data/article/140593267029130.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Caramel Teh Tarik Bingsu",
+    "name": "Caramel Teh Tarik Bingsu",
+    "restaurant_id": "60fe45dc3894b41c1818b055",
+    "tags": ["Sweet", "Dessert", "Bingsu"],
+    "price": 11.9,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxOTA3MDFfMTQ0/MDAxNTYxOTA4NzYxNzcw.VOXkai1Nj-0KM95ky2AgjkmaHhYWMDobPl_1DiOiMKAg.kcoH3a2CMxJYts5A-oKi4HJ0ViMfyBpxsmtcHiHCVIAg.JPEG.candystellar/IMG_0968.JPG?type=w800",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Caramel Coffee Bingsu",
+    "name": "Carmel Coffee Bingsu",
+    "restaurant_id": "60fe45dc3894b41c1818b055",
+    "tags": ["Sweet", "Dessert", "Bingsu"],
+    "price": 11.9,
+    "item_img": "http://nuts.speedgabia.com/cresumer/1st/ransroom/08_02/SV400091-1.jpg?type=w2",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Mango Strawberry Bingsu",
+    "name": "Mango Strawberry Bingsu",
+    "restaurant_id": "60fe45dc3894b41c1818b055",
+    "tags": ["Mango", "Strawberry", "Dessert", "Bingsu"],
+    "price": 11.9,
+    "item_img": "http://imgs.giftishow.co.kr/Resource/goods/G00000576488/G00000576488.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62fce77e3d1a014acdfa",
+    "kor_name": "Gula Melaka Bingsu",
+    "name": "Gula Melaka Bingsu",
+    "restaurant_id": "60fe45dc3894b41c1818b055",
+    "tags": ["Sweet", "Dessert", "Bingsu"],
+    "price": 11.9,
+    "item_img": "https://static.wtable.co.kr/image/production/service/recipe/634/712d44b4-775f-4002-b473-a737762fb445.jpg?size=1024x",
+    "description": null
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Porkbelly Bento",
+    "name": "Porkbelly Bento",
+    "restaurant_id": "60fe46693894b41c1818b057",
+    "tags": ["Pork", "Rice"],
+    "price": 21,
+    "item_img": "https://blog.kakaocdn.net/dn/dkFsmR/btqDO11yp9n/OLYa4VUHB5CLKzJ0Qm1tu1/img.png",
+    "description": "Pork belly bento box with side dishes and rice"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Donkatsu Pork Bento",
+    "name": "Donkatsu Pork Bento",
+    "restaurant_id": "60fe46693894b41c1818b057",
+    "tags": ["Pork", "Rice"],
+    "price": 21,
+    "item_img": "https://en.pimg.jp/020/201/888/1/20201888.jpg",
+    "description": "Donkatsu Pork bento box with side dishes and rice"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Braised Porkbelly",
+    "name": "Braised Porkbelly",
+    "restaurant_id": "60fe46693894b41c1818b057",
+    "tags": ["Pork"],
+    "price": 45,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAyMDAyMDNfMTA2/MDAxNTgwNjg3NjE4Mzk4.4eK8p2jBTwM2VoN9gH2_ONIvLY0BSFS_cvNKivDAacUg.npF5KDsvVQR_fV6mXof-8WQxhlj3ga7FxVoG7QV9vXcg.JPEG.hooshia/SE-2b64dbc5-9dfc-4e52-96e0-cf74eec88de9.jpg?type=w800",
+    "description": "Braised Porkbelly"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Donkatsu",
+    "name": "Donkatsu",
+    "restaurant_id": "60fe46693894b41c1818b057",
+    "tags": ["Pork"],
+    "price": 16,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxODA3MDdfMTYg/MDAxNTMwOTQxMzU2OTg0.5M1NET9VHDeBaBCJuxp-xzqdv0Ga_VTx85E3HdlrfR8g.dqmYDZUK1_wxqj7PdDywaL0diMIAH5P8mvYfKwI-OZcg.JPEG.yanghann/%EB%8F%BC%EC%A7%80%EA%B3%A0%EA%B8%B0_%EB%93%B1%EC%8B%AC%EB%8F%88%EA%B0%80%EC%8A%A4_%EC%88%98%EC%9A%94%EB%AF%B8%EC%8B%9D%ED%9A%8C.jpg?type=w800",
+    "description": "Pork Donkatsu"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Seasoned Pork",
+    "name": "Seasoned Pork",
+    "restaurant_id": "60fe46693894b41c1818b057",
+    "tags": ["Pork"],
+    "price": 21,
+    "item_img": "https://static.wtable.co.kr/image/production/service/recipe/842/cf33666d-4011-4bac-9dc1-54c2b07ed8c1.jpg?size=1024x",
+    "description": "Seasoned Pork"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Dubu kimchi",
+    "name": "Tofu with stir-fried kimchi and pork.",
+    "restaurant_id": "60fe46983894b41c1818b059",
+    "tags": ["Tofu", "Kimchi", "Pork"],
+    "price": 28.9,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_0FB602631BC18B5092934AE30B3A6F57.jpg",
+    "description": "Tofu with stir-fried kimchi and pork."
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Bibimbap",
+    "name": "Bibimbap beef",
+    "restaurant_id": "60fe46983894b41c1818b059",
+    "tags": ["Beef"],
+    "price": 15,
+    "item_img": "https://img.lovepik.com/photo/50075/3241.jpg_wh300.jpg",
+    "description": "Including 2 set of banchan(12 types) and special red pepper paste(Gochujang)"
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Kimchi",
+    "name": "Kimchi",
+    "restaurant_id": "60fe46983894b41c1818b059",
+    "tags": ["Kimchi"],
+    "price": 21.4,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_6CBAFBACD321A7CEC998FD981278D0EF.jpg",
+    "description": "Fresh kimchi that we make. You can enjoy fresh kimchi at home."
+  },
+  {
+    "category_id": "60fd62e4e77e3d1a014acdf4",
+    "kor_name": "Fish cake",
+    "name": "Fish cake Fried",
+    "restaurant_id": "60fe46983894b41c1818b059",
+    "tags": ["Fish Cake", "Fried"],
+    "price": 16,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_953ED47514842CF1D83259537EB08D09.jpg",
+    "description": "Fresh Fish cake that we make everyday."
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Bulgogi Beef",
+    "name": "Bulgogi Beef with Rice",
+    "restaurant_id": "60fe46983894b41c1818b059",
+    "tags": ["Beef", "Rice"],
+    "price": 16,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_4345A55EE77679453E91E864F3D4A9F4.jpeg",
+    "description": "Juicy beef stir-fried with special sauce and 12 types of banchan and one rice."
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Dakgangjeong",
+    "name": "Soy Garlic Fried Chicken",
+    "restaurant_id": "60fe46cf3894b41c1818b05b",
+    "tags": ["Fried", "Chicken"],
+    "price": 9,
+    "item_img": "https://modo-phinf.pstatic.net/20151210_130/14497355508364YTrD_JPEG/mosav9LvGi.jpeg?type=w720",
+    "description": "Deep-fried cirspy chicken galzed in a sticky sweet sauce"
+  },
+  {
+    "category_id": "60fd62dde77e3d1a014acdf2",
+    "kor_name": "Yangnyeom chicken",
+    "name": "Spicy Fried Chicken",
+    "restaurant_id": "60fe46cf3894b41c1818b05b",
+    "tags": ["Fried", "Chicken"],
+    "price": 11,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxNjEwMTlfMjgw/MDAxNDc2ODc1NzIzNDIy.1wuUMDiyXVKPlTaxZLXg7PmgVMqVkTfvItNDNa5_pIEg.KDrizEGu6xpyUeElqEicstgi3vQzZvzgLASvKLitMJog.PNG.ddcknala/160526154149_%EC%8D%B8%EB%84%A4%EC%9D%BC_%EC%96%91%EB%85%90%EC%B9%98%ED%82%A8_%EC%96%91%EB%85%90%EC%B9%98%ED%82%A8_03.png?type=w2",
+    "description": "Deep-fried chicken smothered in a sticky spicy red sauce"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Pork Bulgogi",
+    "name": "Pork Bulgogi",
+    "restaurant_id": "60fe46cf3894b41c1818b05b",
+    "tags": ["Pork", "Rice"],
+    "price": 12,
+    "item_img": "https://imagescdn.gettyimagesbank.com/500/201811/a11209732.jpg",
+    "description": "Slices of pork marinated in a salty-sweet sauce pan-fried with onions"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Saeng Deung Sim",
+    "name": "Unmarinated Beef Sirloin",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Beef"],
+    "price": 29.8,
+    "item_img": "https://cdn.shopify.com/s/files/1/1071/7482/products/628030627_73f64fd2_B2C9B5EEBDC91_2a2439b2-3a5b-4615-bfe6-287b5b0fd7a8.jpg?v=1488208033",
+    "description": "Unmarinated Beef Sirloin for BBQ"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "L.A Kalbi",
+    "name": "Marinated Beef Short Ribs",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Beef"],
+    "price": 29.8,
+    "item_img": "https://blog.kakaocdn.net/dn/dtDHkX/btqOuIEONvt/aeRF7Cv3klT7nglDA55S9K/img.jpg",
+    "description": "Marinated Beef Short Ribs for BBQ"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Chadol Baegi",
+    "name": "Beef Brisket",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Beef"],
+    "price": 29.8,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_CAF1BFA68C86576383F45949A595F2ED.jpg",
+    "description": "Thin sliced Beef Brisket for BBQ"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Bulgogi",
+    "name": "Glass noodles with Beef",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Beef", "Noodle", "Vegetable"],
+    "price": 22.8,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_732BF577DBFE40C75D96BE885A9C18DC.jpg",
+    "description": "Marinated Beef with vegetables and Glass noodles served in a stone plate"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Nokcha Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Pork"],
+    "price": 22.8,
+    "item_img": "http://img.danawa.com/prod_img/500000/079/958/img/10958079_1.jpg?shrink=360:360&_v=20200331132133",
+    "description": "Green tea pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Daepae Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Pork"],
+    "price": 21.8,
+    "item_img": "http://th4.tmon.kr/thumbs/image/ade/2da/7ee/2f6938ea8_700x700_95_FIT.jpg",
+    "description": "Thin sliced Pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Pork"],
+    "price": 21.8,
+    "item_img": "https://img.insight.co.kr/static/2018/03/22/700/t3361rkd9759ad5844hc.jpg",
+    "description": "Normal cut pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Daeji Kalbi",
+    "name": "Marinated Pork Ribs",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Pork"],
+    "price": 23.8,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2016/07/04/87cdf0822a88937db1e7b071f48cf2491.jpg",
+    "description": "Marinated pork ribs for BBQ"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Yangnyum Dak Gui",
+    "name": "Marinated Chicken",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Chicken"],
+    "price": 23.8,
+    "item_img": "https://sjnfzdfjrjgl1655541.cdn.ntruss.com/goods/3/2020/08/481_tmp_bee21a85961b81ffaac02baefef175012918view.jpg",
+    "description": "Marinated chicken for BBQ"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Ttok Pokki",
+    "name": "Spicy Rice Cake",
+    "restaurant_id": "60fe470a3894b41c1818b05d",
+    "tags": ["Rice Cake", "Vegetable"],
+    "price": 13.8,
+    "item_img": "https://i.pinimg.com/originals/9a/ef/b3/9aefb3f244dbec9e6edeefdf08c39290.jpg",
+    "description": "Sliced rice cakes with an assortment of vegetables in sweet and spicy sauce"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Porkbelly Bento",
+    "name": "Porkbelly Bento",
+    "restaurant_id": "60fe473c3894b41c1818b05f",
+    "tags": ["Pork", "Rice"],
+    "price": 21,
+    "item_img": "https://cloudfront.haemukja.com/vh.php?url=https://d1hk7gw6lgygff.cloudfront.net/uploads/direction/image_file/12570/pad_thumb_0_m3.JPG&convert=jpgmin&rt=600",
+    "description": "Pork belly bento box with side dishes and rice"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Donkatsu Pork Bento",
+    "name": "Donkatsu Pork Bento",
+    "restaurant_id": "60fe473c3894b41c1818b05f",
+    "tags": ["Pork", "Rice"],
+    "price": 21,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/data/goods/20/08/33/1000010217/1000010217_magnify_065.jpg",
+    "description": "Donkatsu Pork bento box with side dishes and rice"
+  },
+  {
+    "category_id": "60fd62d7e77e3d1a014acdf0",
+    "kor_name": "Braised Porkbelly",
+    "name": "Braised Porkbelly",
+    "restaurant_id": "60fe473c3894b41c1818b05f",
+    "tags": ["Pork"],
+    "price": 45,
+    "item_img": "https://pbs.twimg.com/media/DlLsvAiVAAAJLIz.jpg",
+    "description": "Braised Porkbelly"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "BiBimBap",
+    "name": "BiBimBap",
+    "restaurant_id": "60fe473c3894b41c1818b05f",
+    "tags": ["Beef", "Rice", "Vegetable"],
+    "price": 15,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/20140217_185/hyleeyan_13925978647849lLmo_JPEG/%B5%B9%BC%DC%BA%F1%BA%F6%B9%E41DSC_0168.JPG?type=w2",
+    "description": "Rice with beef and vegetable"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "MulNaengMyun",
+    "name": "Chilli Buckwheat Noodle Soup",
+    "restaurant_id": "60fe473c3894b41c1818b05f",
+    "tags": ["Noodle", "Buckwheat"],
+    "price": 18,
+    "item_img": "https://images.squarespace-cdn.com/content/v1/5daf93026828611d85cecc7f/1573078157854-3RR6VW7B0Y4XFW0WYL6K/%E1%84%86%E1%85%AE%E1%86%AF%E1%84%82%E1%85%A2%E1%86%BC%E1%84%86%E1%85%A7%E1%86%AB.jpg",
+    "description": "Chili Buckwheat Noodle Soup"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "BiBimNaengMyun",
+    "name": "Spicy Chilled Buckwheat Noodles",
+    "restaurant_id": "60fe473c3894b41c1818b05f",
+    "tags": ["Noodle", "Buckwheat"],
+    "price": 18,
+    "item_img": "https://cdn.clien.net/web/api/file/F01/8424616/12dc86523b16b8.jpg",
+    "description": "Spicy Chilled Buckwheat Noodles"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Jjajangmyeon",
+    "name": "Black bean noodle",
+    "restaurant_id": "60fe476f3894b41c1818b061",
+    "tags": ["Black Bean", "Noodle"],
+    "price": 12,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/20151023_118/blood76_1445574682212iw3tG_JPEG/%BF%BE%B3%AF%C2%A5%C0%E5.jpg?type=w2",
+    "description": "Black Soybean Sauce Noodles"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Jjampong",
+    "name": "Seafood Noodle",
+    "restaurant_id": "60fe476f3894b41c1818b061",
+    "tags": ["Seafood", "Vegetable"],
+    "price": 15,
+    "item_img": "https://img.hankyung.com/photo/201705/01.13924114.1.jpg",
+    "description": "Chinese style with vegetables & seafood noodles"
+  },
+  {
+    "category_id": "60fd61685379eb199c9f178b",
+    "kor_name": "Shrimp Fried rice",
+    "name": "Shrimp Fried rice",
+    "restaurant_id": "60fe476f3894b41c1818b061",
+    "tags": ["Shrimp", "Rice", "Jjajang"],
+    "price": 12,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2015/06/18/58d359a9ac359adbc4c7fa2603f2e504.jpg",
+    "description": "Shrimp fried rice with jjajang sauce"
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Chamisul",
+    "name": "Soju",
+    "restaurant_id": "60fe476f3894b41c1818b061",
+    "tags": ["Soju", "Alcohol"],
+    "price": 18,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/500_50d66eef-a6c6-474d-84c3-9cde63c25c66.jpg?v=1607350958",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "ChumChurum",
+    "name": "Soju",
+    "restaurant_id": "60fe476f3894b41c1818b061",
+    "tags": ["Soju", "Alcohol"],
+    "price": 18,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/405_405.jpg?v=1607350074",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Hite",
+    "name": "Beer",
+    "restaurant_id": "60fe476f3894b41c1818b061",
+    "tags": ["Alcohol", "Beer"],
+    "price": 14,
+    "item_img": "https://leemart.sg/wp-content/uploads/2020/05/Hite-355ml-1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Cass",
+    "name": "Beer",
+    "restaurant_id": "60fe476f3894b41c1818b061",
+    "tags": ["Alcohol", "Beer"],
+    "price": 14,
+    "item_img": "https://dimg.donga.com/wps/NEWS/IMAGE/2020/12/16/104468840.1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Sunduboo Jjigae",
+    "name": "Spicy Silken tofu soup",
+    "restaurant_id": "60fe47a33894b41c1818b063",
+    "tags": ["Tofu", "Mussel", "Prawn", "Clam", "Squid", "Beef"],
+    "price": 18,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxNzA4MjJfOTYg/MDAxNTAzMzc1MjE5Mjg5.ojQVJikF1QbgFJOHm_cUDBVbzMVimWHns6o4NVAIFQkg.MmlqftMFfTioISxHh6cEgMsR0edfsMVRAcKNUQJ_y7Yg.JPEG.whwndud7/%EC%88%9C%EB%91%90%EB%B6%80%EC%B0%8C%EA%B0%9C_01.jpg?type=w2",
+    "description": "Silken tofu, mussel, prawn, clams, squid in spicy beef soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "DoinJangJjiGae",
+    "name": "Bean paste soup",
+    "restaurant_id": "60fe47a33894b41c1818b063",
+    "tags": ["Beef"],
+    "price": 18,
+    "item_img": "http://image.auction.co.kr/itemimage/20/98/cb/2098cb0636.jpg",
+    "description": "Traditional bean paste soup with beef"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Galbi Tang",
+    "name": "Short rib soup",
+    "restaurant_id": "60fe47a33894b41c1818b063",
+    "tags": ["Beef", "Noodle"],
+    "price": 25,
+    "item_img": "https://cdn.imweb.me/thumbnail/20191124/eb26c496b171d.jpg",
+    "description": "Short rib soup, ginseng, ginko, red date, glass noodle"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Dolsot Bibimbab",
+    "name": "Hot Bibimbap",
+    "restaurant_id": "60fe47a33894b41c1818b063",
+    "tags": ["Vegetable", "Rice"],
+    "price": 22,
+    "item_img": "https://cdn.crowdpic.net/list-thumb/thumb_l_A007696FCDB20297F00EE77B0AEEF73F.jpg",
+    "description": "Mixed vegetables on rice served in hot stone bowl"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Yukhoi Bibimbab",
+    "name": "Bibimbap with fresh beef",
+    "restaurant_id": "60fe47a33894b41c1818b063",
+    "tags": ["Vegetable", "Rice", "Beef"],
+    "price": 30,
+    "item_img": "https://mblogthumb-phinf.pstatic.net/MjAxOTEyMjNfNzgg/MDAxNTc3MDU5MDQyNDA3.Mill3Nfi4oOSJRuSEK4PeI9lVaWhlAlqYNVFIG-OOO0g.Z7Bg6UQihHAHHSkuKNYAs7NEENpuOOSun6J0Xdx_BLEg.JPEG.pyask0702/1577059041143.jpg?type=w800",
+    "description": "Mixed vegetables on rice served in hot stone bowl. Topped with seasoned fresh beef and york"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Haemul Kalguksu",
+    "name": "Hand-cut wheat noodle in seafood",
+    "restaurant_id": "60fe47a33894b41c1818b063",
+    "tags": ["Seafood", "Mussel", "Clam", "Prawn", "Noodle"],
+    "price": 19,
+    "item_img": "http://blogs.chosun.com/ohokja1940/wp-content/uploads/sites/59/2020/01/%EC%B9%BC%EA%B5%AD%EC%88%983.jpg",
+    "description": "Hand-cut wheat noodle in seafood soup, mussel, clam, prawn"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "SeolRungTang",
+    "name": "Beef Bone Soup",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Beef"],
+    "price": 18,
+    "item_img": "https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/3QTb/image/zacbnF0O-3LxCP9YmEQPs2CARBE.jpg",
+    "description": "Beef Bone Soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "SamGaeTang",
+    "name": "Ginseng Chicken Soup",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Chicken"],
+    "price": 18,
+    "item_img": "http://www.chuksannews.co.kr/data/photos/20210414/art_16177684990221_d040c6.jpg",
+    "description": "Ginseng Chicken Soup"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Kimchi Jjigae",
+    "name": "Kimchi Stew",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Pork", "Kimchi"],
+    "price": 13,
+    "item_img": "https://www.dailysecu.com/news/photo/202001/100450_114066_1755.jpg",
+    "description": "Kimchi & Pork Soup In Clay Pot"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Sundubu Jjigae",
+    "name": "Spicy Soft Tofu Stew",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Seafood", "Stew", "Rice"],
+    "price": 13,
+    "item_img": "https://sjnfzdfjrjgl1655541.cdn.ntruss.com/goods/3/2019/09/260_tmp_7014533a8452f6f2cb92b80095b8af650018view.jpg",
+    "description": "Seafood stew comes with rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "DoinJangJjiGae",
+    "name": "Soybean Paste Stew",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Soybean", "Stew", "Vegetable", "Seafood"],
+    "price": 13,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2016/12/06/a8010c740a2885fdedcb3c1d8e097b501.jpg",
+    "description": "Soybean Paste Stew with vegetable & seafood"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "HongHabTang",
+    "name": "Mussel Soup",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Mussel", "Seafood"],
+    "price": 30,
+    "item_img": "https://img.mimint.co.kr/food/bbs/2020/12/10/20201210114408_vgdgysbq.jpg",
+    "description": "Mussel Soup for 2 pax"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "BbeHaeJangGuk",
+    "name": "Pork Rib Soup",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Pork", "Rice"],
+    "price": 18,
+    "item_img": "http://img2.tmon.kr/cdn3/deals/2021/06/03/4682254082/front_49275_l08vo.jpg",
+    "description": "Pork Rib Soup with rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Yukgaejang",
+    "name": "Spicy Beef Soup",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Beef", "Rice"],
+    "price": 18,
+    "item_img": "https://pds.joins.com/news/component/htmlphoto_mmdata/201707/22/f0458918-c9c1-449f-9bc2-b22e6beaffb4.jpg",
+    "description": "Spicy Beef Soup with rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "BuDaeJjiGae",
+    "name": "Army Stew",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Stew", "Pork"],
+    "price": 38,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2018/04/24/002c46b34a8814b7d9848fc949eb9e1b1.jpg",
+    "description": "Army stew [2~3 pax]"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "GamJaTang",
+    "name": "Pork Rib Stew",
+    "restaurant_id": "60fe47d33894b41c1818b065",
+    "tags": ["Pork", "Rice"],
+    "price": 20,
+    "item_img": "http://img.danawa.com/prod_img/500000/133/998/img/11998133_1.jpg?shrink=360:360&_v=20210401133041",
+    "description": "Pork Rib Soup with rice"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Nokcha Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Pork"],
+    "price": 22.8,
+    "item_img": "http://image.auction.co.kr/itemimage/1b/f2/a0/1bf2a00956.jpg",
+    "description": "Green tea pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Daepae Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Pork"],
+    "price": 21.8,
+    "item_img": "http://www.fntoday.co.kr/news/photo/201904/2_678671_568152_3353.jpg",
+    "description": "Thin sliced Pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Pork"],
+    "price": 21.8,
+    "item_img": "https://static.wtable.co.kr/image/production/service/recipe/842/0391d07d-1a0e-44d4-8002-20ba5245c1b0.jpg?size=1024x",
+    "description": "Normal cut pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Daeji Kalbi",
+    "name": "Marinated Pork Ribs",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Pork"],
+    "price": 23.8,
+    "item_img": "https://i2.wp.com/chopchopchoi.com/wp-content/uploads/2020/05/garlic-ribs-4643142_640.jpg?fit=640%2C426&ssl=1",
+    "description": "Marinated pork ribs for BBQ"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Yangnyum Dak Gui",
+    "name": "Marinated Chicken",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Chicken"],
+    "price": 23.8,
+    "item_img": "http://th2.tmon.kr/thumbs/image/c1d/87f/8e0/f79156d8d_700x700_95_FIT.jpg",
+    "description": "Marinated chicken for BBQ"
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Chamisul",
+    "name": "Soju",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Soju", "Alcohol"],
+    "price": 18,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/500_50d66eef-a6c6-474d-84c3-9cde63c25c66.jpg?v=1607350958",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "ChumChurum",
+    "name": "Soju",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Soju", "Alcohol"],
+    "price": 18,
+    "item_img": "https://company.lottechilsung.co.kr/common/images/product_view0201_bh2.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Hite",
+    "name": "Beer",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Alcohol", "Beer"],
+    "price": 14,
+    "item_img": "https://leemart.sg/wp-content/uploads/2020/05/Hite-355ml-1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd630ce77e3d1a014acdfe",
+    "kor_name": "Cass",
+    "name": "Beer",
+    "restaurant_id": "60fe480a3894b41c1818b067",
+    "tags": ["Alcohol", "Beer"],
+    "price": 14,
+    "item_img": "https://dimg.donga.com/wps/NEWS/IMAGE/2020/12/16/104468840.1.jpg",
+    "description": null
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Saeng Deung Sim",
+    "name": "Unmarinated Beef Sirloin",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Beef"],
+    "price": 29.8,
+    "item_img": "https://cdn.shopify.com/s/files/1/1071/7482/products/628030627_73f64fd2_B2C9B5EEBDC91.jpg?v=1488207022",
+    "description": "Unmarinated Beef Sirloin for BBQ"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "L.A Kalbi",
+    "name": "Marinated Beef Short Ribs",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Beef"],
+    "price": 29.8,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2015/09/23/789c5a864c767a1cbc718fc50dac81ee1.jpg",
+    "description": "Marinated Beef Short Ribs for BBQ"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Chadol Baegi",
+    "name": "Beef Brisket",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Beef"],
+    "price": 29.8,
+    "item_img": "https://cdn.shopify.com/s/files/1/0114/9252/4091/products/3c4dc4783f0ad4312b56f22993234745.jpg?v=1623147011",
+    "description": "Thin sliced Beef Brisket for BBQ"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "Bulgogi",
+    "name": "Glass noodles with Beef",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Beef", "Noodle", "Vegetable"],
+    "price": 22.8,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2016/12/30/df939769792632a48a0eba8bc895e8601.jpg",
+    "description": "Marinated Beef with vegetables and Glass noodles served in a stone plate"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Nokcha Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Pork"],
+    "price": 22.8,
+    "item_img": "https://m.meattalk.co.kr/web/product/big/201901/292074692b09b0e7e5bcb99c9c95cb4d.jpg",
+    "description": "Green tea pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Daepae Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Pork"],
+    "price": 21.8,
+    "item_img": "http://imagescdn.gettyimagesbank.com/500/201708/jv10918415.jpg",
+    "description": "Thin sliced Pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Samgyeopsal",
+    "name": "Pork Belly",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Pork"],
+    "price": 21.8,
+    "item_img": "https://img.siksinhot.com/seeon/1546499979866179.jpg",
+    "description": "Normal cut pork belly"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Daeji Kalbi",
+    "name": "Marinated Pork Ribs",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Pork"],
+    "price": 23.8,
+    "item_img": "https://www.foodnews.news/data/photos/20201145/art_16043811417854_e4729f.png",
+    "description": "Marinated pork ribs for BBQ"
+  },
+  {
+    "category_id": "60fd62d2e77e3d1a014acdee",
+    "kor_name": "Yangnyum Dak Gui",
+    "name": "Marinated Chicken",
+    "restaurant_id": "60fe483a3894b41c1818b069",
+    "tags": ["Chicken"],
+    "price": 23.8,
+    "item_img": "https://sjnfzdfjrjgl1655541.cdn.ntruss.com/goods/3/2020/08/481_tmp_bee21a85961b81ffaac02baefef175012918view.jpg",
+    "description": "Marinated chicken for BBQ"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "BiBimBap",
+    "name": "BiBimBap",
+    "restaurant_id": "60fe48a63894b41c1818b06b",
+    "tags": ["Beef", "Rice", "Vegetable"],
+    "price": 10,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2018/10/03/355b5cd5c3beb1a775c82ee425dcd1931.jpg",
+    "description": "Rice with beef and vegetable"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "MulNaengMyun",
+    "name": "Chilli Buckwheat Noodle Soup",
+    "restaurant_id": "60fe48a63894b41c1818b06b",
+    "tags": ["Noodle", "Buckwheat"],
+    "price": 9,
+    "item_img": "http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1170/S1555404786098.jpg",
+    "description": "Chili Buckwheat Noodle Soup"
+  },
+  {
+    "category_id": "60fd62f5e77e3d1a014acdf8",
+    "kor_name": "BiBimNaengMyun",
+    "name": "Spicy Chilled Buckwheat Noodles",
+    "restaurant_id": "60fe48a63894b41c1818b06b",
+    "tags": ["Noodle", "Buckwheat"],
+    "price": 8,
+    "item_img": "https://www.yorivery.com/data/goods/20/07/30//1000000905/1000000905_detail_388.jpg",
+    "description": "Spicy Chilled Buckwheat Noodles"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "Sundubu Jjigae",
+    "name": "Spicy Soft Tofu Stew",
+    "restaurant_id": "60fe48a63894b41c1818b06b",
+    "tags": ["Seafood", "Stew", "Rice"],
+    "price": 10,
+    "item_img": "https://moashop.com.au/wp-content/uploads/2019/09/bu-39.jpg",
+    "description": "Seafood stew comes with rice"
+  },
+  {
+    "category_id": "60fd62ece77e3d1a014acdf6",
+    "kor_name": "DoinJangJjiGae",
+    "name": "Soybean Paste Stew",
+    "restaurant_id": "60fe48a63894b41c1818b06b",
+    "tags": ["Soybean", "Stew", "Vegetable", "Seafood"],
+    "price": 8,
+    "item_img": "https://recipe1.ezmember.co.kr/cache/recipe/2017/04/26/ddd495fd432955701068e1a21a0d33211.jpg",
+    "description": "Soybean Paste Stew with vegetable & seafood"
+  }
+]
