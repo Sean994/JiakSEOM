@@ -1,3 +1,6 @@
+import LandingIntroText from './LandingIntroText.jsx';
+import LandingFAQ from './LandingFAQ.jsx';
+
 const Landing = (props) => {
 
     return (
@@ -15,6 +18,8 @@ const Landing = (props) => {
                 type="submit" 
                 value="Delivery"/>
             </form>
+            <LandingIntroText />
+            <LandingFAQ />
         </div>
     )
 }
