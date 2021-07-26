@@ -7,18 +7,27 @@ exports.getRestaurantsPerCategory = async (req, res, next) => {
     const category = await Category.findById(id).select('-__v -slug');
     const restaurants = await MenuItem.aggregate([
       { $match: { category_id: category._id } },
-      { $project: { restaurantObjId: { $toObjectId: '$restaurant_id' } } },
-      { $group: { _id: '$restaurantObjId', numMenuItems: { $sum: 1 } } },
+      { $group: { _id: '$restaurant_id', numMenuItems: { $sum: 1 } } },
       {
         $lookup: {
           from: 'restaurants',
-          localField: 'restaurantObjId',
-          foreignField: '_id.str',
+          let: { rid: { $toObjectId: '$_id' } },
+          pipeline: [
+            {
+              $project: {
+                _id: 1,
+                name: '$name',
+                discount_rate: '$discount_rate',
+                image_cover: '$image_cover',
+                preparation_time: '$preparation_time',
+                ratingAverage: '$ratingAverage',
+                ratingQuantity: '$ratingQuantity',
+              },
+            },
+            { $match: { $expr: { $eq: ['$_id', '$$rid'] } } },
+          ],
           as: 'restaurant',
         },
-      },
-      {
-        $unwind: '$restaurant',
       },
     ]);
 
