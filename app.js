@@ -7,7 +7,7 @@ const morgan = require('morgan');
 
 // ROUTERS
 const categoryRouter = require('./routes/categoryRoute');
-
+const userRouter = require('./routes/userRoute')
 const app = express();
 
 // MIDDLEWARE
@@ -19,7 +19,7 @@ app.use(express.static(`${__dirname}/public`));
 // app.get('/', (req, res) => {
 //   res.send('hi');
 // });
-
+app.use('/api/v1/user', userRouter)
 app.use('/api/v1/categories', categoryRouter);
 
 app.all('*', (req, res) =>
