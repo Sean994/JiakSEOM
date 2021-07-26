@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import './styles/style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/0_NavBar';
 import Landing from './components/1_landing/Landing';
 import SignIn from './components/2_user/SignIn';
