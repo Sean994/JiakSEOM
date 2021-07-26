@@ -1,32 +1,36 @@
-#    User
+# 👦🏻 User
 
-## GET /api/v1/user
+## <strong>GET</strong> /api/v1/user
 
-Get the list of all the users
+- Get the list of all the users
 
-## POST /api/v1/user
+## <strong>POST</strong> /api/v1/user
 
-Add new user
+- Add new user
 
-| field	| data_type  | required  	|  unique 	|   |
-|---	|---	|---	|---	|---	|
-|  first_name 	|  String 	| -  	|   -	|   	
-|  last_name 	|  String 	| -	|   -	| 	|
-|   contact	|  Number 	|  true 	|   true	|   
-|  email	|  String 	| true  	|   true	|   
-|   username	|  String 	| true	| true  	|   	|
-|   password	|  String 	|  true 	|   -	|
-|  address 	|  String 	| true	| -  	|   	|
-|   postal_code	|  Number 	|  true 	|   -	|   	|   
-|   birthday	|  String 	|  - 	|   -	|   	|   
+| field       | data_type | required | unique |     |
+| ----------- | --------- | -------- | ------ | --- |
+| first_name  | String    | -        | -      |
+| last_name   | String    | -        | -      |     |
+| contact     | Number    | true     | true   |
+| email       | String    | true     | true   |
+| username    | String    | true     | true   |     |
+| password    | String    | true     | -      |
+| address     | String    | true     | -      |     |
+| postal_code | Number    | true     | -      |     |
+| birthday    | String    | -        | -      |     |
 
-## PUT /api/v1/user/:id
+<br>
 
-Update the user based on user_id
+## <strong>PUT</strong> /api/v1/user/{user_id}
 
-## DELETE /api/v1/user/:id
+- Update the user based on user_id
 
-Delete the user based on user_id
+## <strong>DELETE</strong> /api/v1/user/{user_id}
+
+- Delete the user based on user_id
+
+  <br>
 
 # 🍿 Restaurants
 
@@ -38,6 +42,7 @@ Delete the user based on user_id
 
 - Get the resaurant's detail by id
 
+<br>
 <br>
 
 # 🍉 Categories
@@ -174,6 +179,7 @@ Delete the user based on user_id
 
 </details>
 
+<br>
 <br>
 
 # 🍺 Menu-Items
