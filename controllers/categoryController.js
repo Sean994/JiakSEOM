@@ -1,4 +1,62 @@
 const Category = require('../models/categoryModel');
+const MenuItem = require('../models/menuItemModel');
+
+exports.getRestaurantsPerCategory = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const category = await Category.findById(id).select('-__v -slug');
+    const restaurants = await MenuItem.aggregate([
+      { $match: { category_id: category._id } },
+      { $project: { restaurantObjId: { $toObjectId: '$restaurant_id' } } },
+      { $group: { _id: '$restaurantObjId', numMenuItems: { $sum: 1 } } },
+      {
+        $lookup: {
+          from: 'restaurants',
+          localField: 'restaurantObjId',
+          foreignField: '_id.str',
+          as: 'restaurant',
+        },
+      },
+      {
+        $unwind: '$restaurant',
+      },
+    ]);
+
+    res.status(200).json({
+      status: 'success',
+      category,
+      restaurants,
+      total_results: restaurants.length,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      error: err.message,
+    });
+  }
+};
+
+exports.getMenuItemsPerCategory = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const menuItems = await MenuItem.find({ category_id: id }).select(
+      '-__v -category_id -tags'
+    );
+    const category = await Category.findById(id).select('-__v -slug');
+
+    res.status(200).json({
+      status: 'success',
+      category,
+      menuItems,
+      total_results: menuItems.length,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      error: err.message,
+    });
+  }
+};
 
 exports.getAllCategories = async (req, res, next) => {
   try {
