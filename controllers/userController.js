@@ -50,7 +50,7 @@ exports.updateUser = async (req, res, next) => {
         if (error){
           console.log(error)
         } else {
-          res.status(200).send(updatedUser)
+          res.status(200).json(updatedUser)
         }
       }
     )
