@@ -6,7 +6,7 @@ exports.getAllUser = async (req, res, next) => {
     try {
       const Users = await User.find();
   
-      res.status(201).json({
+      res.status(200).json({
         status: 'success',
         data: {
           Users,
@@ -16,7 +16,7 @@ exports.getAllUser = async (req, res, next) => {
       console.log(`api, ${err}`);
       res.status(500).json({
         status: 'fail',
-        error: err,
+        error : `Can't find all User data`
       });
     }
   };
@@ -36,7 +36,7 @@ exports.createUser = async (req, res, next) => {
       console.log(`api, ${err}`);
       res.status(500).json({
         status: 'fail',
-        error: err,
+        error: "Unable to create User/ bcrypt failure in hashing"
       });
     }
   };
