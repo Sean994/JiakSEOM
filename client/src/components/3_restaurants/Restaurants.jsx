@@ -8,7 +8,7 @@ const restaurantArray = ["Jeju", "Seoul", "Busan", "Daegu"]
             <h1> List of Restaurants</h1>
             <ul>
             {restaurantArray.map( (element,index) => (
-                <Link key={element} to={`/restaurants/id/${element}`}>
+                <Link key={element} to={`/restaurants/${element}`}>
                     <li key={element}
                     onClick={()=>clickHandle(element)}>
                         {element} -

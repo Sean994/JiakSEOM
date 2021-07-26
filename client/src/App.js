@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import './styles/style.css'
 import NavBar from './components/0_NavBar';
 import Landing from './components/1_landing/Landing';
@@ -18,27 +18,29 @@ function App() {
     <div className="App">
       <NavBar />
       <main>
-        <Route exact path="/">
-            <Redirect to="/landing" />
-        </Route>
-        <Route path="/landing">
-          <Landing/>
-        </Route>
-        <Route path="/user/signin">
-          <SignIn/>
-        </Route>
-        <Route path="/user/signup">
-          <SignUp/>
-        </Route>
-        <Route path="/restaurants/all">
-          <Restaurants clickHandle={restLiClick}/>
-        </Route>
-        <Route path="/restaurants/id">
-          <RestaurantID rest={rest}/>
-        </Route>
-        <Route path="/checkout">
-          
-        </Route>
+        <Switch>
+          <Route exact path="/">
+              <Redirect to="/landing" />
+          </Route>
+          <Route path="/landing">
+            <Landing/>
+          </Route>
+          <Route path="/user/signin">
+            <SignIn/>
+          </Route>
+          <Route path="/user/signup">
+            <SignUp/>
+          </Route>
+          <Route exact path="/restaurants/all">
+            <Restaurants clickHandle={restLiClick}/>
+          </Route>
+          <Route path="/restaurants/:id">
+            <RestaurantID rest={rest}/>
+          </Route>
+          <Route path="/checkout">
+            
+          </Route>
+        </Switch>
       </main>
     </div>
   );
