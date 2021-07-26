@@ -42,24 +42,39 @@ exports.createUser = async (req, res, next) => {
   };
 exports.updateUser = async (req, res, next) => {
   try {
-    User.findByIdAndUpdate(
+      await User.findByIdAndUpdate(
       req.params.id,
       req.body,
       {new : true},
-      (error, updatedUser) => {
-        if (error){
-          console.log(error)
-        } else {
-          res.status(200).json(updatedUser)
-        }
-      }
     )
+    res.status(200).json({
+      status : 'success',
+      User,
+    })
   } 
   catch (error) {
     console.log(`api, ${error}`)
     res.status(500).json({
       status : 'fail',
       error : `Can't update user`,
+    })
+  }
+}
+exports.deleteUser = async (req, res, next) => {
+  try {
+    await User.findByIdAndDelete(
+      req.params.id,
+    )
+    res.status(202).json({
+      status : 'success',
+      data : null,
+    })
+  }
+  catch (error) {
+    console.log(`api, ${error}`)
+    res.status(500).json({
+      status : 'fail',
+      error : `Can't delete user`
     })
   }
 }

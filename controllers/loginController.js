@@ -10,7 +10,7 @@ exports.login = async (req, res) => {
         } else if (!foundUser) {
             res.status(400).json("no found user!")
         } else {
-            if (bcrypt.compare(req.body.password, foundUser.password)){
+            if (bcrypt.compareSync(req.body.password, foundUser.password)){
                 req.session.currentUser = foundUser
                 console.log(foundUser)
                 res.status(200).json("logged in!")

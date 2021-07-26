@@ -1,3 +1,33 @@
+#    User
+
+## GET /api/v1/user
+
+Get the list of all the users
+
+## POST /api/v1/user
+
+Add new user
+
+| field	| data_type  | required  	|  unique 	|   |
+|---	|---	|---	|---	|---	|
+|  first_name 	|  String 	| -  	|   -	|   	
+|  last_name 	|  String 	| -	|   -	| 	|
+|   contact	|  Number 	|  true 	|   true	|   
+|  email	|  String 	| true  	|   true	|   
+|   username	|  String 	| true	| true  	|   	|
+|   password	|  String 	|  true 	|   -	|
+|  address 	|  String 	| true	| -  	|   	|
+|   postal_code	|  Number 	|  true 	|   -	|   	|   
+|   birthday	|  String 	|  - 	|   -	|   	|   
+
+## PUT /api/v1/user/:id
+
+Update the user based on user_id
+
+## DELETE /api/v1/user/:id
+
+Delete the user based on user_id
+
 # 🍿 Restaurants
 
 ## GET /api/v1/restaurants
@@ -6,7 +36,7 @@ Get the list of restaurants
 
 ## GET /api/v1/restaurants/:id
 
-Get the resaurant by id
+Get the restaurant by id
 
 ---
 
