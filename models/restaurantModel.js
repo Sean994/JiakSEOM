@@ -11,16 +11,25 @@ const restaurantSchema = new mongoose.Schema({
     required: [true, 'Restaurant must have a name'],
   },
   slug: String,
-  coordinates: [Number],
-  address: {
-    type: String,
-    required: [true, 'Restaurant must have an address'],
+  location: {
+    type: {
+      type: String,
+      enum: ['Point'],
+      required: true,
+    },
+    coordinates: {
+      type: [Number],
+      required: true,
+    },
+    address: {
+      type: String,
+      required: [true, 'Restaurant must have an address'],
+    },
+    postal_code: {
+      type: String,
+      required: [true, 'Restarant must have a postal code'],
+    },
   },
-  postal_code: {
-    type: String,
-    required: [true, 'Restarant must have a postal code'],
-  },
-
   ratingAverage: {
     type: Number,
     default: 0,
