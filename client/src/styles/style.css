@@ -1,0 +1,23 @@
+.NavBar {
+    display: flex;
+    justify-content: space-evenly;
+    background:grey;
+    height: 50px;
+}
+
+.NavBar div {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    border-left: 2px solid black;
+    padding: 0 20px;
+}
+img{
+    height: 32px;
+    margin: 5px 5px px 0;
+}
+
+.postalCode{
+    width: 250px;
+}
