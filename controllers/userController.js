@@ -40,3 +40,26 @@ exports.createUser = async (req, res, next) => {
       });
     }
   };
+exports.updateUser = async (req, res, next) => {
+  try {
+    User.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {new : true},
+      (error, updatedUser) => {
+        if (error){
+          console.log(error)
+        } else {
+          res.status(200).json(updatedUser)
+        }
+      }
+    )
+  } 
+  catch (error) {
+    console.log(`api, ${error}`)
+    res.status(500).json({
+      status : 'fail',
+      error : `Can't update user`,
+    })
+  }
+}
