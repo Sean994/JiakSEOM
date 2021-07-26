@@ -11,7 +11,13 @@ exports.getAllCategories = async (req, res, next) => {
       },
       total_results: categories.length,
     });
-  } catch (err) {}
+  } catch (err) {
+    console.log(`api, ${err}`);
+    res.status(500).json({
+      status: 'fail',
+      error: err,
+    });
+  }
 };
 
 exports.createCategory = async (req, res, next) => {

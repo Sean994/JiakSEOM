@@ -7,6 +7,7 @@ const morgan = require('morgan');
 
 // ROUTERS
 const categoryRouter = require('./routes/categoryRoute');
+const restaurantRouter = require('./routes/restaurantRoute');
 
 const app = express();
 
@@ -20,7 +21,9 @@ app.use(express.static(`${__dirname}/public`));
 //   res.send('hi');
 // });
 
+// Routes
 app.use('/api/v1/categories', categoryRouter);
+app.use('/api/v1/restaurants', restaurantRouter);
 
 app.all('*', (req, res) =>
   res
