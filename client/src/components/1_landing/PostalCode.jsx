@@ -67,31 +67,44 @@ const PostalCode = (props) => {
   }, [postal, setAddress]);
 
   return (
-    <div>
-      <Container>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="align-items-center">
-            <Form.Label>Postal Code:</Form.Label>
-            <Form.Control type="text" value={postal} onChange={handleChange} />
-            <br />
-            <Button variant="primary" size="lg" type="submit">
+    <Container className="my-4 py-4 mx-auto shadow mb-5 bg-body rounded-2">
+      <Form
+        onSubmit={handleSubmit}
+        className="justify-content-center align-items-center"
+      >
+        <div className="row g-0 px-2">
+          <div className="col-sm-6 col-md-9  ">
+            {/* <Form.Label>Postal Code:</Form.Label> */}
+            <Form.Control
+              size="lg"
+              type="text"
+              value={postal}
+              onChange={handleChange}
+              placeholder="Postal Code"
+              className="rounded-0"
+            />
+          </div>
+          <div className="col-6 col-md-3 d-flex justify-content-center align-items-center ">
+            <Button
+              variant="primary"
+              type="submit"
+              className="btn-lg rounded-0"
+            >
               Delivery
             </Button>
+
             <Button
-              variant="secondary"
-              size="lg"
+              variant="warning"
               type="button"
               onClick={locateUser}
+              className="rounded-0 btn-lg"
             >
               Locate Me
             </Button>
-          </Form.Group>
-        </Form>
-        <br />
-        Your postal code is: {postal}. Your address is: {address}.
-      </Container>
-      <br />
-    </div>
+          </div>
+        </div>
+      </Form>
+    </Container>
   );
 };
 
