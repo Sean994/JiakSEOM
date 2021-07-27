@@ -7,9 +7,8 @@ const Landing = (props) => {
 
     return (
         <div>
-            Landing page
-            <PostalCode />
             <LandingIntroText />
+            <PostalCode />
             <LandingFAQ />
         </div>
     )
