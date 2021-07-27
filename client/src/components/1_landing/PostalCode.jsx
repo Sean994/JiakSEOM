@@ -2,10 +2,10 @@
 // Gordon Chia, 27 July 2021
 
 import { useEffect } from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Button, Container, Form } from 'react-bootstrap';
 
 const PostalCode = (props) => {
-  const {postal, setPostal, address, setAddress} = props
+  const { postal, setPostal, address, setAddress } = props;
 
   const handleChange = (event) => {
     setAddress('Checking Address..');
@@ -64,7 +64,7 @@ const PostalCode = (props) => {
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [postal]);
+  }, [postal, setAddress]);
 
   return (
     <div>
@@ -74,17 +74,17 @@ const PostalCode = (props) => {
             <Form.Label>Postal Code:</Form.Label>
             <Form.Control type="text" value={postal} onChange={handleChange} />
             <br />
-              <Button variant="primary" size="lg" type="submit">
-                Delivery
-              </Button>
-              <Button
-                variant="secondary"
-                size="lg"
-                type="button"
-                onClick={locateUser}
-              >
-                Locate Me
-              </Button>
+            <Button variant="primary" size="lg" type="submit">
+              Delivery
+            </Button>
+            <Button
+              variant="secondary"
+              size="lg"
+              type="button"
+              onClick={locateUser}
+            >
+              Locate Me
+            </Button>
           </Form.Group>
         </Form>
         <br />
