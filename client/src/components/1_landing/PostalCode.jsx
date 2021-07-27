@@ -1,14 +1,14 @@
 // This component checks a postal code against an API, and presents an input form to the user.
 // Gordon Chia, 27 July 2021
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 
 const PostalCode = (props) => {
   const {postal, setPostal, address, setAddress} = props
 
   const handleChange = (event) => {
-    setAddress('checking postal code...');
+    setAddress('Checking Address..');
     setPostal(event.target.value);
   };
 
@@ -44,7 +44,7 @@ const PostalCode = (props) => {
         console.log(values);
         if (values?.items?.[0]?.title === undefined) {
           console.log('address is wrong');
-          setAddress('Postal code not found. Please try again.');
+          setAddress('Incorrect Postal Code');
         } else {
           setAddress(values.items[0].title);
         }

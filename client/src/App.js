@@ -14,7 +14,7 @@ function App() {
   const [rest, setRest] = useState("")
   const [name, setName] = useState("")
   const [postal, setPostal] = useState()
-  const [address, setAddress] = useState()
+  const [address, setAddress] = useState("")
 
   useEffect(() => {
     axios.get("/user/signin")
