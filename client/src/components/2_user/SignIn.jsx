@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 const axios = require('axios').default;
 
 const SignIn = (props) => {
+  let history = useHistory()
+  const {setName}=props
+
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.post('/user/signin', {
@@ -9,14 +13,15 @@ const SignIn = (props) => {
         password: event.target.password.value,
       })
       .then(function (response) {
-        console.log(response);
+        console.log(response.data);
+        if(response.data === "logged in!"){ 
+        setName(response.data.username)          
+        history.push("/restaurants/all")
+        }
       })
       .catch(function (error) {
         console.log(error);
       });
-    console.log(event.target.username.value);
-    console.log(event.target.password.value);
-  
 };
 
   return (
