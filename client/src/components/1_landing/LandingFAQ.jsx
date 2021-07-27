@@ -1,7 +1,7 @@
 // This file holds the FAQ, in a react-bootstrap Accordion component. It is to be imported into Landing.jsx
 // Gordon Chia, 26 July 2021
 
-import { Accordion, Container } from 'react-bootstrap';
+import { Accordion } from 'react-bootstrap';
 
 const LandingFAQ = () => {
   return (
