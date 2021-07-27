@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 const NavBar = (props) => {
   const axios = require('axios').default;
-  const {name, setName} = props
+  const {name, setName, address} = props
 
   const logOut = () => {
     axios.delete('/user/signin',{})
@@ -26,7 +26,8 @@ const NavBar = (props) => {
               <Nav.Link>Browse all restaurants</Nav.Link>
             </LinkContainer>
             </Nav>
-            {name==="" || <h1>"Welcome", {name} </h1>}
+            {address==="" || <h6>Delivering to: {address?.substring(0, address.length - 11)}</h6>}
+            {name==="" || <h4>Welcome, {name} </h4>}
             <Nav>
             {(name==="") ? 
             <LinkContainer to="/user/signin" align="right">

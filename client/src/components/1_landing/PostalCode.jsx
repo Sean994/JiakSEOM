@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 
 const PostalCode = (props) => {
-  const [postal, setPostal] = useState('');
-  const [address, setAddress] = useState('');
+  const {postal, setPostal, address, setAddress} = props
 
   const handleChange = (event) => {
     setAddress('checking postal code...');

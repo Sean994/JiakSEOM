@@ -1,17 +1,18 @@
 import { useState , useEffect } from "react";
 import { Link } from "react-router-dom"
+import CategoryRes from "./CategoryRes";
 const axios = require('axios').default;
 
 const Restaurants = (props) => {
     const {clickHandle} = props
-    const [category, setCategory] = useState([])
+    const [categoryList, setCategoryList] = useState([])
     const restaurantArray = ["Jeju", "Seoul", "Busan", "Daegu"]
 
     useEffect(()=>{
         axios.get('/api/v1/categories', {
         })
         .then(function (response) {
-          setCategory(response.data.data.categories)
+          setCategoryList(response.data.data.categories)
         })
         .catch(function (error) {
           console.log(error);
@@ -32,9 +33,9 @@ const Restaurants = (props) => {
                     </Link>
                 ))}
             </ul>
-            <div>
-                {category.map((element,index) => (
-                    <p key={index}>{element.category_name}</p>   
+            <div className="categoryList">
+                {categoryList.map((element,index) => (
+                    <CategoryRes keyid={index} catName={element.category_name}/> 
                 ))}
             </div>
         </div>
