@@ -11,9 +11,7 @@ const Restaurants = (props) => {
         axios.get('/api/v1/categories', {
         })
         .then(function (response) {
-          console.log(response)
           setCategory(response.data.data.categories)
-          console.log(category)
         })
         .catch(function (error) {
           console.log(error);
@@ -36,7 +34,7 @@ const Restaurants = (props) => {
             </ul>
             <div>
                 {category.map((element,index) => (
-                    <p>{element.category_name}</p>   
+                    <p key={index}>{element.category_name}</p>   
                 ))}
             </div>
         </div>

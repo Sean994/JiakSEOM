@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Route, Redirect, Switch } from "react-router-dom";
+import { useState , useEffect } from "react";
+import { Route, Redirect, Switch} from "react-router-dom";
 import './styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/0_NavBar';
@@ -8,16 +8,30 @@ import SignIn from './components/2_user/SignIn';
 import SignUp from './components/2_user/SignUp';
 import Restaurants from './components/3_restaurants/Restaurants';
 import RestaurantID from './components/3_restaurants/RestaurantID';
-
+import axios from "axios";
 function App() {
   const [rest, setRest] = useState("")
+  const [name, setName] = useState("")
+
+  useEffect(() => {
+    axios.get("/user/signin")
+    .then(res => {
+      console.log(res) 
+      if(res.data.username){
+        console.log("User found:", res.data.username)
+        setName(res.data.username)
+      }
+    })  
+});
+
+
   const restLiClick = (i) => {
     console.log('hey', i)
     setRest(i)
   }
   return (
     <div className="App">
-      <NavBar />
+      <NavBar name={name} setName={setName} />
       <main>
         <Switch>
           <Route exact path="/">
@@ -27,7 +41,7 @@ function App() {
             <Landing/>
           </Route>
           <Route path="/user/signin">
-            <SignIn/>
+            <SignIn setName={setName}/>
           </Route>
           <Route path="/user/signup">
             <SignUp/>
@@ -42,6 +56,7 @@ function App() {
             
           </Route>
         </Switch>
+
       </main>
     </div>
   );
