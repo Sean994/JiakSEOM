@@ -1,8 +1,47 @@
 const Restaurant = require('../models/restaurantModel');
+//const MenuItem = require('../models/menuItemModel');
+const RestaurantFilter = require('../utils/restaurantFilter');
+//const { sortBy } = require('../utils/restaurantFilter');
 
 exports.getAllRestaurants = async (req, res, next) => {
   try {
-    const restaurants = await Restaurant.find();
+    console.log('req.query: ', req.query);
+
+    const data = new RestaurantFilter(Restaurant.find(), req.query)
+      .sortBy()
+      .giveOffers()
+      .populateMenu();
+
+    // const restaurants = await Restaurant.find();
+    let restaurants = await data.query;
+    if (req.query.category) {
+      const categoryArr = req.query.category.split(',');
+      restaurants = restaurants
+        .filter((restaurant) => {
+          restaurant.menuItems.forEach((item) => {
+            if (item.category_id.toString().indexOf(categoryArr) !== -1) {
+              console.log(item);
+              restaurant.hasCategory = true;
+            }
+          });
+
+          return restaurant.hasCategory === true;
+        })
+        .map((restaurant) => {
+          const restaurantObj = {
+            _id: restaurant._id,
+            kor_name: restaurant.kor_name,
+            name: restaurant.name,
+            location: restaurant.location,
+            ratingAverage: restaurant.ratingAverage,
+            ratingQuantity: restaurant.ratingQuantity,
+            preparation_time: restaurant.preparation_time,
+            image_cover: restaurant.image_cover,
+            slug: restaurant.slug,
+          };
+          return restaurantObj;
+        });
+    }
 
     res.status(200).json({
       status: 'success',
@@ -12,9 +51,10 @@ exports.getAllRestaurants = async (req, res, next) => {
       total_results: restaurants.length,
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json({
       status: 'fail',
-      error: err,
+      error: err.message,
     });
   }
 };

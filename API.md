@@ -36,7 +36,70 @@
 
 ## <strong>GET</strong> /api/v1/restaurants
 
-- Get the list of restaurants
+- Get the list of restaurants (if no querystring, you will get all )
+- Query String
+
+| Query string | type   | value         |     |     |
+| ------------ | ------ | ------------- | --- | --- |
+| sort_by      | string | top-rated     |     |     |
+|              |        | fast-delivery |     |     |
+|              |        |               |     |     |
+| offers       | string | free-delivery |     |     |
+|              |        | has-discount  |     |     |
+|              |        |               |     |     |
+| category     | string | category_id   |     |     |
+
+ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast-delivery&category_id=60fd62fce77e3d1a014acdfa
+
+<details>
+<summary>Example</summary>
+
+```json
+{
+  "status": "success",
+  "data": {
+    "restaurants": [
+      {
+        "_id": "60fe45dc3894b41c1818b052",
+        "kor_name": "눈사람",
+        "name": "Nunsaram Korean Dessert Cafe",
+        "location": {
+          "coordinates": [1.3360772207655727, 103.74262653835285],
+          "type": "Point",
+          "address": "#04-37, 3 Gateway Dr, K4 Westgate, Singapore ",
+          "postal_code": "608532"
+        },
+        "ratingAverage": 4.6,
+        "ratingQuantity": 25,
+        "preparation_time": 20,
+        "image_cover": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+        "slug": "nunsaram-korean-dessert-cafe"
+      },
+      {
+        "_id": "60fe45a93894b41c1818b050",
+        "kor_name": "아이스 랩",
+        "name": "Ice Lab",
+        "location": {
+          "coordinates": [1.302175584803254, 103.85554589973295],
+          "type": "Point",
+          "address": "164 Rochor Rd, Bugis Village, Singapore ",
+          "postal_code": "188439"
+        },
+        "ratingAverage": 4.2,
+        "ratingQuantity": 46,
+        "preparation_time": 20,
+        "image_cover": "https://images.unsplash.com/photo-1595275320712-24b6f2b0a984?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+        "slug": "ice-lab"
+      }
+    ]
+  },
+  "total_results": 2
+}
+```
+
+</details>
+
+<br>
 
 ## <strong>GET</strong> /api/v1/restaurants/{restaurant_id}
 
