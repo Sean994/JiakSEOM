@@ -1,12 +1,12 @@
 // const jwt = require("jsonwebtoken")
-const User = require("../models/userModel")
-const bcrypt = require("bcrypt")
+const bcrypt = require('bcrypt');
+const User = require('../models/userModel');
 
 exports.getAllUser = async (req, res, next) => {
     try {
       const Users = await User.find();
   
-      res.status(201).json({
+      res.status(200).json({
         status: 'success',
         data: {
           Users,
@@ -16,7 +16,7 @@ exports.getAllUser = async (req, res, next) => {
       console.log(`api, ${err}`);
       res.status(500).json({
         status: 'fail',
-        error: err,
+        error : `Can't find all User data`
       });
     }
   };
@@ -36,7 +36,45 @@ exports.createUser = async (req, res, next) => {
       console.log(`api, ${err}`);
       res.status(500).json({
         status: 'fail',
-        error: err,
+        error: "Unable to create User/ bcrypt failure in hashing"
       });
     }
   };
+exports.updateUser = async (req, res, next) => {
+  try {
+      await User.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {new : true},
+    )
+    res.status(200).json({
+      status : 'success',
+      User,
+    })
+  } 
+  catch (error) {
+    console.log(`api, ${error}`)
+    res.status(500).json({
+      status : 'fail',
+      error : `Can't update user`,
+    })
+  }
+}
+exports.deleteUser = async (req, res, next) => {
+  try {
+    await User.findByIdAndDelete(
+      req.params.id,
+    )
+    res.status(202).json({
+      status : 'success',
+      data : null,
+    })
+  }
+  catch (error) {
+    console.log(`api, ${error}`)
+    res.status(500).json({
+      status : 'fail',
+      error : `Can't delete user`
+    })
+  }
+}

@@ -19,20 +19,20 @@ const Restaurants = (props) => {
           console.log(error);
         })
     },[])
-
+  
     return (
         <div>
             <h1> List of Restaurants</h1>
             <ul>
-            {restaurantArray.map( (element,index) => (
-                <Link key={element} to={`/restaurants/${element}`}>
-                    <li key={element}
-                    onClick={()=>clickHandle(element)}>
-                        {element} -
-                        index {index}
-                </li>
-                </Link>
-            ))}
+                {restaurantArray.map((element, index) => (
+                    <Link key={element} to={`/restaurants/${element}`}>
+                        <li key={element}
+                            onClick={() => clickHandle(element)}>
+                            {element} -
+                            index {index}
+                        </li>
+                    </Link>
+                ))}
             </ul>
             <div>
                 {category.map((element,index) => (
