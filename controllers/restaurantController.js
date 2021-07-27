@@ -1,12 +1,11 @@
 const Restaurant = require('../models/restaurantModel');
-//const MenuItem = require('../models/menuItemModel');
+
 const RestaurantFilter = require('../utils/restaurantFilter');
-//const { sortBy } = require('../utils/restaurantFilter');
+const BaseError = require('../utils/BaseError');
+const httpStatusCodes = require('../utils/httpStatusCodes');
 
 exports.getAllRestaurants = async (req, res, next) => {
   try {
-    console.log('req.query: ', req.query);
-
     const data = new RestaurantFilter(Restaurant.find(), req.query)
       .sortBy()
       .giveOffers()
@@ -43,6 +42,10 @@ exports.getAllRestaurants = async (req, res, next) => {
         });
     }
 
+    if (restaurants.length === 0) {
+      throw new Error('No results found ');
+    }
+
     res.status(200).json({
       status: 'success',
       data: {
@@ -51,11 +54,7 @@ exports.getAllRestaurants = async (req, res, next) => {
       total_results: restaurants.length,
     });
   } catch (err) {
-    console.log(err);
-    res.status(400).json({
-      status: 'fail',
-      error: err.message,
-    });
+    next(new BaseError(err.name, httpStatusCodes.NOT_FOUND, err.message));
   }
 };
 
@@ -69,11 +68,7 @@ exports.createRestaurant = async (req, res, next) => {
       },
     });
   } catch (err) {
-    console.log(err);
-    res.status(400).json({
-      status: 'fail',
-      error: err,
-    });
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
 
@@ -82,16 +77,22 @@ exports.getRestaurant = async (req, res, next) => {
     const restaurant = await Restaurant.findById(req.params.id).populate(
       'menuItems'
     );
-    res.status(201).json({
+
+    if (!restaurant) {
+      throw new Error(
+        `Sorry, there is no restaurant with this id: ${req.params.id}`
+      );
+    }
+
+    res.status(200).json({
       status: 'success',
       restaurant,
     });
   } catch (err) {
-    console.log(err);
-    res.status(400).json({
-      status: 'fail',
-      error: err,
-    });
+    if (err.name === 'CastError') {
+      err.message = `Restaurant with id: ${req.params.id} not found`;
+    }
+    next(new BaseError(err.name, httpStatusCodes.NOT_FOUND, err.message));
   }
 };
 
@@ -110,11 +111,11 @@ exports.updateRestaurant = async (req, res, next) => {
       restaurant,
     });
   } catch (err) {
-    console.log(err);
-    res.status(400).json({
-      status: 'fail',
-      error: err,
-    });
+    if (err.name === 'CastError') {
+      err.message = `Restaurant with id: ${req.params.id} not found`;
+      next(new BaseError(err.name, httpStatusCodes.NOT_FOUND, err.message));
+    }
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
 
@@ -126,10 +127,6 @@ exports.deleteRestaurant = async (req, res, next) => {
       data: null,
     });
   } catch (err) {
-    console.log(err);
-    res.status(400).json({
-      status: 'fail',
-      error: err,
-    });
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
