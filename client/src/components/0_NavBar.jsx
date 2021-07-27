@@ -26,8 +26,8 @@ const NavBar = (props) => {
               <Nav.Link>Browse all restaurants</Nav.Link>
             </LinkContainer>
             </Nav>
-            {address==="" || <h6>Delivering to: {address?.substring(0, address.length - 11)}</h6>}
-            {name==="" || <h4>Welcome, {name} </h4>}
+            {address.length<22 || <h6 className="navBarDes">Delivering to: {address?.substring(0, address.length - 11)}</h6>}
+            {name==="" || <h6 className="navBarDes">Welcome, {name} </h6>}
             <Nav>
             {(name==="") ? 
             <LinkContainer to="/user/signin" align="right">
