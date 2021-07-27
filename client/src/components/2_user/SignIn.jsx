@@ -1,4 +1,5 @@
 import { Link, useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const axios = require('axios').default;
 
 const SignIn = (props) => {
@@ -56,7 +57,7 @@ const SignIn = (props) => {
                   Password:
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   id="password"
                   name="password"
                   className="form-control"
@@ -69,6 +70,7 @@ const SignIn = (props) => {
                   value="Sign In"
                   className=" btn btn-block  btn btn-warning"
                 >
+                  <FontAwesomeIcon icon={['far', 'user']} className="me-1" />
                   Sign In
                 </button>
               </div>
@@ -81,6 +83,10 @@ const SignIn = (props) => {
               <div class="form-group text-center">
                 <Link to="/user/signup">
                   <button className=" btn btn-block  btn btn-info">
+                    <FontAwesomeIcon
+                      icon={['fas', 'user-plus']}
+                      className="me-1"
+                    />
                     Sign Up
                   </button>
                 </Link>

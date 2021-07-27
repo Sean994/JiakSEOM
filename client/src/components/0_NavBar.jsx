@@ -50,10 +50,18 @@ const NavBar = (props) => {
           <Nav>
             {name === '' ? (
               <LinkContainer to="/user/signin" align="right">
-                <Button variant="warning">Sign In</Button>
+                <Button variant="warning">
+                  {' '}
+                  <FontAwesomeIcon icon={['far', 'user']} className="me-2" />
+                  <span>Sign In</span>
+                </Button>
               </LinkContainer>
             ) : (
               <Button variant="warning" onClick={logOut}>
+                <FontAwesomeIcon
+                  icon={['fas', 'sign-out-alt']}
+                  className="me-1"
+                />
                 Sign Out
               </Button>
             )}
