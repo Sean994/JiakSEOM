@@ -1,12 +1,16 @@
 // This file holds the FAQ, in a react-bootstrap Accordion component. It is to be imported into Landing.jsx
 // Gordon Chia, 26 July 2021
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Accordion } from 'react-bootstrap';
 
 const LandingFAQ = () => {
   return (
     <>
-      <h1 classNmae="fw-bold text-success">FAQ</h1>
+      <h1 classNmae="fs-1 fw-bold text-success">
+        FAQ
+        <FontAwesomeIcon icon={['fas', 'question']} />
+      </h1>
       <Accordion classsName="accordion-flush">
         <Accordion.Item eventKey="0">
           <Accordion.Header>How do I order food?</Accordion.Header>

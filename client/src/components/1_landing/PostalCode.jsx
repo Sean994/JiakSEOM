@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 
 const PostalCode = (props) => {
-  const { postal, setPostal, address, setAddress } = props;
+  const { postal, setPostal, setAddress } = props;
 
   const handleChange = (event) => {
     setAddress('Checking Address..');

@@ -1,21 +1,21 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-
-// import the icons
-
-// SOLID
-import {
-  faSearch,
-  faStar as faStarSolid,
-  faPlay,
-  faPlus,
-  faTimes,
-  faChevronLeft,
-  faChevronRight,
-  faQuestion,
-} from '@fortawesome/free-solid-svg-icons';
-
+// import { fab } from '@fortawesome/free-brands-svg-icons';
 // REGULAR
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
+// SOLID
+import {
+  faChevronLeft,
+  faChevronRight,
+  faPlay,
+  faPlus,
+  faQuestion,
+  faSearch,
+  faStar as faStarSolid,
+  faTimes,
+  faCloudMeatball,
+  faHome,
+  faUtensils,
+} from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faSearch,
@@ -26,9 +26,12 @@ library.add(
   faTimes,
   faChevronRight,
   faChevronLeft,
-  faQuestion
+  faQuestion,
+  faCloudMeatball,
+  faHome,
+  faUtensils
 );
 
-export default function registerIcons() {
-  library.add(faStarSolid, faStarRegular, faPlay, faPlus, faTimes);
-}
+// export default function registerIcons() {
+//   library.add(faStarSolid, faStarRegular, faPlay, faPlus, faTimes);
+// }

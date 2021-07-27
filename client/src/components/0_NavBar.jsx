@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -14,7 +15,11 @@ const NavBar = (props) => {
     <Navbar className="shadow p-3 mb-5 bg-body rounded" expand="lg">
       <Container>
         <LinkContainer to="/landing">
-          <Navbar.Brand className="text-dark fs-3 fw-bold">
+          <Navbar.Brand className="text-dark fs-3 fw-bold ">
+            <FontAwesomeIcon
+              icon={['fas', 'cloud-meatball']}
+              className="me-2"
+            />
             JiakSEOM
           </Navbar.Brand>
         </LinkContainer>
@@ -22,10 +27,16 @@ const NavBar = (props) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <LinkContainer to="/landing/">
-              <Nav.Link className="text-dark">Home</Nav.Link>
+              <Nav.Link className="text-secondary">
+                <FontAwesomeIcon icon={['fas', 'home']} className="me-2" />
+                Home
+              </Nav.Link>
             </LinkContainer>
             <LinkContainer to="/restaurants/all">
-              <Nav.Link className="text-dark">Browse all restaurants</Nav.Link>
+              <Nav.Link className="text-success">
+                <FontAwesomeIcon icon={['fas', 'utensils']} className="me-2" />
+                Our Restaurants
+              </Nav.Link>
             </LinkContainer>
           </Nav>
           {address.length < 22 || (
