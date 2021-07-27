@@ -9,8 +9,8 @@ const Landing = (props) => {
         <div>
             Landing page
             <PostalCode />
-            </form>
             <LandingIntroText />
+            <LandingFAQ />
         </div>
     )
 }
