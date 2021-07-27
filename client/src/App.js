@@ -9,20 +9,21 @@ import SignUp from './components/2_user/SignUp';
 import Restaurants from './components/3_restaurants/Restaurants';
 import RestaurantID from './components/3_restaurants/RestaurantID';
 import axios from "axios";
+
 function App() {
   const [rest, setRest] = useState("")
   const [name, setName] = useState("")
+  const [postal, setPostal] = useState()
+  const [address, setAddress] = useState()
 
   useEffect(() => {
     axios.get("/user/signin")
     .then(res => {
-      console.log(res) 
       if(res.data.username){
-        console.log("User found:", res.data.username)
         setName(res.data.username)
       }
     })  
-});
+  });
 
 
   const restLiClick = (i) => {
@@ -31,14 +32,16 @@ function App() {
   }
   return (
     <div className="App">
-      <NavBar name={name} setName={setName} />
+      <NavBar name={name} setName={setName} 
+      address={address}/>
       <main>
         <Switch>
           <Route exact path="/">
               <Redirect to="/landing" />
           </Route>
           <Route path="/landing">
-            <Landing/>
+            <Landing postal={postal} setPostal={setPostal}
+            address={address} setAddress={setAddress}/>
           </Route>
           <Route path="/user/signin">
             <SignIn setName={setName}/>
