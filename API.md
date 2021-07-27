@@ -104,6 +104,7 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
 ## <strong>GET</strong> /api/v1/restaurants/{restaurant_id}
 
 - Get the resaurant's detail by id
+- All menu items of restaurant will be listed
 
 <br>
 <br>

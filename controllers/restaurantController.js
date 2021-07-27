@@ -79,7 +79,9 @@ exports.createRestaurant = async (req, res, next) => {
 
 exports.getRestaurant = async (req, res, next) => {
   try {
-    const restaurant = await Restaurant.findById(req.params.id);
+    const restaurant = await Restaurant.findById(req.params.id).populate(
+      'menuItems'
+    );
     res.status(201).json({
       status: 'success',
       restaurant,
