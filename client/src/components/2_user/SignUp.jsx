@@ -1,22 +1,14 @@
 // New Signup component. This component allows a user to sign up for our amazing
 // Korean food delivery service.
 
-//! TESTING PHASE - CODE MAY BE GROSSLY INCORRECT
-
-//? Gordon, 28 July 10:30AM - FIXED, PLEASE TEST
-
-//? Too tired to continue - will continue tomorrow.
-//? I stopped at making the form handle validation. The POST API call needs to be tested too.
-//? Refer to https://react-bootstrap.github.io/components/forms/#forms-validation-native 
-//? Gordon, 28 July 1:40AM
-
 
 
 import {Form, Button, Col, Row} from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 const axios = require('axios').default;
 
 const SignUp = (props) => {
-
+let history = useHistory();
 
   const handleSubmit = (event) => { // handleSubmit uses axios to POST a form
     event.preventDefault();
@@ -34,8 +26,9 @@ const SignUp = (props) => {
       })
       .then(function (response) {
         console.log(response.data);
-        if (response.data === 'logged in!') {
+        if (response.data.status === 'success') {
           console.log("New user created")
+          history.push("/user/signin")
         }
       })
       .catch(function (error) {
