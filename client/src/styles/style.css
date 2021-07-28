@@ -1,29 +1,3 @@
 .navBarDes {
    margin: 10px 10px;
 }
-
-.categoryList{
-    margin: 0 auto;
-    display: flex;
-    /* border: 1px solid black; */
-    height: 90px;
-    width: 80%;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.categoryCard {
-    border: 1px solid black;
-    background: yellow;
-    border-radius: 20px;
-    height: 60px;
-    max-width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-.categoryCardTitle{
-    text-align: center;
-    width: 150px;
-}
