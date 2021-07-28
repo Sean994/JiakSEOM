@@ -8,7 +8,7 @@ import SignIn from './components/2_user/SignIn';
 import SignUp from './components/2_user/SignUp';
 import RestaurantID from './components/3_restaurants/RestaurantID';
 import Restaurants from './components/3_restaurants/Restaurants';
-import CheckOut from './components/4_checkout/Checkout';
+import CheckOut from './components/4_checkout/checkout';
 import './styles/style.css';
 
 function App() {
