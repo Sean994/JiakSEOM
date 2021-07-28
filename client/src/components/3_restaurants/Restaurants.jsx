@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import { Link } from "react-router-dom"
+import { useState } from "react"
+import axios from "axios"
+const Restaurants = (props) => {
+    const { clickHandle } = props
+    const restaurantArray = ["Jeju", "Seoul", "Busan", "Daegu"]
+    return (
+
+        <div>
+            <h1> List of Restaurants</h1>
+            <ul>
+                {restaurantArray.map((element, index) => (
+                    <Link key={element} to={`/restaurants/${element}`}>
+                        <li key={element}
+                            onClick={() => clickHandle(element)}>
+                            {element} -
+                            index {index}
+                        </li>
+                    </Link>
+                ))}
+            </ul>
+=======
 import { useEffect, useState } from 'react';
 import CategoryCard from './CategoryCard';
 import RestaurantCard from './RestaurantCard';
@@ -93,6 +116,7 @@ const Restaurants = (props) => {
              />
             </div>
           ))}
+>>>>>>> main
         </div>
       </div>
     </div>

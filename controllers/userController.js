@@ -36,7 +36,7 @@ exports.createUser = async (req, res, next) => {
       console.log(`api, ${err}`);
       res.status(500).json({
         status: 'fail',
-        error: "Unable to create User/ bcrypt failure in hashing"
+        error: err
       });
     }
   };
