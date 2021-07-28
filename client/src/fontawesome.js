@@ -23,6 +23,8 @@ import {
   faSignOutAlt,
   faShoppingBasket,
   faTrashAlt,
+  faHourglassHalf,
+  faMinus,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -43,7 +45,9 @@ library.add(
   faUserPlus,
   faSignOutAlt,
   faShoppingBasket,
-  faTrashAlt
+  faTrashAlt,
+  faHourglassHalf,
+  faMinus
 );
 
 // export default function registerIcons() {

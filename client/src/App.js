@@ -17,6 +17,7 @@ function App() {
   const [postal, setPostal] = useState('');
   const [address, setAddress] = useState('');
 
+  //! store whol user info
   useEffect(() => {
     axios.get('/user/signin').then((res) => {
       if (res.data.username) {

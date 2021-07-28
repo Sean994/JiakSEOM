@@ -1,4 +1,7 @@
 const DeliveryDetailForm = () => {
+  //! submit => api call to post orders
+  //! userid , restaurantid, chosen MENU Array [ {itemid : quantity }, {itemid : quantity }  ]
+
   return (
     <form class="row g-1 m-3">
       <h4>
