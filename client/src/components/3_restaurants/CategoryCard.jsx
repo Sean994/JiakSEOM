@@ -1,4 +1,4 @@
-const CategoryRes = ({ category }) => {
+const CategoryCard = ({ category }) => {
   return (
     <div
       id={category._id}
@@ -18,7 +18,7 @@ const CategoryRes = ({ category }) => {
   );
 };
 
-export default CategoryRes;
+export default CategoryCard;
 
 //display: block;
 // margin-left: auto;

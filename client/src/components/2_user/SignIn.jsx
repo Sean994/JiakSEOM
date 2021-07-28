@@ -17,7 +17,7 @@ const SignIn = (props) => {
         console.log(response.data);
         if (response.data === 'logged in!') {
           setName(response.data.username);
-          history.push('/restaurants/all');
+          history.push('/landing');
         }
       })
       .catch(function (error) {
@@ -74,13 +74,13 @@ const SignIn = (props) => {
                   Sign In
                 </button>
               </div>
-              <div class="col-md-12 text-center my-3">
-                <div class="login-or">
-                  <hr class="hr-or" />
-                  <span class="span-or">New User?</span>
+              <div className="col-md-12 text-center my-3">
+                <div className="login-or">
+                  <hr className="hr-or" />
+                  <span className="span-or">New User?</span>
                 </div>
               </div>
-              <div class="form-group text-center">
+              <div className="form-group text-center">
                 <Link to="/user/signup">
                   <button className=" btn btn-block  btn btn-info">
                     <FontAwesomeIcon
