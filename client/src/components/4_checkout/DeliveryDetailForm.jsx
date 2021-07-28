@@ -1,4 +1,4 @@
-const DeliveryDetailForm = () => {
+const DeliveryDetailForm = ({address}) => {
   //! submit => api call to post orders
   //! userid , restaurantid, chosen MENU Array [ {itemid : quantity }, {itemid : quantity }  ]
 
@@ -18,6 +18,7 @@ const DeliveryDetailForm = () => {
           class="form-control"
           id="address"
           placeholder="Street Address"
+          value={address}
         />
       </div>
       <div class="col-12">
@@ -30,7 +31,7 @@ const DeliveryDetailForm = () => {
       </div>
 
       <div class="d-grid gap-2">
-        <button type="submit" class="btn btn-warning">
+        <button type="button" class="btn btn-warning">
           SUBMIT
         </button>
       </div>

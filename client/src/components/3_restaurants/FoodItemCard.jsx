@@ -1,6 +1,6 @@
 
 const FoodItemCard = (props) => {
-  const {foodItem, order, setOrder } = props
+  const {foodItem, order, setOrder, setSubTotal } = props
 
   const addItemCart = (fooditem) => {
     let cartArray = order["orders"]
@@ -12,9 +12,11 @@ const FoodItemCard = (props) => {
     }})
     if (checkCartForItem.existing){
       cartArray[checkCartForItem.indexFound].quantity += 1
+      setSubTotal((prev)=> prev + fooditem.price)
     } else {
       fooditem.quantity=1
       cartArray.push(fooditem)
+      setSubTotal((prev)=> prev + fooditem.price)
     }
     console.log("adding to cart", fooditem)
     console.log(order)
@@ -40,7 +42,7 @@ const FoodItemCard = (props) => {
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title">
-              {foodItem.name} {foodItem._id}<br /> 
+              {foodItem.name}<br /> 
               [{foodItem.kor_name}] <br /> $
               {foodItem.price}
             </h5>
