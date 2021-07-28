@@ -13,7 +13,9 @@
     "kor_name": "이태원 짜장",
     "name": "Itaewon Jjajang",
     "image_cover": "https://images.unsplash.com/photo-1590437084089-9f5ae1500176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "itaewon-jjajang"
+    "slug": "itaewon-jjajang",
+    "discount_rate": 0.3,
+    "delivery_fee": 3
   },
   {
     "_id": "60fe44b63731471b031b10ca",
@@ -29,7 +31,8 @@
     "kor_name": "오빠 짜장 -부키티마",
     "name": "O.BBa Jjajang",
     "image_cover": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "o.bba-jjajang"
+    "slug": "o.bba-jjajang",
+    "delivery_fee": 4
   },
   {
     "_id": "60fe44f53731471b031b10cc",
@@ -45,7 +48,9 @@
     "kor_name": "창",
     "name": "Chang",
     "image_cover": "https://images.unsplash.com/photo-1564346208972-94f69eb6d5a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "chang"
+    "slug": "chang",
+    "discount_rate": 0.4,
+    "delivery_fee": 5
   },
   {
     "_id": "60fe452a3731471b031b10ce",
@@ -61,7 +66,8 @@
     "kor_name": "싹쓰리",
     "name": "Ssak 3",
     "image_cover": "https://images.unsplash.com/photo-1426869981800-95ebf51ce900?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80",
-    "slug": "ssak-3"
+    "slug": "ssak-3",
+    "delivery_fee": 0
   },
   {
     "_id": "60fe455a3731471b031b10d0",
@@ -77,7 +83,9 @@
     "kor_name": "꼬꼬나라",
     "name": "Kko Kko Na Ra",
     "image_cover": "https://images.unsplash.com/photo-1614398751058-eb2e0bf63e53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2432&q=80",
-    "slug": "kko-kko-na-ra"
+    "slug": "kko-kko-na-ra",
+    "discount_rate": 0.2,
+    "delivery_fee": 0
   },
   {
     "_id": "60fe45a93894b41c1818b050",
@@ -93,7 +101,8 @@
     "kor_name": "아이스 랩",
     "name": "Ice Lab",
     "image_cover": "https://images.unsplash.com/photo-1595275320712-24b6f2b0a984?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "ice-lab"
+    "slug": "ice-lab",
+    "delivery_fee": 2
   },
   {
     "_id": "60fe45dc3894b41c1818b052",
@@ -109,7 +118,8 @@
     "kor_name": "눈사람",
     "name": "Nunsaram Korean Dessert Cafe",
     "image_cover": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "nunsaram-korean-dessert-cafe"
+    "slug": "nunsaram-korean-dessert-cafe",
+    "delivery_fee": 4
   },
   {
     "_id": "60fe46383894b41c1818b055",
@@ -125,7 +135,8 @@
     "kor_name": "한빙 카페",
     "name": "Han Bing Cafe",
     "image_cover": "https://images.unsplash.com/photo-1580555535526-d49b8f40b1ec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "han-bing-cafe"
+    "slug": "han-bing-cafe",
+    "delivery_fee": 5
   },
   {
     "_id": "60fe46693894b41c1818b057",
@@ -141,7 +152,8 @@
     "kor_name": "고케이",
     "name": "Go! K BBQ",
     "image_cover": "https://images.unsplash.com/photo-1550388342-b3fd986e4e67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "go!-k-bbq"
+    "slug": "go!-k-bbq",
+    "delivery_fee": 3
   },
   {
     "_id": "60fe46983894b41c1818b059",
@@ -157,7 +169,8 @@
     "kor_name": "한우리",
     "name": "Hanwoori Korean Restaurant",
     "image_cover": "https://images.unsplash.com/photo-1504670555658-db8fb2e908ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80",
-    "slug": "hanwoori-korean-restaurant"
+    "slug": "hanwoori-korean-restaurant",
+    "delivery_fee": 3
   },
   {
     "_id": "60fe46cf3894b41c1818b05b",
@@ -173,7 +186,8 @@
     "kor_name": "호호치맥",
     "name": "HoHoChimek",
     "image_cover": "https://images.unsplash.com/photo-1585703900468-13c7a978ad86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80",
-    "slug": "hohochimek"
+    "slug": "hohochimek",
+    "delivery_fee": 5
   },
   {
     "_id": "60fe470a3894b41c1818b05d",
@@ -189,7 +203,9 @@
     "kor_name": "만나",
     "name": "ManNa Korean Restaurant",
     "image_cover": "https://images.unsplash.com/photo-1567444632153-edd7b4a3ed70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "manna-korean-restaurant"
+    "slug": "manna-korean-restaurant",
+    "discount_rate": 0.1,
+    "delivery_fee": 3
   },
   {
     "_id": "60fe473c3894b41c1818b05f",
@@ -205,7 +221,8 @@
     "kor_name": "한식",
     "name": "Hansik Restaurant",
     "image_cover": "https://images.unsplash.com/photo-1566705474094-5bf047ce2754?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2495&q=80",
-    "slug": "hansik-restaurant"
+    "slug": "hansik-restaurant",
+    "delivery_fee": 3
   },
   {
     "_id": "60fe476f3894b41c1818b061",
@@ -220,9 +237,9 @@
     "preparation_time": 30,
     "kor_name": "써니",
     "name": "Sunny Korean",
-
     "image_cover": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "sunny-korean"
+    "slug": "sunny-korean",
+    "delivery_fee": 4
   },
   {
     "_id": "60fe47a33894b41c1818b063",
@@ -238,7 +255,8 @@
     "kor_name": "우리나라",
     "name": "Woorinara Korean ",
     "image_cover": "https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "woorinara-korean"
+    "slug": "woorinara-korean",
+    "delivery_fee": 3
   },
   {
     "_id": "60fe47d33894b41c1818b065",
@@ -254,7 +272,9 @@
     "kor_name": "호호",
     "name": "HoHo Korean",
     "image_cover": "https://images.unsplash.com/photo-1589010588553-46e8e7c21788?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2627&q=80",
-    "slug": "hoho-korean"
+    "slug": "hoho-korean",
+    "discount_rate": 0.2,
+    "delivery_fee": 3
   },
   {
     "_id": "60fe480a3894b41c1818b067",
@@ -270,7 +290,8 @@
     "kor_name": "서래",
     "name": "Seorae Charcoal BBQ",
     "image_cover": "https://images.unsplash.com/photo-1585951641542-c30dac5d87b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2540&q=80",
-    "slug": "seorae-charcoal-bbq"
+    "slug": "seorae-charcoal-bbq",
+    "delivery_fee": 3
   },
   {
     "_id": "60fe483a3894b41c1818b069",
@@ -286,7 +307,9 @@
     "kor_name": "오빠 바베큐",
     "name": "Oppa Korean BBQ Buffet",
     "image_cover": "https://images.unsplash.com/photo-1586058584816-869476c63ff7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2389&q=80",
-    "slug": "oppa-korean-bbq-buffet"
+    "slug": "oppa-korean-bbq-buffet",
+    "discount_rate": 0.2,
+    "delivery_fee": 0
   },
   {
     "_id": "60fe48a63894b41c1818b06b",
@@ -302,7 +325,8 @@
     "kor_name": "파퓰러 푸드",
     "name": "Popular Food Japanese & Korean Food",
     "image_cover": "https://images.unsplash.com/photo-1580651315530-69c8e0026377?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-    "slug": "popular-food-japanese-and-korean-food"
+    "slug": "popular-food-japanese-and-korean-food",
+    "delivery_fee": 4
   },
   {
     "_id": "60fe48db3894b41c1818b06d",
@@ -318,6 +342,8 @@
     "kor_name": "9PM 꼬치",
     "name": "9PM Kkochi (Causeway Point)",
     "image_cover": "https://images.unsplash.com/photo-1559660526-de9cb4e63b55?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2549&q=80",
-    "slug": "9pm-kkochi-(causeway-point)"
+    "slug": "9pm-kkochi-(causeway-point)",
+    "discount_rate": 0.3,
+    "delivery_fee": 5
   }
 ]

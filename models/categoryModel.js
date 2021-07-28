@@ -10,6 +10,9 @@ const categorySchema = new mongoose.Schema({
   slug: {
     type: String,
   },
+  img_cover: {
+    type: String,
+  },
 });
 
 categorySchema.pre('save', function (next) {

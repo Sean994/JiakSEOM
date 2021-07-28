@@ -4,8 +4,10 @@ const router = express.Router();
 const searchResController = require('../controllers/searchResController');
 
 router
-    .route('/')
+    .route('/restaurants')
     .get(searchResController.searchRes)
 
-
+router 
+    .route('/menuitems')
+    .get(searchResController.searchItems)
 module.exports = router

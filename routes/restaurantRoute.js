@@ -14,3 +14,5 @@ router
   .put(restaurantController.updateRestaurant)
   .delete(restaurantController.deleteRestaurant);
 module.exports = router;
+
+//https://www.foodpanda.sg/restaurants/new?lat=1.3703648&lng=103.9451463&vertical=restaurants&cuisines=38

@@ -8,4 +8,10 @@ router
   .get(menuItemController.getAllMenuItems)
   .post(menuItemController.createMenuItem);
 
+router
+  .route('/:id')
+  .get(menuItemController.getMenuItem)
+  .put(menuItemController.updateItem)
+  .delete(menuItemController.deleteItem);
+
 module.exports = router;

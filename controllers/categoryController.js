@@ -1,5 +1,7 @@
 const Category = require('../models/categoryModel');
 const MenuItem = require('../models/menuItemModel');
+const BaseError = require('../utils/BaseError');
+const httpStatusCodes = require('../utils/httpStatusCodes');
 
 exports.getRestaurantsPerCategory = async (req, res, next) => {
   try {
@@ -7,20 +9,33 @@ exports.getRestaurantsPerCategory = async (req, res, next) => {
     const category = await Category.findById(id).select('-__v -slug');
     const restaurants = await MenuItem.aggregate([
       { $match: { category_id: category._id } },
-      { $project: { restaurantObjId: { $toObjectId: '$restaurant_id' } } },
-      { $group: { _id: '$restaurantObjId', numMenuItems: { $sum: 1 } } },
+      { $group: { _id: '$restaurant_id', numMenuItems: { $sum: 1 } } },
       {
         $lookup: {
           from: 'restaurants',
-          localField: 'restaurantObjId',
-          foreignField: '_id.str',
+          let: { rid: { $toObjectId: '$_id' } },
+          pipeline: [
+            {
+              $project: {
+                _id: 1,
+                name: '$name',
+                discount_rate: '$discount_rate',
+                image_cover: '$image_cover',
+                preparation_time: '$preparation_time',
+                ratingAverage: '$ratingAverage',
+                ratingQuantity: '$ratingQuantity',
+              },
+            },
+            { $match: { $expr: { $eq: ['$_id', '$$rid'] } } },
+          ],
           as: 'restaurant',
         },
       },
-      {
-        $unwind: '$restaurant',
-      },
     ]);
+
+    if (restaurants.length === 0) {
+      throw new Error('Sorry, no restaurants found');
+    }
 
     res.status(200).json({
       status: 'success',
@@ -29,10 +44,7 @@ exports.getRestaurantsPerCategory = async (req, res, next) => {
       total_results: restaurants.length,
     });
   } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      error: err.message,
-    });
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
 
@@ -44,6 +56,10 @@ exports.getMenuItemsPerCategory = async (req, res, next) => {
     );
     const category = await Category.findById(id).select('-__v -slug');
 
+    if (menuItems.length === 0) {
+      throw new Error('Sorry, no menu Items found');
+    }
+
     res.status(200).json({
       status: 'success',
       category,
@@ -51,10 +67,7 @@ exports.getMenuItemsPerCategory = async (req, res, next) => {
       total_results: menuItems.length,
     });
   } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      error: err.message,
-    });
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
 
@@ -70,11 +83,7 @@ exports.getAllCategories = async (req, res, next) => {
       total_results: categories.length,
     });
   } catch (err) {
-    console.log(`api, ${err}`);
-    res.status(500).json({
-      status: 'fail',
-      error: err,
-    });
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
 
@@ -87,10 +96,7 @@ exports.createCategory = async (req, res, next) => {
       newCategory,
     });
   } catch (err) {
-    res.status(500).json({
-      status: 'fail',
-      error: err,
-    });
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
 
@@ -98,15 +104,21 @@ exports.getCategory = async (req, res, next) => {
   try {
     const category = await Category.findById(req.params.id);
 
+    if (!category) {
+      throw new Error(
+        `Sorry, there is no category with this id: ${req.params.id}`
+      );
+    }
+
     res.status(200).json({
       status: 'success',
       category,
     });
   } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      error: err,
-    });
+    if (err.name === 'CastError') {
+      err.message = `Category with id: ${req.params.id} not found`;
+    }
+    next(new BaseError(err.name, httpStatusCodes.NOT_FOUND, err.message));
   }
 };
 
@@ -122,10 +134,11 @@ exports.updateCategory = async (req, res, next) => {
       category,
     });
   } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      error: err,
-    });
+    if (err.name === 'CastError') {
+      err.message = `Restaurant with id: ${req.params.id} not found`;
+      next(new BaseError(err.name, httpStatusCodes.NOT_FOUND, err.message));
+    }
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };
 
@@ -138,9 +151,6 @@ exports.deleteCategory = async (req, res, next) => {
       data: null,
     });
   } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      error: err,
-    });
+    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };

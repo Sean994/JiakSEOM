@@ -1,23 +1,29 @@
-.NavBar {
-    display: flex;
-    justify-content: space-evenly;
-    background:grey;
-    height: 50px;
+.navBarDes {
+   margin: 10px 10px;
 }
 
-.NavBar div {
+.categoryList{
+    margin: 0 auto;
     display: flex;
+    /* border: 1px solid black; */
+    height: 90px;
+    width: 80%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.categoryCard {
+    border: 1px solid black;
+    background: yellow;
+    border-radius: 20px;
+    height: 60px;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    justify-items: center;
-    border-left: 2px solid black;
-    padding: 0 20px;
+    margin: 5px;
 }
-img{
-    height: 32px;
-    margin: 5px 5px px 0;
-}
-
-.postalCode{
-    width: 250px;
+.categoryCardTitle{
+    text-align: center;
+    width: 150px;
 }
