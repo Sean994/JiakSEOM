@@ -4,7 +4,7 @@ const axios = require('axios').default;
 
 const SignIn = (props) => {
   let history = useHistory();
-  const { setUser , setPostal } = props;
+  const { setUser , setPostal, setOrder } = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,6 +20,7 @@ const SignIn = (props) => {
             console.log(res)
             if (res.data) {
               setUser(res.data);
+              setOrder((order)=>({...order, "user": res.data._id}))
               setPostal(res.data.postal_code)
             }
           });

@@ -12,8 +12,13 @@ import CheckOut from './components/4_checkout/Checkout.jsx';
 import './styles/style.css';
 
 function App() {
-  const [rest, setRest] = useState('');
+  const [restaurant, setRestaurant] = useState({});
   const [user, setUser] = useState('');
+  const [order, setOrder] = useState({
+    "user": "",
+    "restaurant": "",
+    "orders": []
+  })
   const [postal, setPostal] = useState('');
   const [address, setAddress] = useState('');
 
@@ -22,17 +27,14 @@ function App() {
     axios.get('/user/signin').then((res) => {
       if (res.data) {
         setUser(res.data);
+        setOrder((order)=>({...order, "user": res.data._id}))
       }
     });
   },[]);
 
-  const restLiClick = (i) => {
-    console.log('hey', i);
-    setRest(i);
-  };
   return (
     <div className="App">
-      <NavBar user={user} setUser={setUser} setPostal={setPostal} address={address} setAddress={setAddress} />
+      <NavBar user={user} setUser={setUser} setPostal={setPostal} address={address} setAddress={setAddress} setOrder={setOrder}/>
       <main>
         <Switch>
           <Route exact path="/">
@@ -47,16 +49,19 @@ function App() {
             />
           </Route>
           <Route path="/user/signin">
-            <SignIn setUser={setUser} setPostal={setPostal}/>
+            <SignIn setUser={setUser} setPostal={setPostal} setOrder={setOrder}/>
           </Route>
           <Route path="/user/signup">
             <SignUp />
           </Route>
           <Route exact path="/restaurants/all">
-            <Restaurants clickHandle={restLiClick} />
+            <Restaurants />
           </Route>
           <Route path="/restaurants/:id">
-            <RestaurantID rest={rest} />
+            <RestaurantID 
+            restaurant={restaurant} setRestaurant={setRestaurant}
+            order={order} setOrder={setOrder}
+            />
           </Route>
           {/* if cookie with the session id => (loggedin) => link to checkout 
           if no cookie with the session id => link to login page */}

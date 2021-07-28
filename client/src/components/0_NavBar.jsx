@@ -4,13 +4,14 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const NavBar = (props) => {
   const axios = require('axios').default;
-  const { user, setUser, setPostal, address, setAddress } = props;
+  const { user, setUser, setPostal, address, setAddress, setOrder} = props;
 
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
       setUser({})
       setPostal('')
       setAddress('')
+      setOrder((order)=>({...order, "user": ""}))
     });
     console.log('loggin out');
   };
@@ -43,6 +44,7 @@ const NavBar = (props) => {
               </Nav.Link>
             </LinkContainer>
           </Nav>
+          {/* <span>user:{order.user}restaurant:{order.restaurant}</span> */}
           {(address==="")|| (
             <h6 className="navBarDes text-dark">
               Delivering to: {address?.substring(0, address.length - 11)} 

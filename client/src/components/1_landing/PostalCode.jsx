@@ -39,7 +39,6 @@ const PostalCode = (props) => {
   useEffect(() => {
     const checkPostal = async () => {
       const updateAddress = (values) => {
-        console.log(values);
         if (values?.items?.[0]?.title === undefined) {
           console.log('address is wrong');
         } else {
@@ -75,7 +74,7 @@ const PostalCode = (props) => {
               size="lg"
               type="text"
               pattern="[0-9]{6}"
-              maxlength="6"
+              maxLength="6"
               value={postal}
               onChange={handleChange}
               placeholder="Postal Code"
