@@ -8,6 +8,7 @@ import SignIn from './components/2_user/SignIn';
 import SignUp from './components/2_user/SignUp';
 import RestaurantID from './components/3_restaurants/RestaurantID';
 import Restaurants from './components/3_restaurants/Restaurants';
+import CheckOut from './components/4_checkout/Checkout';
 import './styles/style.css';
 
 function App() {
@@ -56,7 +57,11 @@ function App() {
           <Route path="/restaurants/:id">
             <RestaurantID rest={rest} />
           </Route>
-          <Route path="/checkout"></Route>
+          {/* if cookie with the session id => (loggedin) => link to checkout 
+          if no cookie with the session id => link to login page */}
+          <Route path="/checkout">
+            <CheckOut />
+          </Route>
         </Switch>
       </main>
     </div>
