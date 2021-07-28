@@ -13,6 +13,7 @@ const morgan = require('morgan');
 const categoryRouter = require('./routes/categoryRoute');
 const restaurantRouter = require('./routes/restaurantRoute');
 const menuItemRouter = require('./routes/menuItemRoute');
+const ordersRouter = require('./routes/ordersRoute');
 
 const userRouter = require('./routes/userRoute');
 const loginRouter = require('./routes/loginRoute');
