@@ -3,10 +3,15 @@ const PaymentForm = () => {
     <form class="row g-1 m-3">
       <h4>
         {' '}
-        <span className="badge bg-warning me-2">3</span>Payment
+        <span className="badge bg-warning me-2">3</span>Payment Method
       </h4>
-
-      <div class="col-12">
+      <select class="form-control">
+        <option>Cash on Delivery (Default)</option>
+        <option>PayLah!</option>
+        <option>PayPal</option>
+        <option>Credit / Debit Card</option>
+      </select>
+      {/* <div class="col-12">
         <label for="address" class="form-label">
           Delivery Address
         </label>
@@ -16,7 +21,7 @@ const PaymentForm = () => {
           id="address"
           placeholder="Street Address"
         />
-      </div>
+      </div> */}
 
       <div class="d-grid gap-2">
         <button type="submit" class="btn btn-warning">

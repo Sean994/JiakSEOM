@@ -2,11 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import CartItem from './CartItem';
+import { useHistory } from 'react-router-dom';
 
 const OrderSideBar = (props) => {
   const { order, setOrder, restaurant, subTotal, setSubTotal} = props;
   const [totalItems, setTotalItems] = useState(0)
-  
+  let history = useHistory();
+  const checkOut = () => {
+    history.push('/checkout')
+  }
 
   useEffect(()=>{
     setTotalItems(()=>order.orders.length)
@@ -78,7 +82,7 @@ const OrderSideBar = (props) => {
         </table>
       </div>
       <div className="d-grid gap-2">
-        <button className="btn btn-danger p-3">GO TO CHECKOUT</button>
+        <button className="btn btn-danger p-3" onClick={checkOut}>GO TO CHECKOUT</button>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import PostalCode from './0_NavBarPostal.jsx';
 
 const NavBar = (props) => {
   const axios = require('axios').default;
-  const { user, setUser, setPostal, postal, address, setAddress } = props;
+  const { user, setUser, setPostal, postal, address, setAddress, order } = props;
 
   // State logic for delivery offCanvas
   const [show, setShow] = useState(false);
@@ -108,7 +108,7 @@ const NavBar = (props) => {
                 size="lg"
                 className="ms-4 text-warning"
               />
-              <span className="badge text-danger">1</span>
+              <span className="badge text-danger">{order.orders.length}</span>
             </Nav.Link>
           </LinkContainer>
         </Nav>
