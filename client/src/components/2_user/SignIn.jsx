@@ -82,6 +82,7 @@ const SignIn = (props) => {
                   Sign In
                 </button>
               </div>
+              </form>
               <div className="col-md-12 text-center my-3">
                 <div className="login-or">
                   <hr className="hr-or" />
@@ -90,7 +91,7 @@ const SignIn = (props) => {
               </div>
               <div className="form-group text-center">
                 <Link to="/user/signup">
-                  <button className=" btn btn-block  btn btn-info">
+                  <button type="button" className=" btn btn-block  btn btn-info">
                     <FontAwesomeIcon
                       icon={['fas', 'user-plus']}
                       className="me-1"
@@ -102,7 +103,6 @@ const SignIn = (props) => {
               <p className="small mt-3">
                 By signing up, you will be one of our precious customers.
               </p>
-            </form>
           </div>
         </div>
       </div>
