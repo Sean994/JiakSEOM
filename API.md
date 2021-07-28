@@ -317,3 +317,44 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
 ```
 
 </details>
+
+<br>
+<br>
+
+# ✏️ Reviews
+
+## <strong> GET </strong> /api/v1/reviews
+
+- Get all Reviews
+
+## <strong> GET </strong> /api/v1/reviews/{restaurant_id}
+
+- Get all Reviews of the restaurant with specific id
+
+<details>
+<summary>Example</summary>
+
+```json
+{
+  "status": "success",
+  "data": {
+    "reviews": [
+      {
+        "createdAt": "2021-07-28T14:17:15.616Z",
+        "_id": "6101672626d5414cd74ed2c5",
+        "user": {
+          "_id": "60fe3277d6932e1093b56255",
+          "username": "sean994"
+        },
+        "restaurant": "60fe44b63731471b031b10ca",
+        "rating": 4,
+        "review": "굿굿"
+      }
+    ]
+  }
+}
+```
+
+</details>
+
+<br>
