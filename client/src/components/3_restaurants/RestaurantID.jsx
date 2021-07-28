@@ -1,4 +1,4 @@
-import { useEffect} from 'react';
+import { useState, useEffect} from 'react';
 import FoodItemCard from './FoodItemCard';
 import OrderSideBar from '../5_order/OrderSideBar';
 import axios from 'axios';
@@ -6,6 +6,7 @@ import { useParams } from 'react-router';
 
 const RestaurantID = (props) => {
   let { id } = useParams();
+  const [subTotal, setSubTotal] = useState(0);
   const {restaurant, setRestaurant, order, setOrder} = props
 
   useEffect(() => {
@@ -15,9 +16,10 @@ const RestaurantID = (props) => {
         .then((res) => {
           const restaurantResponse = res.data.restaurant;
           setRestaurant(restaurantResponse);
-          setOrder((order)=>({...order, "restaurant": restaurantResponse._id}))
-          // setRestName({"english": restaurantResponse["name"], "korean": restaurantResponse["kor_name"]})
-          // setFoodList(restaurantResponse.menuItems);
+          setOrder((order)=>({...order, 
+            "restaurant": restaurantResponse._id,
+            "orders": []
+          }))
         })
         .catch((err) => {
           console.log(err);
@@ -41,7 +43,7 @@ const RestaurantID = (props) => {
           <div className="container-xl restContainer">
           {restaurant?.menuItems?.map((food) => (
             <div key={food._id} className="row-2 mb-3">
-              <FoodItemCard foodItem={food} order={order} setOrder={setOrder} />
+              <FoodItemCard foodItem={food} order={order} setOrder={setOrder} setSubTotal={setSubTotal}/>
             </div>
           ))}
           </div>
@@ -49,7 +51,8 @@ const RestaurantID = (props) => {
         <div className="col-lg-4">
             <OrderSideBar 
             restaurant={restaurant}
-            order={order} setOrder={setOrder}/>
+            order={order} setOrder={setOrder} 
+            subTotal={subTotal} setSubTotal={setSubTotal}/>
         </div>
       </div>
     </div>
