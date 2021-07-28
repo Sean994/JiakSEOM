@@ -1,15 +1,39 @@
-import { useParams } from "react-router"
-
+import { useEffect, useState } from 'react';
+import FoodItemCard from './FoodItemCard';
+import axios from 'axios';
+import { useParams } from 'react-router';
 
 const RestaurantID = (props) => {
-    let {id} = useParams();
+  let { id } = useParams();
+  const [foodList, setFoodList] = useState([]);
 
-    return (
-        <div>Welcome to restaurant {props.rest}
-            <p>See Our Menu</p>
-            <p>ID: {id}</p>
-        </div>
-    )
-}
+  useEffect(() => {
+    axios
+      .get(`/api/v1/restaurants/${id}`, {})
+      .then((res) => {
+        console.log(res.data.restaurant.menuItems);
+        setFoodList(res.data.restaurant.menuItems)
+        
+        
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
-export default RestaurantID
+  return (
+    <div>
+      <h1>Welcome to restaurant {props.rest} </h1>
+      <p>See Our Menu</p>
+      {foodList.map((food) => (
+          <FoodItemCard foodItem={food} />
+      ))}
+       
+      <p>ID: {id}</p>
+
+      
+    </div>
+  );
+};
+
+export default RestaurantID;
