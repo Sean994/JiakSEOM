@@ -14,9 +14,7 @@ exports.searchRes = async (req, res, next) => {
             } 
             res.status(200).json({
                 status : 'success',
-                data : {
-                    data
-                }
+                data 
             })
         }
             catch(error) {
