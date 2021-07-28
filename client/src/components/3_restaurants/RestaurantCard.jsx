@@ -7,7 +7,7 @@ const RestaurantCard = ({ restaurant }) => {
   }
 
   return (
-    <div className="restCard" style={{ width: '24rem' }} onClick = {() => goToRest(restaurant.id)}>
+    <div className="restCard" style={{ width: '24rem' }} onClick = {() => goToRest(restaurant._id)}>
       <img
         className="card-img-top a"
         src={restaurant.image_cover}
@@ -26,18 +26,24 @@ const RestaurantCard = ({ restaurant }) => {
           Prep time: {restaurant.preparation_time} mins
         </li>
         <li className="list-group-item">
+          Delivery Fee: ${restaurant.delivery_fee}
+        </li>
+        <li className="list-group-item">
+          {restaurant.discount_rate ? <b> Promotion: {restaurant.discount_rate*100}% Off</b> : "No ongoing promo"}
+        </li>
+        <li className="list-group-item">
           Ratings: {restaurant.ratingAverage} ({restaurant.ratingQuantity} reviews)
         </li>
         {/* <li className="list-group-item">Vestibulum at eros</li> */}
       </ul>
-      <div className="card-body">
-        {/* <Button variant="primary" type="submit" className="btn-lg rounded-0" onClick = {() => goToRest(restaurant.id)}>
+      {/* <div className="card-body">
+        <Button variant="primary" type="submit" className="btn-lg rounded-0" onClick = {() => goToRest(restaurant.id)}>
           Menu
         </Button>
         <Button variant="warning" type="button" className="rounded-0 btn-lg">
           Favourite
-        </Button> */}
-      </div>
+        </Button>
+      </div> */}
     </div>
   );
 };

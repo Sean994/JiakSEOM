@@ -1,14 +1,14 @@
-import axios from 'axios';
+// import axios from 'axios';
 const CategoryCard = (props) => {
-  const { category, setRestaurantList } = props;
+  const { category, setFilter } = props;
 
-  const filterCatRest = (id) => {
-    axios.get(` /api/v1/restaurants?&category=${id}`).then((res) => {
-      console.log(id);
-      console.log(res.data.data.restaurants);
-      setRestaurantList(res.data.data.restaurants)
-    });
-
+  const toggleFilterCategory = (id) => {
+    // axios.get(` /api/v1/restaurants?&category=${id}`).then((res) => {
+    //   console.log(id);
+    //   console.log(res.data.data.restaurants);
+    //   setRestaurantList(res.data.data.restaurants)
+    // })
+    setFilter(filter  => ({...filter, "category": id}))
     // axios.get(`/api/v1/categories/${id}/restaurants`).then((res) => {
     //   console.log(id);
     //   console.log(res.data.restaurants);
@@ -19,7 +19,7 @@ const CategoryCard = (props) => {
       id={category._id}
       className="card me-2 shadow-sm border-0 catCard"
       style={{ minWidth: '12rem' }}
-      onClick={() => filterCatRest(category._id)}
+      onClick={() => toggleFilterCategory(category._id)}
     >
       <img
         src={category.img_cover}
