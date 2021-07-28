@@ -134,7 +134,7 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
                 "category_name": "Seafood",
                 "slug": "seafood",
                 "__v": 0
-            },...
+            },
           ]
     }
 }
@@ -407,3 +407,143 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
   "review": "굿굿"
 }
 ```
+
+# Search
+
+## <strong>GET</strong> /api/v1/search/restaurants?query={'name of restaurant'}
+- search using ?query, will return restaurant's details.
+<details>
+<summary>Example {itae}</summary>
+
+```json
+{
+    "status": "success",
+    "data": {
+        "data": [
+            {
+                "_id": "60fe44403731471b031b10c8",
+                "location": {
+                    "coordinates": [
+                        1.279665257461622,
+                        103.84485076594592
+                    ],
+                    "type": "Point",
+                    "address": "64 Peck Seah St, Singapore ",
+                    "postal_code": "079325"
+                },
+                "ratingAverage": 4.5,
+                "ratingQuantity": 100,
+                "preparation_time": 25,
+                "kor_name": "이태원 짜장",
+                "name": "Itaewon Jjajang",
+                "image_cover": "https://images.unsplash.com/photo-1590437084089-9f5ae1500176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+                "slug": "itaewon-jjajang",
+                "discount_rate": 0.3,
+                "delivery_fee": 3,
+                "__v": 0
+            }
+        ]
+    }
+}
+```
+</details>
+
+<br>
+
+## <strong>GET</strong> /api/v1/search/menuitems?query={'name of menu item'}
+- search using ?query, will return list of restaurants that include the searched menu item.
+
+<details>
+<summary>Example {rice}</summary>
+
+```json
+{
+    "status": "success",
+    "data": [
+        {
+            "location": {
+                "coordinates": [
+                    1.279665257461622,
+                    103.84485076594592
+                ],
+                "type": "Point",
+                "address": "64 Peck Seah St, Singapore ",
+                "postal_code": "079325"
+            },
+            "ratingAverage": 4.5,
+            "ratingQuantity": 100,
+            "preparation_time": 25,
+            "_id": "60fe44403731471b031b10c8",
+            "kor_name": "이태원 짜장",
+            "name": "Itaewon Jjajang",
+            "image_cover": "https://images.unsplash.com/photo-1590437084089-9f5ae1500176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+            "slug": "itaewon-jjajang",
+            "discount_rate": 0.3,
+            "delivery_fee": 3
+        },
+        {
+            "location": {
+                "coordinates": [
+                    1.352279759064383,
+                    103.77376378091117
+                ],
+                "type": "Point",
+                "address": "19 Cheong Chin Nam Rd, Singapore",
+                "postal_code": "599743"
+            },
+            "ratingAverage": 4.8,
+            "ratingQuantity": 167,
+            "preparation_time": 30,
+            "_id": "60fe44b63731471b031b10ca",
+            "kor_name": "오빠 짜장 -부키티마",
+            "name": "O.BBa Jjajang",
+            "image_cover": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+            "slug": "o.bba-jjajang",
+            "delivery_fee": 4
+        },
+        {
+            "location": {
+                "coordinates": [
+                    1.3643939452893703,
+                    103.86521230354202
+                ],
+                "type": "Point",
+                "address": "76 Serangoon Garden Way, Singapore ",
+                "postal_code": "555972"
+            },
+            "ratingAverage": 4.1,
+            "ratingQuantity": 20,
+            "preparation_time": 29,
+            "_id": "60fe46983894b41c1818b059",
+            "kor_name": "한우리",
+            "name": "Hanwoori Korean Restaurant",
+            "image_cover": "https://images.unsplash.com/photo-1504670555658-db8fb2e908ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80",
+            "slug": "hanwoori-korean-restaurant",
+            "delivery_fee": 3
+        },
+        {
+            "location": {
+                "coordinates": [
+                    1.336486098860422,
+                    103.9639727499927
+                ],
+                "type": "Point",
+                "address": "#01-39/40, Changi City Point, 5 Changi Business Park Central 1, Singapore",
+                "postal_code": "486038"
+            },
+            "ratingAverage": 4.6,
+            "ratingQuantity": 50,
+            "preparation_time": 30,
+            "_id": "60fe470a3894b41c1818b05d",
+            "kor_name": "만나",
+            "name": "ManNa Korean Restaurant",
+            "image_cover": "https://images.unsplash.com/photo-1567444632153-edd7b4a3ed70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+            "slug": "manna-korean-restaurant",
+            "discount_rate": 0.1,
+            "delivery_fee": 3
+        }
+    ],
+    "total_results": 4
+}
+```
+</details>
