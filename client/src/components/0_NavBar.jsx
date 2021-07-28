@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import { Button, Nav, Navbar, Offcanvas } from 'react-bootstrap'; //! deleted container import
 import { LinkContainer } from 'react-router-bootstrap';
 import { useState } from 'react';
 import PostalCode from './0_NavBarPostal.jsx';
@@ -47,11 +47,6 @@ const NavBar = (props) => {
             </Nav.Link>
           </LinkContainer>
         </Nav>
-        {address && (
-          <h6 className="navBarDes text-dark">
-            Delivering to: {address?.substring(0, address.length - 11)}
-          </h6>
-        )}
         {user.username && (
           <Nav>
             <h6 className="navBarDes text-dark">Welcome, {user.username}🍉 </h6>
@@ -65,6 +60,7 @@ const NavBar = (props) => {
               </Nav.Link>
             </LinkContainer>
           </Nav>
+        )}
           {address === '' || (
             <>
               <Button variant="light" onClick={handleShow}>
@@ -102,15 +98,6 @@ const NavBar = (props) => {
                 />
                 Sign Out
               </Button>
-            </LinkContainer>
-          ) : (
-            <Button variant="warning" onClick={logOut}>
-              <FontAwesomeIcon
-                icon={['fas', 'sign-out-alt']}
-                className="me-1"
-              />
-              Sign Out
-            </Button>
           )}
         </Nav>
         <Nav>
