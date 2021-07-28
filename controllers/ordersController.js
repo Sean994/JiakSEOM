@@ -43,6 +43,12 @@ exports.getOrdersByUser = async (req, res, next) => {
         options: { select: 'name price item_img' },
       });
 
+    if (orders.length === 0) {
+      throw new Error(
+        `Sorry, there's no review with this user id : ${req.params.user_id}`
+      );
+    }
+
     res.status(200).json({
       status: 'success',
       data: {
@@ -50,6 +56,11 @@ exports.getOrdersByUser = async (req, res, next) => {
       },
     });
   } catch (err) {
-    next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
+    if (err.name === 'MongoError') {
+      next(
+        new BaseError(err.name, httpStatusCodes.INTERNAL_SERVER, err.message)
+      );
+    }
+    next(new BaseError(err.name, httpStatusCodes.NOT_FOUND, err.message));
   }
 };

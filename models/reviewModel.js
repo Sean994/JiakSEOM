@@ -1,27 +1,23 @@
 const mongoose = require('mongoose');
 
-const ordersSchema = new mongoose.Schema(
+const reviewSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Types.ObjectId,
       ref: 'User',
-      required: [true, 'Order must have an user_id'],
+      required: [true, 'Review must have an user_id'],
     },
     restaurant: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Restaurant',
-      required: [true, 'Order must have restaurant_id'],
+      required: [true, 'Review must have restaurant_id'],
     },
-    orders: [
-      {
-        item: {
-          type: mongoose.Types.ObjectId,
-          ref: 'MenuItem',
-        },
-        quantity: Number,
-      },
-    ],
-    orderedAt: {
+    rating: { type: Number },
+    review: {
+      type: String,
+      required: [true, 'Review must have content!'],
+    },
+    createdAt: {
       type: Date,
       default: Date.now(),
     },
@@ -38,6 +34,6 @@ const ordersSchema = new mongoose.Schema(
   },
 });
 
-const Orders = mongoose.model('Orders', ordersSchema);
+const Review = mongoose.model('Reviewe', reviewSchema);
 
-module.exports = Orders;
+module.exports = Review;

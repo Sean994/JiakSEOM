@@ -14,6 +14,7 @@ const categoryRouter = require('./routes/categoryRoute');
 const restaurantRouter = require('./routes/restaurantRoute');
 const menuItemRouter = require('./routes/menuItemRoute');
 const ordersRouter = require('./routes/ordersRoute');
+const reviewRouter = require('./routes/reviewRoute');
 
 const userRouter = require('./routes/userRoute');
 const loginRouter = require('./routes/loginRoute');
@@ -42,6 +43,7 @@ app.use('/api/v1/categories', categoryRouter);
 app.use('/api/v1/restaurants', restaurantRouter);
 app.use('/api/v1/menu-items', menuItemRouter);
 app.use('/api/v1/orders', ordersRouter);
+app.use('/api/v1/reviews', reviewRouter);
 
 app.use('/user/signin', loginRouter);
 app.all('*', (req, res, next) => {
