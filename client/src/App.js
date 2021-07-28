@@ -24,7 +24,7 @@ function App() {
         setUser(res.data);
       }
     });
-  },[]);
+  }, []);
 
   const restLiClick = (i) => {
     console.log('hey', i);
@@ -32,7 +32,13 @@ function App() {
   };
   return (
     <div className="App">
-      <NavBar user={user} setUser={setUser} setPostal={setPostal} address={address} setAddress={setAddress} />
+      <NavBar
+        user={user}
+        setUser={setUser}
+        setPostal={setPostal}
+        address={address}
+        setAddress={setAddress}
+      />
       <main>
         <Switch>
           <Route exact path="/">
@@ -47,10 +53,13 @@ function App() {
             />
           </Route>
           <Route path="/user/signin">
-            <SignIn setUser={setUser} setPostal={setPostal}/>
+            <SignIn setUser={setUser} setPostal={setPostal} />
           </Route>
           <Route path="/user/signup">
             <SignUp />
+          </Route>
+          <Route path="/user/edit">
+            <SignUp user={user} />
           </Route>
           <Route exact path="/restaurants/all">
             <Restaurants clickHandle={restLiClick} />

@@ -25,6 +25,7 @@ import {
   faTrashAlt,
   faHourglassHalf,
   faMinus,
+  faUserEdit,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -47,7 +48,8 @@ library.add(
   faShoppingBasket,
   faTrashAlt,
   faHourglassHalf,
-  faMinus
+  faMinus,
+  faUserEdit
 );
 
 // export default function registerIcons() {
