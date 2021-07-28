@@ -15,6 +15,15 @@ const FilterButtons = (props) => {
     const toggleFilterDiscounts = () => {
         setFilter(filter=>({...filter, "has-discount": !filter["has-discount"] }))
     }
+    const toggleFilterCategory= () => {
+        setFilter({
+            "top-rated": false,
+            "fast-delivery": false,
+            "free-delivery": false,
+            "has-discount": false,
+            "category": "",
+          })
+    }
 
     return(
         <div>
@@ -22,6 +31,7 @@ const FilterButtons = (props) => {
             <button onClick={toggleFilterFastDelivery}>Delivery time</button>
             <button onClick={toggleFilterFreeDelivery}>Free delivery</button>
             <button onClick={toggleFilterDiscounts}>Discounts</button>
+            <button onClick={toggleFilterCategory}>Clear filters</button>
         </div>
     )
 }

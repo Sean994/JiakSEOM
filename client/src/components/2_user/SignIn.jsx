@@ -4,7 +4,7 @@ const axios = require('axios').default;
 
 const SignIn = (props) => {
   let history = useHistory();
-  const { setName } = props;
+  const { setUser , setPostal } = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,9 +14,15 @@ const SignIn = (props) => {
         password: event.target.password.value,
       })
       .then(function (response) {
-        console.log(response.data);
+        console.log(response);
         if (response.data === 'logged in!') {
-          setName(response.data.username);
+          axios.get('/user/signin').then((res) => {
+            console.log(res)
+            if (res.data) {
+              setUser(res.data);
+              setPostal(res.data.postal_code)
+            }
+          });
           history.push('/landing');
         }
       })

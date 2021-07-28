@@ -7,7 +7,6 @@ const PostalCode = (props) => {
   const { postal, setPostal, setAddress } = props;
 
   const handleChange = (event) => {
-    setAddress('Checking Address..');
     setPostal(event.target.value);
   };
 
@@ -43,7 +42,6 @@ const PostalCode = (props) => {
         console.log(values);
         if (values?.items?.[0]?.title === undefined) {
           console.log('address is wrong');
-          setAddress('Incorrect Postal Code');
         } else {
           setAddress(values.items[0].title);
         }
