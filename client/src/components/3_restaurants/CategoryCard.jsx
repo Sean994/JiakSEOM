@@ -17,7 +17,7 @@ const CategoryCard = (props) => {
   return (
     <div
       id={category._id}
-      className="card me-2 shadow-sm border-0"
+      className="card me-2 shadow-sm border-0 catCard"
       style={{ minWidth: '12rem' }}
       onClick={() => filterCatRest(category._id)}
     >
@@ -27,8 +27,8 @@ const CategoryCard = (props) => {
         className="card-img-top d-block mx-auto img-fluid "
         style={{ maxHeight: '8rem', overflow: 'hidden', height: '100%' }}
       />
-      <div className="card-body text-center">
-        <p className="card-text">{category.category_name}</p>
+      <div className="card-body text-center" >
+        <h6 className="card-text">{category.category_name}</h6>
       </div>
     </div>
   );

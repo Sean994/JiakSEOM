@@ -1,4 +1,3 @@
-import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 const RestaurantCard = ({ restaurant }) => {
@@ -8,7 +7,7 @@ const RestaurantCard = ({ restaurant }) => {
   }
 
   return (
-    <div className="card" style={{ width: '24rem' }}>
+    <div className="restCard" style={{ width: '24rem' }} onClick = {() => goToRest(restaurant.id)}>
       <img
         className="card-img-top a"
         src={restaurant.image_cover}
@@ -24,20 +23,20 @@ const RestaurantCard = ({ restaurant }) => {
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">
-          Delivery fee: ${restaurant.delivery_fee}
+          Prep time: {restaurant.preparation_time} mins
         </li>
         <li className="list-group-item">
-          Ratings: {restaurant.ratingAverage} ({restaurant.ratingQuantity})
+          Ratings: {restaurant.ratingAverage} ({restaurant.ratingQuantity} reviews)
         </li>
         {/* <li className="list-group-item">Vestibulum at eros</li> */}
       </ul>
       <div className="card-body">
-        <Button variant="primary" type="submit" className="btn-lg rounded-0" onClick = {() => goToRest(restaurant.id)}>
+        {/* <Button variant="primary" type="submit" className="btn-lg rounded-0" onClick = {() => goToRest(restaurant.id)}>
           Menu
         </Button>
         <Button variant="warning" type="button" className="rounded-0 btn-lg">
           Favourite
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
