@@ -4,10 +4,13 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const NavBar = (props) => {
   const axios = require('axios').default;
-  const { name, setName, address } = props;
+  const { name, setName, setPostal, address } = props;
 
   const logOut = () => {
-    axios.delete('/user/signin', {}).then((res) => setName(''));
+    axios.delete('/user/signin', {}).then((res) => {
+      setName('')
+      setPostal('')
+    });
     console.log('loggin out');
   };
 

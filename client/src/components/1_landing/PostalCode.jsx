@@ -1,5 +1,4 @@
 // This component checks a postal code against an API, and presents an input form to the user.
-// Gordon Chia, 27 July 2021
 
 import { useEffect } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';

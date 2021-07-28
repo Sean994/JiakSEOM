@@ -14,7 +14,7 @@ import './styles/style.css';
 function App() {
   const [rest, setRest] = useState('');
   const [name, setName] = useState('');
-  const [postal, setPostal] = useState();
+  const [postal, setPostal] = useState('');
   const [address, setAddress] = useState('');
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function App() {
   };
   return (
     <div className="App">
-      <NavBar name={name} setName={setName} address={address} />
+      <NavBar name={name} setName={setName} setPostal={setPostal} address={address} />
       <main>
         <Switch>
           <Route exact path="/">
