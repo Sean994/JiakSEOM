@@ -32,7 +32,7 @@ function App() {
   };
   return (
     <div className="App">
-      <NavBar user={user} setUser={setUser} setPostal={setPostal} address={address} setAddress={setAddress} />
+      <NavBar user={user} setUser={setUser} postal={postal} setPostal={setPostal} address={address} setAddress={setAddress} />
       <main>
         <Switch>
           <Route exact path="/">
