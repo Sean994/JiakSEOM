@@ -2,17 +2,27 @@
 
 import { useEffect } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+
 
 const PostalCode = (props) => {
-  const { postal, setPostal, setAddress } = props;
+  const { postal, setPostal, setAddress, address } = props;
 
   const handleChange = (event) => {
     setPostal(event.target.value);
   };
 
+  let history = useHistory();
+
   const handleSubmit = (event) => {
     console.log(postal);
     event.preventDefault();
+
+    if (address !== "") {
+      history.push(`/restaurants/all`)
+    } else {
+      alert("Wrong Address")
+    }
   };
 
   const locateUser = () => {
@@ -75,7 +85,7 @@ const PostalCode = (props) => {
               size="lg"
               type="text"
               pattern="[0-9]{6}"
-              maxlength="6"
+              maxLength="6"
               value={postal}
               onChange={handleChange}
               placeholder="Postal Code"
