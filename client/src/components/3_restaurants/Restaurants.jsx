@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom"
-
+import { useState } from "react"
+import axios from "axios"
 const Restaurants = (props) => {
     const { clickHandle } = props
     const restaurantArray = ["Jeju", "Seoul", "Busan", "Daegu"]
     return (
+
         <div>
             <h1> List of Restaurants</h1>
             <ul>
