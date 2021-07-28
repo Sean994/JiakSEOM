@@ -21,6 +21,7 @@ import {
   faUser,
   faUserPlus,
   faSignOutAlt,
+  faShoppingBasket
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -39,7 +40,8 @@ library.add(
   faUser,
   faUserRegular,
   faUserPlus,
-  faSignOutAlt
+  faSignOutAlt,
+  faShoppingBasket
 );
 
 // export default function registerIcons() {

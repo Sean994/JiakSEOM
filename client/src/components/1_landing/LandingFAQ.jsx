@@ -7,11 +7,11 @@ import { Accordion } from 'react-bootstrap';
 const LandingFAQ = () => {
   return (
     <>
-      <h1 classNmae="fs-1 fw-bold text-success">
+      <h1 className="fs-1 fw-bold text-success">
         FAQ
         <FontAwesomeIcon icon={['fas', 'question']} />
       </h1>
-      <Accordion classsName="accordion-flush">
+      <Accordion classsname="accordion-flush">
         <Accordion.Item eventKey="0">
           <Accordion.Header>How do I order food?</Accordion.Header>
           <Accordion.Body>
