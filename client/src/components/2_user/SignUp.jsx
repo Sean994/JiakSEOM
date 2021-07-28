@@ -1,14 +1,37 @@
 // New Signup component. This component allows a user to sign up for our amazing
 // Korean food delivery service.
 
-import { Button, Col, Form, Row } from 'react-bootstrap';
-
-import { useHistory } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
+import { Redirect, useHistory } from 'react-router-dom';
 const axios = require('axios').default;
+
+const AlertDismissibleExample = ({ message }) => {
+  const [show, setShow] = useState(true);
+
+  if (show) {
+    return (
+      <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+        <p>{message}</p>
+      </Alert>
+    );
+  }
+  return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+};
 
 const SignUp = ({ user }) => {
   let history = useHistory();
+  const [error, setError] = useState('');
 
+  useEffect(() => {
+    if (!user) {
+      <Redirect to="/landing" />;
+      history.push('/user/signin');
+    }
+  }, [history, user]);
+
+  console.log(user);
   const handleSubmit = (event) => {
     // handleSubmit uses axios to POST a form
     event.preventDefault();
@@ -26,14 +49,13 @@ const SignUp = ({ user }) => {
           birthday: event.target.birthday.value,
         })
         .then(function (response) {
-          console.log(response.data);
           if (response.data.status === 'success') {
             console.log('New user created');
             history.push('/user/signin');
           }
         })
         .catch(function (error) {
-          console.log(error);
+          setError(error.response.data.error);
         });
     } else {
       axios
@@ -68,6 +90,7 @@ const SignUp = ({ user }) => {
       {!user && <h1>New User</h1>}
 
       <h3>Embark on a brand new journey of gastronomic happiness.</h3>
+      {error && <AlertDismissibleExample message={error} />}
 
       <Form onSubmit={handleSubmit}>
         <Row className="mb-3">

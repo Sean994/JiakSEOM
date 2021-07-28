@@ -4,7 +4,7 @@ const axios = require('axios').default;
 
 const SignIn = (props) => {
   let history = useHistory();
-  const { setUser , setPostal } = props;
+  const { setUser, setPostal } = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,10 +17,10 @@ const SignIn = (props) => {
         console.log(response);
         if (response.data === 'logged in!') {
           axios.get('/user/signin').then((res) => {
-            console.log(res)
+            console.log(res);
             if (res.data) {
               setUser(res.data);
-              setPostal(res.data.postal_code)
+              setPostal(res.data.postal_code);
             }
           });
           history.push('/landing');
@@ -40,13 +40,13 @@ const SignIn = (props) => {
       </div> */}
       <div className="row ">
         <div className="col-md-4 mx-auto border border-warning  border-1 p-4 rounded-3 shadow">
-          <div class="header-title text-center">
-            <h1 class="wv-heading--title">Sign in</h1>
+          <div className="header-title text-center">
+            <h1 className="wv-heading--title">Sign in</h1>
           </div>
           <div className="myform form">
             <form onSubmit={handleSubmit} className="container  p-4">
               <div className="mb-3 row">
-                <div class="form-group">
+                <div className="form-group">
                   <label htmlFor="username" className="col-sm-4 col-form-label">
                     Username:
                   </label>
@@ -58,7 +58,7 @@ const SignIn = (props) => {
                   />
                 </div>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label htmlFor="password" className="col-sm-4 col-form-label">
                   Password:
                 </label>
@@ -97,7 +97,7 @@ const SignIn = (props) => {
                   </button>
                 </Link>
               </div>
-              <p class="small mt-3">
+              <p className="small mt-3">
                 By signing up, you will be one of our precious customers.
               </p>
             </form>

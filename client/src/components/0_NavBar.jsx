@@ -8,9 +8,9 @@ const NavBar = (props) => {
 
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
-      setUser({});
-      setPostal('');
-      setAddress('');
+      setUser(() => '');
+      setPostal(() => '');
+      setAddress(() => '');
     });
     console.log('loggin out');
   };
