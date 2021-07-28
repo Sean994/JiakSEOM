@@ -60,7 +60,6 @@ const NavBar = (props) => {
               </Nav.Link>
             </LinkContainer>
           </Nav>
-        )}
           {address === '' || (
             <>
               <Button variant="light" onClick={handleShow}>

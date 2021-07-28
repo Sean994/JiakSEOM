@@ -1,27 +1,41 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import CartItem from './CartItem';
 
-const OrderSideBar = () => {
-  //const [subTotal, setSubTotal] = useState(0);
+const OrderSideBar = (props) => {
+  const { order, setOrder, restaurant } = props;
+  const [totalItems, setTotalItems] = useState(0)
+  const [subTotal, setSubTotal] = useState(0);
 
-  //! context  chosenMenu
+  useEffect(()=>{
+    setTotalItems(order.orders.length)
+    let num = 0
+    order.orders.forEach((ele) => {num += (ele.price*ele.quantity)})
+    setSubTotal(num)
+  },[order.orders.length, order.orders])
+
   return (
     <div className="container bg-white text-center py-5 px-0 shadow ">
       <div className="mb-5">
         <h6 className="fw-light mb-3">
           <FontAwesomeIcon icon={['fas', 'hourglass-half']} className="mx-1" />
-          <span>35</span>min
+          <span>{restaurant.preparation_time}</span>min
         </h6>
-        <h5>Your order from 'restaurant name'</h5>
+        <h5>Your order from: {restaurant?.name}</h5>
+        <h5>Total Cart Items: {totalItems}</h5>
       </div>
       <div className="bg-light container-fluid py-4 border-bottom">
-        {/* map the chosen menu items list */}
-        {/* <ItemCard item={item} key={item._id}/> */}
-        <CartItem />
-        <CartItem />
-        <CartItem />
-        <CartItem />
+        {order['orders'].map((orderItem, index) => (
+          <CartItem
+            key={index}
+            orderItem={orderItem}
+            index={index}
+            order={order}
+            setOrder={setOrder}
+            setSubTotal={setSubTotal}
+          />
+        ))}
       </div>
       <div className="px-3">
         <table className="table table-borderless ">
@@ -31,7 +45,7 @@ const OrderSideBar = () => {
                 Subtotal
               </th>
               <td className="text-end">
-                S$ <span>24.21</span>
+                S$ <span>{subTotal}</span>
               </td>
             </tr>
             <tr>
@@ -40,7 +54,7 @@ const OrderSideBar = () => {
               </th>
 
               <td className="text-end">
-                S$ <span>4</span>
+                S$ <span>{restaurant.delivery_fee}</span>
               </td>
             </tr>
             <tr>

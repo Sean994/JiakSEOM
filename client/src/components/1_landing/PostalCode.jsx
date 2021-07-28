@@ -49,7 +49,6 @@ const PostalCode = (props) => {
   useEffect(() => {
     const checkPostal = async () => {
       const updateAddress = (values) => {
-        console.log(values);
         if (values?.items?.[0]?.title === undefined) {
           console.log('address is wrong');
         } else {
