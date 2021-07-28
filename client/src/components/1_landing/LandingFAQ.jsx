@@ -76,7 +76,7 @@ const LandingFAQ = () => {
           <Accordion.Header>How much is the delivery fee?</Accordion.Header>
           <Accordion.Body>
             For now, as we are operating in beta mode, we cap all delivery fees
-            islandwide to the low price of SGD$3.00.
+            islandwide at SGD$5.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
