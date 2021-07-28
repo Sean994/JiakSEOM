@@ -2,19 +2,20 @@
 // Korean food delivery service.
 
 //! TESTING PHASE - CODE MAY BE GROSSLY INCORRECT
+
+//? Gordon, 28 July 10:30AM - FIXED, PLEASE TEST
+
 //? Too tired to continue - will continue tomorrow.
 //? I stopped at making the form handle validation. The POST API call needs to be tested too.
 //? Refer to https://react-bootstrap.github.io/components/forms/#forms-validation-native 
 //? Gordon, 28 July 1:40AM
 
-import * as React from 'react';
-import {useState} from 'react';
+
+
 import {Form, Button, Col, Row} from 'react-bootstrap';
 const axios = require('axios').default;
 
 const SignUp = (props) => {
-
-  const [validated, setValidated] = useState(false); // this state is to handle form validation
 
 
   const handleSubmit = (event) => { // handleSubmit uses axios to POST a form
@@ -47,22 +48,22 @@ const SignUp = (props) => {
       <h1>New User</h1>
       <h3>Embark on a brand new journey of gastronomic happiness.</h3>
 
-      <Form noValidate validated={validated} >
+      <Form onSubmit={handleSubmit}>
   <Row className="mb-3">
     <Form.Group as={Col}>
       <Form.Label>First name</Form.Label>
-      <Form.Control required type="first_name"/>
+      <Form.Control type="text" name="first_name"/>
       <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
     </Form.Group>
 
     <Form.Group as={Col}>
       <Form.Label>Last name</Form.Label>
-      <Form.Control type="last_name"/>
+      <Form.Control type="text" name="last_name"/>
     </Form.Group>
 
     <Form.Group as={Col}>
       <Form.Label>Birthday</Form.Label>
-      <Form.Control type="birthday"/>
+      <Form.Control type="date" name="birthday"/>
     </Form.Group>
 
   </Row>
@@ -71,12 +72,12 @@ const SignUp = (props) => {
 
 <Form.Group as={Col}>
       <Form.Label>Username</Form.Label>
-      <Form.Control type="username"/>
+      <Form.Control required type="text" name="username"/>
     </Form.Group>
 
     <Form.Group as={Col}>
       <Form.Label>Password</Form.Label>
-      <Form.Control type="password"/>
+      <Form.Control required type="password" name="password"/>
     </Form.Group>
 </Row>
 
@@ -86,12 +87,12 @@ const SignUp = (props) => {
 
 <Form.Group as={Col}>
       <Form.Label>Contact Number</Form.Label>
-      <Form.Control type="contact"/>
+      <Form.Control required type="tel" name="contact"/>
     </Form.Group>
 
     <Form.Group as={Col}>
       <Form.Label>Email</Form.Label>
-      <Form.Control type="email"/>
+      <Form.Control required type="email" name="email"/>
     </Form.Group>
 </Row>
 
@@ -99,12 +100,12 @@ const SignUp = (props) => {
 
 <Form.Group as={Col}>
       <Form.Label>Address</Form.Label>
-      <Form.Control type="address"/>
+      <Form.Control required type="address" name="address"/>
     </Form.Group>
 
     <Form.Group as={Col}>
       <Form.Label>Postal Code</Form.Label>
-      <Form.Control type="postal_code"/>
+      <Form.Control required type="number" name="postal_code"/>
     </Form.Group>
 </Row>
 
