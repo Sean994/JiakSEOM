@@ -1,8 +1,6 @@
-
 const FoodItemCard = ({ foodItem }) => {
-
   return (
-    <div className="card mb-2" style={{ maxWidth: '900px' }}>
+    <div className="card mb-2 border-0 shadow" style={{ maxWidth: '900px' }}>
       <div className="row no-gutters">
         <div className="col-md-4">
           <img
@@ -20,8 +18,8 @@ const FoodItemCard = ({ foodItem }) => {
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title">
-              {foodItem.name} {foodItem.category_id}<br /> [{foodItem.kor_name}] <br /> $
-              {foodItem.price}
+              {foodItem.name} {foodItem.category_id}
+              <br /> [{foodItem.kor_name}] <br /> ${foodItem.price}
             </h5>
 
             <p className="card-text">
@@ -38,10 +36,7 @@ const FoodItemCard = ({ foodItem }) => {
                 ))}
               </small>
             </p>
-            <button
-              type="button"
-              className="btn btn-primary"
-            >
+            <button type="button" className="btn btn-primary">
               Add to cart
             </button>
             {/* <button
