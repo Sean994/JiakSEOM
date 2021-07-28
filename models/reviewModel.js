@@ -12,7 +12,7 @@ const reviewSchema = new mongoose.Schema(
       ref: 'Restaurant',
       required: [true, 'Review must have restaurant_id'],
     },
-    rating: { type: Number },
+    rating: { type: Number, max: 5, min: 0 },
     review: {
       type: String,
       required: [true, 'Review must have content!'],
@@ -34,6 +34,6 @@ const reviewSchema = new mongoose.Schema(
   },
 });
 
-const Review = mongoose.model('Reviewe', reviewSchema);
+const Review = mongoose.model('Review', reviewSchema);
 
 module.exports = Review;

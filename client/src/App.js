@@ -30,11 +30,19 @@ function App() {
         setOrder((order)=>({...order, "user": res.data._id}))
       }
     });
-  },[]);
+  }, []);
 
   return (
     <div className="App">
-      <NavBar user={user} setUser={setUser} setPostal={setPostal} address={address} setAddress={setAddress} setOrder={setOrder}/>
+      <NavBar
+        user={user}
+        setUser={setUser}
+        postal={postal}
+        setPostal={setPostal}
+        address={address}
+        setAddress={setAddress}
+        setOrder={setOrder}
+      />
       <main>
         <Switch>
           <Route exact path="/">
@@ -53,6 +61,9 @@ function App() {
           </Route>
           <Route path="/user/signup">
             <SignUp />
+          </Route>
+          <Route path="/user/edit">
+            <SignUp user={user} />
           </Route>
           <Route exact path="/restaurants/all">
             <Restaurants />
