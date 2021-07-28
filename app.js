@@ -49,6 +49,7 @@ app.use('/api/v1/reviews', reviewRouter);
 
 app.use('/api/v1/search', searchRouter)
 app.use('/user/signin', loginRouter);
+app.use(express.static(path.join(__dirname, "./client/build")));
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build", "index.html"));
 });
