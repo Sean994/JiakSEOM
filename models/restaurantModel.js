@@ -60,18 +60,26 @@ const restaurantSchema = new mongoose.Schema(
     },
   },
   { toJSON: { virtuals: true } },
-  { toObject: { virtuals: true } }
-);
+  { toObject: { virtuals: true } },
+  { name: String },
+  { id: false }
+).set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function (doc, ret) {
+    delete ret.id;
+  },
+});
 
 restaurantSchema.pre('save', function (next) {
   this.slug = slugify(this.name, { lower: true });
   next();
 });
 
-restaurantSchema.pre(/^find/, function (next) {
-  this.select('-__v');
-  next();
-});
+// restaurantSchema.pre(/^find/, function (next) {
+//   this.select('-__v');
+//   next();
+// });
 
 restaurantSchema.virtual('menuItems', {
   ref: 'MenuItem', // The model to use

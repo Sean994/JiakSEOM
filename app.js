@@ -41,6 +41,7 @@ app.use('/api/v1/user', userRouter);
 app.use('/api/v1/categories', categoryRouter);
 app.use('/api/v1/restaurants', restaurantRouter);
 app.use('/api/v1/menu-items', menuItemRouter);
+app.use('/api/v1/orders', ordersRouter);
 
 app.use('/user/signin', loginRouter);
 app.all('*', (req, res, next) => {

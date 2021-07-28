@@ -255,3 +255,65 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
 ## <strong>GET</strong> /api/v1/menu-items/{menu-item_id}
 
 - Get the menu-item's detail by id
+
+<br>
+<br>
+
+# 📖 Orders
+
+## <strong> GET </strong> /api/v1/orders
+
+- Get all orders
+
+<br>
+
+## <strong> GET </strong> /api/v1/orders/{user_id}
+
+- Get all orders with user_id
+- restaurant's \_id, name | Each order items' name, price, image are included
+
+<details>
+<summary>Example</summary>
+
+```json
+{
+  "status": "success",
+  "data": {
+    "orders": [
+      {
+        "orderedAt": "2021-07-28T10:36:40.826Z",
+        "_id": "6101333d8383393cab7a711f",
+        "user": "60fe3277d6932e1093b56255",
+        "restaurant": {
+          "_id": "60fe44b63731471b031b10ca",
+          "name": "O.BBa Jjajang"
+        },
+        "orders": [
+          {
+            "_id": "6101333d8383393cab7a7120",
+            "item": {
+              "_id": "60fe727aa63b9a2bfc8baa65",
+              "name": "Chilli Buckwheat Noodle Soup",
+              "price": 18,
+              "item_img": "http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1170/S1555404786098.jpg"
+            },
+            "quantity": 3
+          },
+          {
+            "_id": "6101333d8383393cab7a7121",
+            "item": {
+              "_id": "60fe727aa63b9a2bfc8baa66",
+              "name": "Spicy Chilled Buckwheat Noodles",
+              "price": 18,
+              "item_img": "https://www.yorivery.com/data/goods/20/07/30//1000000905/1000000905_detail_388.jpg"
+            },
+            "quantity": 2
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+</details>

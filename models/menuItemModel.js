@@ -28,6 +28,12 @@ const menuItemSchema = new mongoose.Schema({
   description: {
     type: String,
   },
+}).set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function (doc, ret) {
+    delete ret.id;
+  },
 });
 
 const MenuItem = mongoose.model('MenuItem', menuItemSchema);

@@ -13,6 +13,12 @@ const categorySchema = new mongoose.Schema({
   img_cover: {
     type: String,
   },
+}).set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function (doc, ret) {
+    delete ret.id;
+  },
 });
 
 categorySchema.pre('save', function (next) {
