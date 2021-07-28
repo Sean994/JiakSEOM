@@ -11,7 +11,7 @@ const LandingFAQ = () => {
         FAQ
         <FontAwesomeIcon icon={['fas', 'question']} />
       </h1>
-      <Accordion className="accordion-flush">
+      <Accordion classsname="accordion-flush">
         <Accordion.Item eventKey="0">
           <Accordion.Header>How do I order food?</Accordion.Header>
           <Accordion.Body>

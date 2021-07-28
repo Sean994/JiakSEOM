@@ -29,11 +29,9 @@ const Restaurants = (props) => {
 
   return (
     <div>
-
-
       <div className="container">
         <h3 className="text-body">Categories</h3>
-        <div className="container-xl d-flex overflow-auto align-baseline">
+        <div className="container-xl d-flex overflow-auto align-baseline" >
           {categoryList.map((category) => (
             <CategoryCard key={category._id} category={category} setRestaurantList={setRestaurantList} />
           ))}
@@ -44,9 +42,9 @@ const Restaurants = (props) => {
         <h3 className="text-body">All Restaurants</h3>
         <div className="container-xl restContainer row">
           {restaurantList.map((restaurant) => (
-            < div className="col-4 mb-4"
+            < div className="col-4 mb-4" key={restaurant._id}
             >
-            <RestaurantCard key={restaurant._id} restaurant={restaurant}
+            <RestaurantCard  restaurant={restaurant}
              />
             </div>
           ))}

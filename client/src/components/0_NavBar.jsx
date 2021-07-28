@@ -69,6 +69,19 @@ const NavBar = (props) => {
               </Button>
             )}
           </Nav>
+          <Nav>
+            <FontAwesomeIcon
+              icon={['fas', 'shopping-basket']}
+              size="lg"
+              className="ms-4 text-warning"
+            />
+            <span className="badge text-danger">1</span>
+          </Nav>
+          <Nav>
+            <LinkContainer to="/checkout">
+              <Nav.Link className="text-secondary">checkout</Nav.Link>
+            </LinkContainer>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

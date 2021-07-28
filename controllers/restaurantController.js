@@ -37,6 +37,8 @@ exports.getAllRestaurants = async (req, res, next) => {
             preparation_time: restaurant.preparation_time,
             image_cover: restaurant.image_cover,
             slug: restaurant.slug,
+            delivery_fee: restaurant.delivery_fee,
+            discount_rate: restaurant.discount_rate || null,
           };
           return restaurantObj;
         });
