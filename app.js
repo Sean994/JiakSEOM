@@ -8,6 +8,7 @@ dotenv.config();
 const session = require('express-session');
 // EXTRA INSTALL
 const morgan = require('morgan');
+const path = require('path')
 
 // ROUTERS
 const categoryRouter = require('./routes/categoryRoute');
@@ -48,6 +49,9 @@ app.use('/api/v1/reviews', reviewRouter);
 
 app.use('/api/v1/search', searchRouter)
 app.use('/user/signin', loginRouter);
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
+});
 app.all('*', (req, res, next) => {
   const error = new Error(`Can't find ${req.originalUrl} on this server`);
 
