@@ -35,6 +35,7 @@ function App() {
       <NavBar
         user={user}
         setUser={setUser}
+        postal={postal}
         setPostal={setPostal}
         address={address}
         setAddress={setAddress}

@@ -2,26 +2,24 @@
 
 import { useEffect } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
 
 
 const PostalCode = (props) => {
-  const { postal, setPostal, setAddress, address } = props;
+  const { postal, setPostal, setAddress, address, handleClose } = props;
 
   const handleChange = (event) => {
     setPostal(event.target.value);
   };
 
-  let history = useHistory();
 
   const handleSubmit = (event) => {
     console.log(postal);
     event.preventDefault();
 
     if (address !== "") {
-      history.push(`/restaurants/all`)
+        handleClose()
     } else {
-      alert("Wrong Address")
+      alert("Wrong Address. Please try again.")
     }
   };
 
@@ -94,11 +92,11 @@ const PostalCode = (props) => {
           </div>
           <div className="col-6 col-md-3 d-flex justify-content-center align-items-center ">
             <Button
-              variant="primary"
+              variant="danger"
               type="submit"
               className="btn-lg rounded-0"
             >
-              Delivery
+              Change Address
             </Button>
 
             <Button

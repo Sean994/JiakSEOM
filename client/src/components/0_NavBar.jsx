@@ -1,10 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { useState } from 'react';
+import PostalCode from './0_NavBarPostal.jsx';
 
 const NavBar = (props) => {
   const axios = require('axios').default;
-  const { user, setUser, setPostal, address, setAddress } = props;
+  const { user, setUser, setPostal, postal, address, setAddress } = props;
+
+  // State logic for delivery offCanvas
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
@@ -57,13 +65,42 @@ const NavBar = (props) => {
               </Nav.Link>
             </LinkContainer>
           </Nav>
-        )}
+          {address === '' || (
+            <>
+              <Button variant="light" onClick={handleShow}>
+                <h6 className="navBarDes text-dark">
+                  Delivering to: {address?.substring(0, address.length - 11)}
+                </h6>
+              </Button>
+
+              <Offcanvas show={show} onHide={handleClose} placement="top">
+                <Offcanvas.Header closeButton>
+                  <Offcanvas.Title>Changing your location?</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                  <PostalCode postal ={postal} setPostal={setPostal} address={address} setAddress={setAddress} handleClose={handleClose}/>
+                </Offcanvas.Body>
+              </Offcanvas>
+            </>
+          )}
+          {user.username === undefined || (
+            <h6 className="navBarDes text-dark">Welcome, {user.username} </h6>
+       )}
         <Nav>
           {!user.username ? (
             <LinkContainer to="/user/signin" align="right">
               <Button variant="warning">
                 <FontAwesomeIcon icon={['far', 'user']} className="me-2" />
                 <span>Sign In</span>
+                </Button>
+              </LinkContainer>
+            ) : (
+              <Button variant="warning" onClick={logOut}>
+                <FontAwesomeIcon
+                  icon={['fas', 'sign-out-alt']}
+                  className="me-1"
+                />
+                Sign Out
               </Button>
             </LinkContainer>
           ) : (
