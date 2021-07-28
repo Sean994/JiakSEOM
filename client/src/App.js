@@ -13,18 +13,18 @@ import './styles/style.css';
 
 function App() {
   const [rest, setRest] = useState('');
-  const [name, setName] = useState('');
+  const [user, setUser] = useState('');
   const [postal, setPostal] = useState('');
   const [address, setAddress] = useState('');
 
   //! store whol user info
   useEffect(() => {
     axios.get('/user/signin').then((res) => {
-      if (res.data.username) {
-        setName(res.data.username);
+      if (res.data) {
+        setUser(res.data);
       }
     });
-  });
+  },[]);
 
   const restLiClick = (i) => {
     console.log('hey', i);
@@ -32,7 +32,7 @@ function App() {
   };
   return (
     <div className="App">
-      <NavBar name={name} setName={setName} setPostal={setPostal} address={address} />
+      <NavBar user={user} setUser={setUser} setPostal={setPostal} address={address} setAddress={setAddress} />
       <main>
         <Switch>
           <Route exact path="/">
@@ -47,7 +47,7 @@ function App() {
             />
           </Route>
           <Route path="/user/signin">
-            <SignIn setName={setName} />
+            <SignIn setUser={setUser} setPostal={setPostal}/>
           </Route>
           <Route path="/user/signup">
             <SignUp />

@@ -24,7 +24,7 @@ const OrderSideBar = () => {
         <CartItem />
       </div>
       <div className="px-3">
-        <table class="table table-borderless ">
+        <table className="table table-borderless ">
           <tbody>
             <tr>
               <th scope="row" className="text-start fw-light">

@@ -7,7 +7,6 @@ const PostalCode = (props) => {
   const { postal, setPostal, setAddress } = props;
 
   const handleChange = (event) => {
-    setAddress('Checking Address..');
     setPostal(event.target.value);
   };
 
@@ -43,7 +42,6 @@ const PostalCode = (props) => {
         console.log(values);
         if (values?.items?.[0]?.title === undefined) {
           console.log('address is wrong');
-          setAddress('Incorrect Postal Code');
         } else {
           setAddress(values.items[0].title);
         }
@@ -73,10 +71,11 @@ const PostalCode = (props) => {
       >
         <div className="row g-0 px-2">
           <div className="col-sm-6 col-md-9  ">
-            {/* <Form.Label>Postal Code:</Form.Label> */}
             <Form.Control
               size="lg"
               type="text"
+              pattern="[0-9]{6}"
+              maxlength="6"
               value={postal}
               onChange={handleChange}
               placeholder="Postal Code"

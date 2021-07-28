@@ -21,13 +21,13 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
+  "proxy": "http://localhost:3003",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3003",
   "eslintConfig": {
     "extends": [
       "react-app",
