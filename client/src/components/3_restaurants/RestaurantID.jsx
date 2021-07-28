@@ -26,7 +26,9 @@ const RestaurantID = (props) => {
       <h1>Welcome to restaurant {props.rest} </h1>
       <p>See Our Menu</p>
       {foodList.map((food) => (
+          <div className="col-4 mb-4">
           <FoodItemCard foodItem={food} />
+          </div>
       ))}
        
       <p>ID: {id}</p>

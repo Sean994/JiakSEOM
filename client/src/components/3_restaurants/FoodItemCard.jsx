@@ -29,7 +29,7 @@ const FoodItemCard = ({ foodItem }) => {
       </ul>
       <div className="card-body">
         <Button variant="primary" type="submit" className="btn-lg rounded-0" onClick = {() => goToRest(foodItem.restaurant_id)}>
-          Menu
+          Order
         </Button>
         <Button variant="warning" type="button" className="rounded-0 btn-lg">
           Favourite
