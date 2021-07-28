@@ -5,7 +5,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 
 
 const PostalCode = (props) => {
-  const { postal, setPostal, setAddress, address } = props;
+  const { postal, setPostal, setAddress, address, handleClose } = props;
 
   const handleChange = (event) => {
     setPostal(event.target.value);
@@ -17,7 +17,7 @@ const PostalCode = (props) => {
     event.preventDefault();
 
     if (address !== "") {
-      alert("Address Updated!")
+        handleClose()
     } else {
       alert("Wrong Address. Please try again.")
     }

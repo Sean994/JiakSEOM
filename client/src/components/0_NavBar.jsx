@@ -64,7 +64,7 @@ const NavBar = (props) => {
                   <Offcanvas.Title>Changing your location?</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                  <PostalCode postal ={postal} setPostal={setPostal} address={address} setAddress={setAddress}/>
+                  <PostalCode postal ={postal} setPostal={setPostal} address={address} setAddress={setAddress} handleClose={handleClose}/>
                 </Offcanvas.Body>
               </Offcanvas>
             </>
