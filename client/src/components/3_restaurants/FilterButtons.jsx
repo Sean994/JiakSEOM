@@ -26,12 +26,12 @@ const FilterButtons = (props) => {
     }
 
     return(
-        <div>
-            <button onClick={toggleFilterRating}>Top rated</button>
-            <button onClick={toggleFilterFastDelivery}>Delivery time</button>
-            <button onClick={toggleFilterFreeDelivery}>Free delivery</button>
-            <button onClick={toggleFilterDiscounts}>Discounts</button>
-            <button onClick={toggleFilterCategory}>Clear filters</button>
+        <div className="d-flex align-items-center justify-content-center">
+            <button onClick={toggleFilterRating} className ="btn btn-success m-2">Top rated</button>
+            <button onClick={toggleFilterFastDelivery} className="btn btn-danger m-2">Delivery time</button>
+            <button onClick={toggleFilterFreeDelivery} className="btn btn-dark m-2">Free delivery</button>
+            <button onClick={toggleFilterDiscounts} className="btn btn-info m-2">Discounts</button>
+            <button onClick={toggleFilterCategory} className="btn btn-warning m-2">Clear filters</button>
         </div>
     )
 }
