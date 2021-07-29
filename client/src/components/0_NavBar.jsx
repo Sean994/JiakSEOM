@@ -2,12 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { Button, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap'; //! deleted container import
 import { LinkContainer } from 'react-router-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PostalCode from './0_NavBarPostal.jsx';
 import { useMain, actions } from './utils/MainProvider.jsx';
 
-const NavBar = (props) => {
+const NavBar = () => {
   const { mainState, mainDispatch } = useMain();
+  const history = useHistory();
   const axios = require('axios').default;
 
   // State logic for delivery offCanvas
@@ -21,6 +22,7 @@ const NavBar = (props) => {
       mainDispatch({ type: actions.SIGNOUT });
     });
     console.log('loggin out');
+    history.push('/');
   };
 
   return (

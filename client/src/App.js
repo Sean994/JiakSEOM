@@ -11,63 +11,58 @@ import RestaurantID from './components/3_restaurants/RestaurantID';
 import Restaurants from './components/3_restaurants/Restaurants';
 import CheckOut from './components/4_checkout/Checkout.jsx';
 import Reviews from './components/6_review/Reviews';
+import { actions, useMain } from './components/utils/MainProvider';
 import './styles/style.css';
-import { useMain } from './components/utils/MainProvider';
+
+const PrivateRoute = ({ children, ...rest }) => {
+  const { mainState } = useMain();
+  return (
+    <Route
+      {...rest}
+      render={({ location }) => {
+        return mainState.isAuthenticated === true ? (
+          children
+        ) : (
+          <Redirect
+            to={{ pathname: '/user/signin', state: { from: location } }}
+          />
+        );
+      }}
+    />
+  );
+};
+
+const Protected = () => {
+  return <div>Hi protected </div>;
+};
 
 function App() {
-  const [restaurant, setRestaurant] = useState({});
+  const { mainState, mainDispatch } = useMain();
   const [user, setUser] = useState('');
-  const [order, setOrder] = useState({
-    user: '',
-    restaurant: '',
-    orders: [],
-  });
-  const [postal, setPostal] = useState('');
-  const [address, setAddress] = useState('');
 
-  const { mainState } = useMain();
   console.log(mainState);
 
   useEffect(() => {
     axios.get('/user/signin').then((res) => {
-      if (res.data) {
-        setUser(res.data);
-        setPostal(res.data.postal_code);
-        setOrder((order) => ({ ...order, user: res.data._id }));
+      if (res.status === 200) {
+        mainDispatch({ type: actions.SIGNIN, payload: res.data });
       }
     });
   }, []);
 
   return (
     <div className="App">
-      <NavBar
-        user={user}
-        setUser={setUser}
-        postal={postal}
-        setPostal={setPostal}
-        address={address}
-        setAddress={setAddress}
-        order={order}
-      />
+      <NavBar />
       <main>
         <Switch>
           <Route exact path="/">
             <Redirect to="/landing" />
           </Route>
           <Route path="/landing">
-            <Landing
-              postal={postal}
-              setPostal={setPostal}
-              address={address}
-              setAddress={setAddress}
-            />
+            <Landing />
           </Route>
           <Route path="/user/signin">
-            <SignIn
-              setUser={setUser}
-              setPostal={setPostal}
-              setOrder={setOrder}
-            />
+            <SignIn />
           </Route>
           <Route path="/user/signup">
             <SignUp />
@@ -82,22 +77,21 @@ function App() {
             <Restaurants />
           </Route>
           <Route path="/restaurants/:id">
-            <RestaurantID
-              restaurant={restaurant}
-              setRestaurant={setRestaurant}
-              order={order}
-              setOrder={setOrder}
-            />
+            <RestaurantID />
           </Route>
           {/* if cookie with the session id => (loggedin) => link to checkout 
           if no cookie with the session id => link to login page */}
 
           <Route path="/checkout">
-            <CheckOut address={address} order={order} restaurant={restaurant} />
+            <CheckOut />
           </Route>
           <Route path="/review">
             <Reviews user={user} />
           </Route>
+
+          <PrivateRoute>
+            <Protected />
+          </PrivateRoute>
 
           <Redirect from="*" to="/" />
         </Switch>

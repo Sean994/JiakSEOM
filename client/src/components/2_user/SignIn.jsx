@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { actions, useMain } from '../utils/MainProvider';
+import { Redirect, useLocation } from 'react-router';
 
 const axios = require('axios').default;
 
 const SignIn = (props) => {
-  let history = useHistory();
-
+  const { state } = useLocation();
+  const [redirectToReferrer, setRedirectToReferrer] = useState(false);
   const { mainDispatch } = useMain();
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,6 +23,7 @@ const SignIn = (props) => {
         if (res.status === 200) {
           console.log(res);
           mainDispatch({ type: actions.SIGNIN, payload: res.data });
+          setRedirectToReferrer(true);
           history.push('/landing');
         }
       })
@@ -28,6 +31,11 @@ const SignIn = (props) => {
         console.log(error);
       });
   };
+  if (redirectToReferrer === true) {
+    const a = state?.from;
+    console.log('state.from ', a);
+    return <Redirect to={state?.from || '/'} />;
+  }
 
   return (
     <div className="container  p-4 ">
