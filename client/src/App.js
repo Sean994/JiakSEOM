@@ -27,6 +27,7 @@ function App() {
     axios.get('/user/signin').then((res) => {
       if (res.data) {
         setUser(res.data);
+        setPostal(res.data.postal_code)
         setOrder((order)=>({...order, "user": res.data._id}))
       }
     });
