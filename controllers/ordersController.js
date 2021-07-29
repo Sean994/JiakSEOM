@@ -41,7 +41,8 @@ exports.getOrdersByUser = async (req, res, next) => {
       .populate({
         path: 'orders.item',
         options: { select: 'name price item_img' },
-      });
+      })
+      .populate('review')
 
     if (orders.length === 0) {
       throw new Error(

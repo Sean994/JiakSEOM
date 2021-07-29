@@ -21,6 +21,10 @@ const reviewSchema = new mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
+    orders : {
+      type : mongoose.Schema.Types.ObjectId,
+      ref : 'Orders'
+    }
   },
   { toJSON: { virtuals: true } },
   { toObject: { virtuals: true } },

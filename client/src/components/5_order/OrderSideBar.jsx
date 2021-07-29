@@ -17,7 +17,7 @@ const OrderSideBar = (props) => {
   }, [order.orders.length])
 
   return (
-    <div className="container bg-white text-center py-5 px-0 shadow sticky-top" style={{top: `50px`}}>
+    <div className="container bg-white text-center py-5 px-0 shadow sticky-top" style={{top: `20px`}}>
       <div className="mb-5">
         <h6 className="fw-light mb-3">
           <FontAwesomeIcon icon={['fas', 'hourglass-half']} className="mx-1" />
