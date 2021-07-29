@@ -38,6 +38,8 @@ Prerequisites:
 5. In root folder, `npx nodemon server.js` to start the Express localhost server.
 6. In client folder, `npm start` to start the React localhost server.
 
+Refer to `API.md` for API documentation.
+
 ## Wireframes
 
 ### Landing Page
@@ -61,7 +63,7 @@ Prerequisites:
 
 4. The user should be able to see their order history, as well as their past reviews.
 
-5. Unauthenticated users should be able to select the restaurants, but should not be able to check out ( @HyunJungOh0120 and @Sean994 please confirm )
+5. Unauthenticated users should be able to select the restaurants, but should not be able to check out.
 
 ### Planning and Development Process
 1. Completed a basic preproject exercise, including writing out the user stories.
@@ -79,7 +81,8 @@ Prerequisites:
 * ???
 
 ### APIs Used
-- @Sean994 to fill up
+- HERE API
+- 
 
 ### Acknowledgments
 * Images from [Unsplash](https://unsplash.com/)
