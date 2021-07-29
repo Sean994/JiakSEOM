@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import { Button, Nav, Navbar, Offcanvas, NavDropdown } from 'react-bootstrap'; //! deleted container import
+import { Button, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap'; //! deleted container import
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import PostalCode from './0_NavBarPostal.jsx';
 
 const NavBar = (props) => {
@@ -51,28 +52,24 @@ const NavBar = (props) => {
         {user.username && (
           <Nav>
             <h6 className="navBarDes text-dark">Welcome, {user.username}🍉 </h6>
-            <NavDropdown title="User" id="basic-nav-dropdown">
-              <NavDropdown.Item>
-                <LinkContainer to="/user/edit">
-                  <Nav.Link className="text-secondary">
-                    <FontAwesomeIcon
-                      icon={['fas', 'user-edit']}
-                      className="me-1 text-warning"
-                    />
-                    Edit Info
-                  </Nav.Link>
-                </LinkContainer>
+            <NavDropdown
+              title="User"
+              id="basic-nav-dropdown"
+              className="text-secondary"
+            >
+              <NavDropdown.Item as={Link} to="/user/edit">
+                <FontAwesomeIcon
+                  icon={['fas', 'user-edit']}
+                  className="me-1 text-warning"
+                />
+                Edit Info
               </NavDropdown.Item>
-              <NavDropdown.Item>
-                <LinkContainer to="/user/history">
-                  <Nav.Link className="text-secondary">
-                    <FontAwesomeIcon
-                      icon={['fas', 'user-edit']}
-                      className="me-1 text-warning"
-                    />
-                    Order History
-                  </Nav.Link>
-                </LinkContainer>
+              <NavDropdown.Item as={Link} to="/user/edit">
+                <FontAwesomeIcon
+                  icon={['fas', 'user-edit']}
+                  className="me-1 text-warning"
+                />
+                Order History
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

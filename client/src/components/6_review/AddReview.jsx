@@ -8,7 +8,7 @@ import { useLocation } from 'react-router';
 import { useHistory } from 'react-router-dom';
 
 // install query-string from npm, and then find a way to get the data inside
-
+//http://localhost:3000/review?user=60fe3277d6932e1093b56255&restaurant=60fe44b63731471b031b10ca&orderid=61022e8b4d5058181389c56b
 const AddReview = () => {
   const { search } = useLocation();
   const { user, restaurant, orderid } = queryString.parse(search);

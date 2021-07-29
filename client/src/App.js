@@ -13,7 +13,6 @@ import CheckOut from './components/4_checkout/Checkout.jsx';
 import Reviews from './components/6_review/Reviews';
 import './styles/style.css';
 
-
 function App() {
   const [restaurant, setRestaurant] = useState({});
   const [user, setUser] = useState('');
@@ -73,8 +72,8 @@ function App() {
           <Route path="/user/edit">
             <SignUp user={user} />
           </Route>
-          <Route path ="/user/history">
-            <UserHistory user={user}/>
+          <Route path="/user/history">
+            <UserHistory user={user} />
           </Route>
           <Route exact path="/restaurants/all">
             <Restaurants />
@@ -89,12 +88,14 @@ function App() {
           </Route>
           {/* if cookie with the session id => (loggedin) => link to checkout 
           if no cookie with the session id => link to login page */}
+
           <Route path="/checkout">
             <CheckOut address={address} order={order} restaurant={restaurant} />
           </Route>
           <Route path="/review">
-            <Reviews />
+            <Reviews user={user} />
           </Route>
+
           <Redirect from="*" to="/" />
         </Switch>
       </main>
