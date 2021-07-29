@@ -8,7 +8,7 @@ const CategoryCard = (props) => {
     //   console.log(res.data.data.restaurants);
     //   setRestaurantList(res.data.data.restaurants)
     // })
-    setFilter(filter  => ({...filter, "category": id}))
+    setFilter(filter  => ({...filter, "category": id , "category-name": category.category_name}))
     // axios.get(`/api/v1/categories/${id}/restaurants`).then((res) => {
     //   console.log(id);
     //   console.log(res.data.restaurants);

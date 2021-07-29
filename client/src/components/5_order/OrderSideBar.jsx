@@ -2,21 +2,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import CartItem from './CartItem';
+import { useHistory } from 'react-router-dom';
 
 const OrderSideBar = (props) => {
-  const { order, setOrder, restaurant } = props;
+  const { order, setOrder, restaurant, subTotal, setSubTotal} = props;
   const [totalItems, setTotalItems] = useState(0)
-  const [subTotal, setSubTotal] = useState(0);
+  let history = useHistory();
+  const checkOut = () => {
+    history.push('/checkout')
+  }
 
   useEffect(()=>{
-    setTotalItems(order.orders.length)
-    let num = 0
-    order.orders.forEach((ele) => {num += (ele.price*ele.quantity)})
-    setSubTotal(num)
-  },[order.orders.length, order.orders])
+    setTotalItems(()=>order.orders.length)
+  }, [order.orders.length])
 
   return (
-    <div className="container bg-white text-center py-5 px-0 shadow ">
+    <div className="container bg-white text-center py-5 px-0 shadow sticky-top" style={{top: `50px`}}>
       <div className="mb-5">
         <h6 className="fw-light mb-3">
           <FontAwesomeIcon icon={['fas', 'hourglass-half']} className="mx-1" />
@@ -52,33 +53,36 @@ const OrderSideBar = (props) => {
               <th scope="row" className="text-start fw-light">
                 Delivery fee
               </th>
-
               <td className="text-end">
-                S$ <span>{restaurant.delivery_fee}</span>
+                S$ <span>{restaurant.delivery_fee ? restaurant.delivery_fee.toFixed(2): "0.00"}</span>
               </td>
             </tr>
+            {restaurant.discount_rate ?
             <tr>
               <th scope="row" className="text-start fw-light">
-                Discount
+                Discount ({(restaurant.discount_rate)*100}% off subtotal)
               </th>
-
               <td className="text-end">
-                S$ <span>0</span>{' '}
+                S$ <span>-{(restaurant.discount_rate*subTotal).toFixed(2)}</span>{' '}
               </td>
-            </tr>
+            </tr> :
+            null
+            }
             <tr>
               <th scope="row" className="text-start">
                 Total
               </th>
               <td className="text-end">
-                S$ <span>28.21</span>
+              {restaurant.discount_rate ?
+              (<span>S$ {(subTotal+restaurant.delivery_fee-(restaurant.discount_rate*subTotal)).toFixed(2)}</span>) : 
+              (<span>S$ {(subTotal+restaurant.delivery_fee).toFixed(2)}</span>)}
               </td>
             </tr>
           </tbody>
         </table>
       </div>
       <div className="d-grid gap-2">
-        <button className="btn btn-danger p-3">GO TO CHECKOUT</button>
+        <button className="btn btn-danger p-3" onClick={checkOut}>GO TO CHECKOUT</button>
       </div>
     </div>
   );

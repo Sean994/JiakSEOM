@@ -6,7 +6,7 @@ import PostalCode from './0_NavBarPostal.jsx';
 
 const NavBar = (props) => {
   const axios = require('axios').default;
-  const { user, setUser, setPostal, postal, address, setAddress } = props;
+  const { user, setUser, setPostal, postal, address, setAddress, order } = props;
 
   // State logic for delivery offCanvas
   const [show, setShow] = useState(false);
@@ -61,11 +61,9 @@ const NavBar = (props) => {
             </LinkContainer>
           </Nav>
           )}
-          {address === '' || (
-            <>
               <Button variant="light" onClick={handleShow}>
                 <h6 className="navBarDes text-dark">
-                  Delivering to: {address?.substring(0, address.length - 11)}
+                  Delivering to: {(address === "") ? "Click to input address" : address}
                 </h6>
               </Button>
 
@@ -77,11 +75,7 @@ const NavBar = (props) => {
                   <PostalCode postal ={postal} setPostal={setPostal} address={address} setAddress={setAddress} handleClose={handleClose}/>
                 </Offcanvas.Body>
               </Offcanvas>
-            </>
-          )}
-          {user.username === undefined || (
-            <h6 className="navBarDes text-dark">Welcome, {user.username} </h6>
-       )}
+       
         <Nav>
           {!user.username ? (
             <LinkContainer to="/user/signin" align="right">
@@ -108,7 +102,7 @@ const NavBar = (props) => {
                 size="lg"
                 className="ms-4 text-warning"
               />
-              <span className="badge text-danger">1</span>
+              <span className="badge text-danger">{order.orders.length}</span>
             </Nav.Link>
           </LinkContainer>
         </Nav>

@@ -27,6 +27,7 @@ function App() {
     axios.get('/user/signin').then((res) => {
       if (res.data) {
         setUser(res.data);
+        setPostal(res.data.postal_code)
         setOrder((order)=>({...order, "user": res.data._id}))
       }
     });
@@ -41,7 +42,7 @@ function App() {
         setPostal={setPostal}
         address={address}
         setAddress={setAddress}
-        setOrder={setOrder}
+        order={order}
       />
       <main>
         <Switch>
@@ -77,7 +78,7 @@ function App() {
           {/* if cookie with the session id => (loggedin) => link to checkout 
           if no cookie with the session id => link to login page */}
           <Route path="/checkout">
-            <CheckOut />
+            <CheckOut  address={address} order={order} restaurant={restaurant}/>
           </Route>
         </Switch>
       </main>

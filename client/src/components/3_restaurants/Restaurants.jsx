@@ -20,6 +20,7 @@ const Restaurants = (props) => {
     axios
       .get('/api/v1/categories', {})
       .then((res) => {
+        console.log(res.data.data.categories)
         setCategoryList(res.data.data.categories);
       })
       .catch((err) => {
@@ -72,11 +73,11 @@ const Restaurants = (props) => {
         <SearchBar resState={setRestaurantList} />
         <div>
           <div className="d-flex align-items-center justify-content-center">
-            {filter['top-rated'] ? <span>top rated / </span> : null}
-            {filter['fast-delivery'] ? <span>fast delivery / </span> : null}
-            {filter['free-delivery'] ? <span>free delivery / </span> : null}
-            {filter['has-discount'] ? <span>discounts / </span> : null}
-            {filter['category'] ? <span>{filter['category']}</span> : null}
+            {filter['top-rated'] ? <span>top rated/ </span> : null}
+            {filter['fast-delivery'] ? <span>fast delivery/ </span> : null}
+            {filter['free-delivery'] ? <span>free delivery/ </span> : null}
+            {filter['has-discount'] ? <span>discounts/ </span> : null}
+            {filter['category'] ? <span>{filter['category-name']}</span> : null}
           </div>
           <FilterButtons setFilter={setFilter} />
         </div>

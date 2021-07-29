@@ -1,28 +1,30 @@
-
 const FoodItemCard = (props) => {
-  const {foodItem, order, setOrder } = props
+  const { foodItem, order, setOrder, setSubTotal } = props;
 
   const addItemCart = (fooditem) => {
-    let cartArray = order["orders"]
-    let checkCartForItem = {existing: false, indexFound: null};
-    cartArray.forEach((element,index)=> {      
-      if(element._id===fooditem._id){
-      checkCartForItem.existing = true
-      checkCartForItem.indexFound = index
-    }})
-    if (checkCartForItem.existing){
-      cartArray[checkCartForItem.indexFound].quantity += 1
+    let cartArray = order['orders'];
+    let checkCartForItem = { existing: false, indexFound: null };
+    cartArray.forEach((element, index) => {
+      if (element._id === fooditem._id) {
+        checkCartForItem.existing = true;
+        checkCartForItem.indexFound = index;
+      }
+    });
+    if (checkCartForItem.existing) {
+      cartArray[checkCartForItem.indexFound].quantity += 1;
+      setSubTotal((prev) => prev + fooditem.price);
     } else {
-      fooditem.quantity=1
-      cartArray.push(fooditem)
+      fooditem.quantity = 1;
+      cartArray.push(fooditem);
+      setSubTotal((prev) => prev + fooditem.price);
     }
-    console.log("adding to cart", fooditem)
-    console.log(order)
-    setOrder((order)=>({...order, "orders": cartArray}))
-  }
+    console.log('adding to cart', fooditem);
+    console.log(order);
+    setOrder((order) => ({ ...order, orders: cartArray }));
+  };
 
   return (
-    <div className="card mb-2" style={{ maxWidth: '900px' }}>
+    <div className="card mb-2 border-0 shadow" style={{ maxWidth: '900px' }}>
       <div className="row no-gutters">
         <div className="col-md-4">
           <img
@@ -40,9 +42,8 @@ const FoodItemCard = (props) => {
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title">
-              {foodItem.name} {foodItem._id}<br /> 
-              [{foodItem.kor_name}] <br /> $
-              {foodItem.price}
+              {foodItem.name}
+              <br />[{foodItem.kor_name}] <br /> ${foodItem.price}
             </h5>
 
             <p className="card-text">
@@ -62,7 +63,7 @@ const FoodItemCard = (props) => {
             <button
               type="button"
               className="btn btn-primary"
-              onClick={()=>addItemCart(foodItem)}
+              onClick={() => addItemCart(foodItem)}
             >
               Add to cart
             </button>
