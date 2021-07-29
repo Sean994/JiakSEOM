@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 
 const CartItem = (props) => {
-  const {orderItem, order, setOrder, index, setSubTotal} = props
+  const {orderItem, order, setOrder, index, setSubTotal, final} = props
   const [price, setPrice] = useState(orderItem.price*orderItem.quantity);
 
   useEffect(() => {
@@ -43,6 +43,7 @@ const CartItem = (props) => {
           S$ <span id="itemPrice">{price.toFixed(2)}</span>
         </div>
         <div className="d-flex ">
+        {final ||
           <button
             type="button"
             className="btn btn-white"
@@ -55,10 +56,14 @@ const CartItem = (props) => {
               <FontAwesomeIcon size="sm" icon={['fas', 'minus']} />
             )}
           </button>
-          <span className="p-1">{orderItem.quantity}</span>
+          }
+
+          <span className="p-1">{orderItem.quantity}x</span>
+          {final ||
           <button type="button" className="btn btn-white" onClick={plusHandler}>
             <FontAwesomeIcon size="sm" icon={['fas', 'plus']} />
           </button>
+            }
         </div>
       </div>
     </div>

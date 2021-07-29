@@ -18,7 +18,6 @@ const DeliveryDetailForm = ({address}) => {
           class="form-control"
           id="address"
           placeholder="Street Address"
-          value={address}
         />
       </div>
       <div class="col-12">
