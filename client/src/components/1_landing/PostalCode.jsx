@@ -53,7 +53,7 @@ const PostalCode = () => {
   useEffect(() => {
     const updateAddress = (values) => {
       if (values?.items?.[0]?.title === undefined) {
-        console.log('address is wrong');
+        console.log('address is wrong', values.items?.[0].title);
       } else {
         const trimAddress = values.items[0].title.length - 11;
         const addressString = values.items[0].title.substring(0, trimAddress);
