@@ -66,7 +66,7 @@ const NavBar = () => {
                 />
                 Edit Info
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/user/edit">
+              <NavDropdown.Item as={Link} to="/user/history">
                 <FontAwesomeIcon
                   icon={['fas', 'user-edit']}
                   className="me-1 text-warning"
@@ -79,9 +79,7 @@ const NavBar = () => {
         <Button variant="light" onClick={handleShow}>
           <h6 className="navBarDes text-dark">
             Delivering to:{' '}
-            {mainState.user.address
-              ? mainState.user.address
-              : 'Click to input address'}
+            {mainState.address ? mainState.address : 'Click to input address'}
           </h6>
         </Button>
 

@@ -1,23 +1,17 @@
 // This component checks a postal code against an API, and presents an input form to the user.
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { actions, useMain } from './utils/MainProvider';
 
 const PostalCode = (props) => {
-  const { mainState, mainDispatch } = useMain();
-
-  const { handleClose } = props;
-  const [postal, setPostal] = useState(mainState.postal_code);
-  const [address, setAddress] = useState(mainState.address);
+  const { postal, setPostal, setAddress, address, handleClose } = props;
 
   const handleChange = (event) => {
     setPostal(event.target.value);
-    mainDispatch({ type: actions.SETPOSTAL, payload: event.target.value });
   };
 
   const handleSubmit = (event) => {
-    console.log(address);
+    console.log(postal);
     event.preventDefault();
 
     if (address !== '') {
@@ -51,15 +45,13 @@ const PostalCode = (props) => {
   useEffect(() => {
     const checkPostal = async () => {
       const updateAddress = (values) => {
-        console.log(values.items[0].title);
+        console.log(values);
         if (values?.items?.[0]?.title === undefined) {
           console.log('address is wrong');
         } else {
           let trimAddress = values.items[0].title.length - 11;
           let addressString = values.items[0].title.substring(0, trimAddress);
           setAddress(addressString);
-          console.log(values.items[0].title);
-          mainDispatch({ type: actions.SETADDRESS, payload: addressString });
         }
       };
 
@@ -69,9 +61,7 @@ const PostalCode = (props) => {
           { mode: 'cors' }
         );
         const json = await res.json();
-        Promise.all([res, json]).then((values) => {
-          updateAddress(values[1]);
-        });
+        Promise.all([res, json]).then((values) => updateAddress(values[1]));
       }
     };
     let timeout = setTimeout(() => {
@@ -79,9 +69,8 @@ const PostalCode = (props) => {
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [postal, address, setAddress, mainDispatch]);
+  }, [postal, setAddress]);
 
-  console.log('address', address);
   return (
     <Container className="my-4 py-4 mx-auto shadow mb-5 bg-body rounded-2">
       <Form

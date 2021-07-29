@@ -115,6 +115,18 @@ const mainReducer = (state, action) => {
         total_price: state.total_price - action.payload,
       };
 
+    case actions.SETADDRESS:
+      return {
+        ...state,
+        address: action.payload,
+      };
+
+    case actions.SETPOSTAL:
+      return {
+        ...state,
+        postal_code: action.payload,
+      };
+
     default:
       return state;
   }

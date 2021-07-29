@@ -6,7 +6,7 @@ import Moment from 'react-moment';
 
 const ReviewBalloon = ({ review }) => {
   const date = review.createdAt;
-
+  
   return (
     <div className="card bg-white px-4 py-2 border border-warning border-4 rounded-3  shadow">
       <Rate
