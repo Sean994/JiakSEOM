@@ -6,14 +6,21 @@ import queryString from 'query-string';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useLocation } from 'react-router';
 import { useHistory } from 'react-router-dom';
+import { useState } from 'react'
 
 // install query-string from npm, and then find a way to get the data inside
 //http://localhost:3000/review?user=60fe3277d6932e1093b56255&restaurant=60fe44b63731471b031b10ca&orderid=61022e8b4d5058181389c56b
 const AddReview = () => {
   const { search } = useLocation();
   const { user, restaurant, orderid } = queryString.parse(search);
-
+  const [resName, setResName] = useState()
+  
   const history = useHistory();
+  axios
+    .get(`/api/v1/restaurants/${restaurant}`)
+    .then((res) => {
+      setResName(res.data.restaurant.name)
+    })
 
   const postReviewHandler = (event) => {
     event.preventDefault();
@@ -37,7 +44,7 @@ const AddReview = () => {
   
   return (
     <Container>
-      <h1>How did we do? Leave a review for {restaurant}!</h1>
+      <h1>How did we do? Leave a review for {resName}!</h1>
 
       <Form onSubmit={postReviewHandler}>
         <Form.Group className="mb-3">
