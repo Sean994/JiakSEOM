@@ -38,6 +38,11 @@ const ordersSchema = new mongoose.Schema(
   },
 });
 
+ordersSchema.virtual("review", {
+  ref : 'Review',
+  localField : '_id',
+  foreignField : 'orders',
+})
 const Orders = mongoose.model('Orders', ordersSchema);
 
 module.exports = Orders;

@@ -120,23 +120,23 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
 
 ```json
 {
-    "status": "success",
-    "data": {
-        "categories": [
-            {
-                "_id": "60fd61685379eb199c9f178b",
-                "category_name": "Korean-Chinese",
-                "slug": "korean-chinese",
-                "__v": 0
-            },
-            {
-                "_id": "60fd62cbe77e3d1a014acdec",
-                "category_name": "Seafood",
-                "slug": "seafood",
-                "__v": 0
-            },
-          ]
-    }
+  "status": "success",
+  "data": {
+    "categories": [
+      {
+        "_id": "60fd61685379eb199c9f178b",
+        "category_name": "Korean-Chinese",
+        "slug": "korean-chinese",
+        "__v": 0
+      },
+      {
+        "_id": "60fd62cbe77e3d1a014acdec",
+        "category_name": "Seafood",
+        "slug": "seafood",
+        "__v": 0
+      }
+    ]
+  }
 }
 ```
 
@@ -324,28 +324,101 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
 
 - Post new order after checkout
 
-| field      | type     |          |                              |     |
-| ---------- | -------- | -------- | ---------------------------- | --- |
-| user       | ObjectId | required |                              |     |
-| restaurant | ObjectId | required |                              |     |
-| orders     | Array    | required | [{item: 'xxx', quantity: 3}] |     |
+| field      | type     |          |                                      |     |
+| ---------- | -------- | -------- | ------------------------------------ | --- |
+| user       | ObjectId | required |                                      |     |
+| restaurant | ObjectId | required |                                      |     |
+| orders     | Array    | required | [{item: 'xxx', quantity: 3}]         |     |
+| reviews    | Array    | optional | will be empty unless review is done. |     |
+
+<details>
+<summary>Example</summary>
 
 ```json
 {
-  "user": "60fe3277d6932e1093b56255",
-  "restaurant": "60fe44b63731471b031b10ca",
-  "orders": [
-    {
-      "item": "60fe727aa63b9a2bfc8baa65",
-      "quantity": 3
-    },
-    {
-      "item": "60fe727aa63b9a2bfc8baa66",
-      "quantity": 2
-    }
-  ]
+  "status": "success",
+  "data": {
+    "orders": [
+      {
+        "orderedAt": "2021-07-28T10:36:40.826Z",
+        "_id": "6101333d8383393cab7a711f",
+        "user": "60fe3277d6932e1093b56255",
+        "restaurant": {
+          "_id": "60fe44b63731471b031b10ca",
+          "name": "O.BBa Jjajang"
+        },
+        "orders": [
+          {
+            "_id": "6101333d8383393cab7a7120",
+            "item": {
+              "_id": "60fe727aa63b9a2bfc8baa65",
+              "name": "Chilli Buckwheat Noodle Soup",
+              "price": 18,
+              "item_img": "http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1170/S1555404786098.jpg"
+            },
+            "quantity": 3
+          },
+          {
+            "_id": "6101333d8383393cab7a7121",
+            "item": {
+              "_id": "60fe727aa63b9a2bfc8baa66",
+              "name": "Spicy Chilled Buckwheat Noodles",
+              "price": 18,
+              "item_img": "https://www.yorivery.com/data/goods/20/07/30//1000000905/1000000905_detail_388.jpg"
+            },
+            "quantity": 2
+          }
+        ],
+        "review": [
+          {
+            "createdAt": "2021-07-29T05:46:57.690Z",
+            "_id": "61024181f8ec8821a6329c6f",
+            "user": "60fe3277d6932e1093b56255",
+            "restaurant": "60fe44b63731471b031b10ca",
+            "rating": 4,
+            "review": "굿굿",
+            "orders": "6101333d8383393cab7a711f"
+          }
+        ]
+      },
+      {
+        "orderedAt": "2021-07-29T03:54:45.570Z",
+        "_id": "61022e8b4d5058181389c56b",
+        "user": "60fe3277d6932e1093b56255",
+        "restaurant": {
+          "_id": "60fe44b63731471b031b10ca",
+          "name": "O.BBa Jjajang"
+        },
+        "orders": [
+          {
+            "_id": "61022e8b4d5058181389c56c",
+            "item": {
+              "_id": "60fe727aa63b9a2bfc8baa65",
+              "name": "Chilli Buckwheat Noodle Soup",
+              "price": 18,
+              "item_img": "http://image.kyobobook.co.kr/newimages/giftshop_new/goods/400/1170/S1555404786098.jpg"
+            },
+            "quantity": 3
+          },
+          {
+            "_id": "61022e8b4d5058181389c56d",
+            "item": {
+              "_id": "60fe727aa63b9a2bfc8baa66",
+              "name": "Spicy Chilled Buckwheat Noodles",
+              "price": 18,
+              "item_img": "https://www.yorivery.com/data/goods/20/07/30//1000000905/1000000905_detail_388.jpg"
+            },
+            "quantity": 2
+          }
+        ],
+        "review": []
+      }
+    ]
+  }
 }
 ```
+
+</details>
 
 <br>
 <br>
@@ -398,59 +471,61 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
 | restaurant | ObjectId | required |     |     |
 | rating     | Number   | optional |     |     |
 | review     | String   | required |     |     |
+| orders     | ObjectId | required |     |     |
 
 ```json
 {
   "user": "60fe3277d6932e1093b56255",
   "restaurant": "60fe44b63731471b031b10ca",
   "rating": 4.0,
-  "review": "굿굿"
+  "review": "굿굿",
+  "orders": "6101333d8383393cab7a711f"
 }
 ```
 
 # Search
 
 ## <strong>GET</strong> /api/v1/search/restaurants?query={'name of restaurant'}
+
 - search using ?query, will return restaurant's details.
 <details>
 <summary>Example {itae}</summary>
 
 ```json
 {
-    "status": "success",
-    "data": {
-        "data": [
-            {
-                "_id": "60fe44403731471b031b10c8",
-                "location": {
-                    "coordinates": [
-                        1.279665257461622,
-                        103.84485076594592
-                    ],
-                    "type": "Point",
-                    "address": "64 Peck Seah St, Singapore ",
-                    "postal_code": "079325"
-                },
-                "ratingAverage": 4.5,
-                "ratingQuantity": 100,
-                "preparation_time": 25,
-                "kor_name": "이태원 짜장",
-                "name": "Itaewon Jjajang",
-                "image_cover": "https://images.unsplash.com/photo-1590437084089-9f5ae1500176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-                "slug": "itaewon-jjajang",
-                "discount_rate": 0.3,
-                "delivery_fee": 3,
-                "__v": 0
-            }
-        ]
-    }
+  "status": "success",
+  "data": {
+    "data": [
+      {
+        "_id": "60fe44403731471b031b10c8",
+        "location": {
+          "coordinates": [1.279665257461622, 103.84485076594592],
+          "type": "Point",
+          "address": "64 Peck Seah St, Singapore ",
+          "postal_code": "079325"
+        },
+        "ratingAverage": 4.5,
+        "ratingQuantity": 100,
+        "preparation_time": 25,
+        "kor_name": "이태원 짜장",
+        "name": "Itaewon Jjajang",
+        "image_cover": "https://images.unsplash.com/photo-1590437084089-9f5ae1500176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+        "slug": "itaewon-jjajang",
+        "discount_rate": 0.3,
+        "delivery_fee": 3,
+        "__v": 0
+      }
+    ]
+  }
 }
 ```
+
 </details>
 
 <br>
 
 ## <strong>GET</strong> /api/v1/search/menuitems?query={'name of menu item'}
+
 - search using ?query, will return list of restaurants that include the searched menu item.
 
 <details>
@@ -458,92 +533,81 @@ ex) /api/v1/restaurants?offers=has-discount,free-delivery&sort_by=top-rated,fast
 
 ```json
 {
-    "status": "success",
-    "data": [
-        {
-            "location": {
-                "coordinates": [
-                    1.279665257461622,
-                    103.84485076594592
-                ],
-                "type": "Point",
-                "address": "64 Peck Seah St, Singapore ",
-                "postal_code": "079325"
-            },
-            "ratingAverage": 4.5,
-            "ratingQuantity": 100,
-            "preparation_time": 25,
-            "_id": "60fe44403731471b031b10c8",
-            "kor_name": "이태원 짜장",
-            "name": "Itaewon Jjajang",
-            "image_cover": "https://images.unsplash.com/photo-1590437084089-9f5ae1500176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-            "slug": "itaewon-jjajang",
-            "discount_rate": 0.3,
-            "delivery_fee": 3
-        },
-        {
-            "location": {
-                "coordinates": [
-                    1.352279759064383,
-                    103.77376378091117
-                ],
-                "type": "Point",
-                "address": "19 Cheong Chin Nam Rd, Singapore",
-                "postal_code": "599743"
-            },
-            "ratingAverage": 4.8,
-            "ratingQuantity": 167,
-            "preparation_time": 30,
-            "_id": "60fe44b63731471b031b10ca",
-            "kor_name": "오빠 짜장 -부키티마",
-            "name": "O.BBa Jjajang",
-            "image_cover": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-            "slug": "o.bba-jjajang",
-            "delivery_fee": 4
-        },
-        {
-            "location": {
-                "coordinates": [
-                    1.3643939452893703,
-                    103.86521230354202
-                ],
-                "type": "Point",
-                "address": "76 Serangoon Garden Way, Singapore ",
-                "postal_code": "555972"
-            },
-            "ratingAverage": 4.1,
-            "ratingQuantity": 20,
-            "preparation_time": 29,
-            "_id": "60fe46983894b41c1818b059",
-            "kor_name": "한우리",
-            "name": "Hanwoori Korean Restaurant",
-            "image_cover": "https://images.unsplash.com/photo-1504670555658-db8fb2e908ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80",
-            "slug": "hanwoori-korean-restaurant",
-            "delivery_fee": 3
-        },
-        {
-            "location": {
-                "coordinates": [
-                    1.336486098860422,
-                    103.9639727499927
-                ],
-                "type": "Point",
-                "address": "#01-39/40, Changi City Point, 5 Changi Business Park Central 1, Singapore",
-                "postal_code": "486038"
-            },
-            "ratingAverage": 4.6,
-            "ratingQuantity": 50,
-            "preparation_time": 30,
-            "_id": "60fe470a3894b41c1818b05d",
-            "kor_name": "만나",
-            "name": "ManNa Korean Restaurant",
-            "image_cover": "https://images.unsplash.com/photo-1567444632153-edd7b4a3ed70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
-            "slug": "manna-korean-restaurant",
-            "discount_rate": 0.1,
-            "delivery_fee": 3
-        }
-    ],
-    "total_results": 4
+  "status": "success",
+  "data": [
+    {
+      "location": {
+        "coordinates": [1.279665257461622, 103.84485076594592],
+        "type": "Point",
+        "address": "64 Peck Seah St, Singapore ",
+        "postal_code": "079325"
+      },
+      "ratingAverage": 4.5,
+      "ratingQuantity": 100,
+      "preparation_time": 25,
+      "_id": "60fe44403731471b031b10c8",
+      "kor_name": "이태원 짜장",
+      "name": "Itaewon Jjajang",
+      "image_cover": "https://images.unsplash.com/photo-1590437084089-9f5ae1500176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+      "slug": "itaewon-jjajang",
+      "discount_rate": 0.3,
+      "delivery_fee": 3
+    },
+    {
+      "location": {
+        "coordinates": [1.352279759064383, 103.77376378091117],
+        "type": "Point",
+        "address": "19 Cheong Chin Nam Rd, Singapore",
+        "postal_code": "599743"
+      },
+      "ratingAverage": 4.8,
+      "ratingQuantity": 167,
+      "preparation_time": 30,
+      "_id": "60fe44b63731471b031b10ca",
+      "kor_name": "오빠 짜장 -부키티마",
+      "name": "O.BBa Jjajang",
+      "image_cover": "https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+      "slug": "o.bba-jjajang",
+      "delivery_fee": 4
+    },
+    {
+      "location": {
+        "coordinates": [1.3643939452893703, 103.86521230354202],
+        "type": "Point",
+        "address": "76 Serangoon Garden Way, Singapore ",
+        "postal_code": "555972"
+      },
+      "ratingAverage": 4.1,
+      "ratingQuantity": 20,
+      "preparation_time": 29,
+      "_id": "60fe46983894b41c1818b059",
+      "kor_name": "한우리",
+      "name": "Hanwoori Korean Restaurant",
+      "image_cover": "https://images.unsplash.com/photo-1504670555658-db8fb2e908ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80",
+      "slug": "hanwoori-korean-restaurant",
+      "delivery_fee": 3
+    },
+    {
+      "location": {
+        "coordinates": [1.336486098860422, 103.9639727499927],
+        "type": "Point",
+        "address": "#01-39/40, Changi City Point, 5 Changi Business Park Central 1, Singapore",
+        "postal_code": "486038"
+      },
+      "ratingAverage": 4.6,
+      "ratingQuantity": 50,
+      "preparation_time": 30,
+      "_id": "60fe470a3894b41c1818b05d",
+      "kor_name": "만나",
+      "name": "ManNa Korean Restaurant",
+      "image_cover": "https://images.unsplash.com/photo-1567444632153-edd7b4a3ed70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+      "slug": "manna-korean-restaurant",
+      "discount_rate": 0.1,
+      "delivery_fee": 3
+    }
+  ],
+  "total_results": 4
 }
 ```
+
 </details>
