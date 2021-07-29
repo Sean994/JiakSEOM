@@ -47,10 +47,16 @@ exports.createUser = async (req, res, next) => {
 };
 exports.updateUser = async (req, res, next) => {
   try {
-    await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const password = bcrypt.hashSync(
+      req.body.password,
+      bcrypt.genSaltSync(8)
+    );
+    req.body.password = password 
+    const updateUser = await User.findByIdAndUpdate(req.params.id, req.body,  { new: true });
+    
     res.status(200).json({
       status: 'success',
-      User,
+      updateUser, 
     });
   } catch (error) {
     console.log('❌', error.message);
