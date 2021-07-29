@@ -20,8 +20,7 @@ const postOrderFormat = (orderObj) => {
 
 const OrderSideBar = (props) => {
   const { mainState } = useMain();
-  const { user, order, cart, total_price, restaurant } = mainState;
-  const [subTotalPrice, setSubTotalPrice] = useState(0);
+  const { user, order, total_price, restaurant, isAuthenticated } = mainState;
 
   const [final, setFinal] = useState(false);
   const history = useHistory();
@@ -68,16 +67,7 @@ const OrderSideBar = (props) => {
     return cartObj.map((orderItem, index) => {
       const cartArr = [];
       if (orderItem.quantity > 0) {
-        cartArr.push(
-          <CartItem
-            key={index}
-            orderItem={orderItem}
-            order={order}
-            final={final}
-            id={orderItem.item}
-            setSubTotalPrice={setSubTotalPrice}
-          />
-        );
+        cartArr.push(<CartItem key={index} orderItem={orderItem} />);
       }
       return cartArr;
     });
@@ -161,7 +151,7 @@ const OrderSideBar = (props) => {
           </tbody>
         </table>
       </div>
-      {final ? (
+      {isAuthenticated ? (
         <div className="d-grid gap-2">
           <button className="btn btn-danger p-3" onClick={completeOrder}>
             COMPLETE ORDER

@@ -121,7 +121,7 @@ const NavBar = (props) => {
                   className="ms-4 text-warning"
                 />
                 <span className="badge text-danger">
-                  {mainState.order?.orders.length}
+                  {mainState.order && 1}
                 </span>
               </Nav.Link>
             </LinkContainer>
