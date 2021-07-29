@@ -12,6 +12,7 @@ import NavBar from './components/0_NavBar';
 import Landing from './components/1_landing/Landing';
 import SignIn from './components/2_user/SignIn';
 import SignUp from './components/2_user/SignUp';
+import UserHistory from './components/2_user/UserHistory';
 import RestaurantID from './components/3_restaurants/RestaurantID';
 import Restaurants from './components/3_restaurants/Restaurants';
 import CheckOut from './components/4_checkout/Checkout.jsx';
@@ -145,6 +146,9 @@ function App() {
           </Route>
           <Route path="/user/edit">
             <SignUp user={user} />
+          </Route>
+          <Route path ="/user/history">
+            <UserHistory user={user}/>
           </Route>
           <Route exact path="/restaurants/all">
             <Restaurants />
