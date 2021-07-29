@@ -4,6 +4,8 @@ A food delivery platform catered specifically for South Korean cuisine.
 ## Description
 We set out to build an online food delivery app, specifically tailored towards Korean restaurants. We were introduced to a mobile app and website called [Yellowsing](https://yellowsing.com/) which was built for Korean expatriates in Singapore, but were frustrated to discover that it did not have an in-app delivery option. We opted to solve that ourselves by building a food delivery platform with a slick interface, enabling anyone to get a taste of Korea at the click of a button!
 
+Please see presentation.md for a demo!
+
 ### Why the name JiakSEOM?
 
 ![JiakSEOM image](/readmeImages/jiakseom.jpeg)
@@ -19,12 +21,16 @@ Hence, we thought it best to juxtapose both Singlish and Korean together by comb
 * Javascript
 * React
     * React Router
+    * React Tabs
 * Express
 * Mongoose
 * MongoDB
 * Bootstrap
     * React Bootstrap
 * Query-String
+* Font-Awesome
+* Axios
+
 
 
 ## Installation instructions
@@ -81,8 +87,7 @@ Refer to `API.md` for API documentation.
 * ???
 
 ### APIs Used
-- HERE API
-- 
+- HERE geolocation API
 
 ### Acknowledgments
 * Images from [Unsplash](https://unsplash.com/)
