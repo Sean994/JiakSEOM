@@ -15,8 +15,10 @@ const mainInfo = {
     postal_code: '',
     birthday: '',
   },
+  cart: [],
+  order: {},
+  total_price: 0,
   restaurant: '',
-  orders: [],
   postal_code: '',
   address: '',
 };
@@ -26,8 +28,32 @@ const actions = {
   SIGNOUT: 'SIGNOUT',
   SETPOSTAL: 'SETPOSTAL',
   SETADDRESS: 'SETADDRESS',
-  SAVEORDER: 'SAVEORDER',
+  ADDTOCART: 'ADDTOCART',
+  MINUSCART: 'MINUSCART',
   DELETEORDER: 'DELETEORDER',
+  SETRESTAURANT: 'SETRESTAURANT',
+  PLUSPRICE: 'PLUSPRICE',
+  MINUSPRICE: 'MINUSPRICE',
+};
+
+const addtoOrder = (order, itemId) => {
+  const obj = { ...order };
+  if (obj[itemId]) {
+    obj[itemId] += 1;
+  } else {
+    obj[itemId] = 1;
+  }
+  return obj;
+};
+
+const minusOrder = (order, itemId) => {
+  const obj = { ...order };
+  if (obj[itemId] > 0) {
+    obj[itemId] -= 1;
+  } else {
+    // 1
+  }
+  return obj;
 };
 
 const mainReducer = (state, action) => {
@@ -52,14 +78,43 @@ const mainReducer = (state, action) => {
         postal_code: action.payload,
       };
 
-    case actions.SAVEORDER:
-      break;
+    case actions.ADDTOCART:
+      const updatedOrder = addtoOrder(state.order, action.payload._id);
+      return {
+        ...state,
+        order: { ...updatedOrder },
+      };
+
+    case actions.MINUSCART:
+      const deductedOrder = minusOrder(state.order, action.payload._id);
+      return {
+        ...state,
+        order: { ...deductedOrder },
+      };
 
     case actions.DELETEORDER:
       return {
         ...state,
-        orders: [],
+        cart: [],
       };
+    case actions.SETRESTAURANT:
+      return {
+        ...state,
+        restaurant: action.payload,
+      };
+
+    case actions.PLUSPRICE:
+      return {
+        ...state,
+        total_price: state.total_price + action.payload,
+      };
+
+    case actions.MINUSPRICE:
+      return {
+        ...state,
+        total_price: state.total_price - action.payload,
+      };
+
     default:
       return state;
   }

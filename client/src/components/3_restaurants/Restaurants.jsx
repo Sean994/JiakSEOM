@@ -20,7 +20,6 @@ const Restaurants = () => {
     axios
       .get('/api/v1/categories', {})
       .then((res) => {
-        console.log(res.data.data.categories);
         setCategoryList(res.data.data.categories);
       })
       .catch((err) => {
@@ -57,14 +56,12 @@ const Restaurants = () => {
     axios
       .get(url, {})
       .then((res) => {
-        console.log(res.data.data.restaurants);
         setRestaurantList(res.data.data.restaurants);
       })
       .catch((err) => {
         setRestaurantList([]);
         console.log(err);
       });
-    console.log('filter toggled');
   }, [filter]);
 
   return (

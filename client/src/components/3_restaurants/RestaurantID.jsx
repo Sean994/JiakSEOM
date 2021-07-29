@@ -6,34 +6,40 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import OrderSideBar from '../5_order/OrderSideBar';
 import ShowReview from '../6_review/ShowReview';
+import { actions, useMain } from '../utils/MainProvider';
 import FoodItemCard from './FoodItemCard';
-import { useMain, actions } from '../utils/MainProvider';
 
 const RestaurantID = (props) => {
-  let { id } = useParams();
-  const [subTotal, setSubTotal] = useState(0);
-  const { restaurant, setRestaurant, order, setOrder } = props;
   const { mainState, mainDispatch } = useMain();
+  const { id } = useParams();
+  const [status, setStatus] = useState('idle');
+
+  const { restaurant } = mainState;
+  const restaurantId = restaurant._id;
 
   useEffect(() => {
-    if (restaurant._id !== id) {
+    if (restaurantId !== id) {
       axios
         .get(`/api/v1/restaurants/${id}`, {})
         .then((res) => {
-          const restaurantResponse = res.data.restaurant;
-          setRestaurant(restaurantResponse);
-          setOrder((order) => ({
-            ...order,
-            restaurant: restaurantResponse._id,
-            orders: [],
-          }));
-          mainDispatch({ type: actions.DELETEORDER });
+          if (res.status !== 200) {
+            throw new Error('Bad connection');
+          } else {
+            setStatus('success');
+            const restaurantRes = res.data.restaurant;
+            mainDispatch({
+              type: actions.SETRESTAURANT,
+              payload: restaurantRes,
+            });
+            mainDispatch({ type: actions.DELETEORDER });
+          }
         })
         .catch((err) => {
           console.log(err);
+          setStatus('error');
         });
     }
-  }, [id, setRestaurant, setOrder, restaurant._id, mainDispatch]);
+  }, [id, restaurantId, mainDispatch]);
 
   const discountRate = restaurant.discount_rate * 100;
 
@@ -81,12 +87,7 @@ const RestaurantID = (props) => {
             <div className="container restContainer bg-warning p-4 rounded-3 active">
               {restaurant?.menuItems?.map((food) => (
                 <div key={food._id} className="row-2 mb-3">
-                  <FoodItemCard
-                    foodItem={food}
-                    order={order}
-                    setOrder={setOrder}
-                    setSubTotal={setSubTotal}
-                  />
+                  <FoodItemCard foodItem={food} />
                 </div>
               ))}
             </div>
@@ -97,13 +98,7 @@ const RestaurantID = (props) => {
         </Tabs>
       </div>
       <div className="col-4 position-abolute right-0">
-        <OrderSideBar
-          restaurant={restaurant}
-          order={order}
-          setOrder={setOrder}
-          subTotal={subTotal}
-          setSubTotal={setSubTotal}
-        />
+        <OrderSideBar />
       </div>
     </div>
   );

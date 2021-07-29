@@ -1,26 +1,31 @@
-const FoodItemCard = (props) => {
-  const { foodItem, order, setOrder, setSubTotal } = props;
+import React from 'react';
+import { useMain, actions } from '../utils/MainProvider';
+
+const FoodItemCard = ({ foodItem }) => {
+  const { mainDispatch } = useMain();
+  //const { foodItem, setSubTotal } = props;
 
   const addItemCart = (fooditem) => {
-    let cartArray = order['orders'];
-    let checkCartForItem = { existing: false, indexFound: null };
-    cartArray.forEach((element, index) => {
-      if (element._id === fooditem._id) {
-        checkCartForItem.existing = true;
-        checkCartForItem.indexFound = index;
-      }
-    });
-    if (checkCartForItem.existing) {
-      cartArray[checkCartForItem.indexFound].quantity += 1;
-      setSubTotal((prev) => prev + fooditem.price);
-    } else {
-      fooditem.quantity = 1;
-      cartArray.push(fooditem);
-      setSubTotal((prev) => prev + fooditem.price);
-    }
+    // let cartArray = order['orders'];
+    // let checkCartForItem = { existing: false, indexFound: null };
+    // cartArray.forEach((element, index) => {
+    //   if (element._id === fooditem._id) {
+    //     checkCartForItem.existing = true;
+    //     checkCartForItem.indexFound = index;
+    //   }
+    // });
+    // if (checkCartForItem.existing) {
+    //   cartArray[checkCartForItem.indexFound].quantity += 1;
+    //   setSubTotal((prev) => prev + fooditem.price);
+    // } else {
+    //   fooditem.quantity = 1;
+    //   cartArray.push(fooditem);
+    //   setSubTotal((prev) => prev + fooditem.price);
+    // }
     console.log('adding to cart', fooditem);
-    console.log(order);
-    setOrder((order) => ({ ...order, orders: cartArray }));
+
+    mainDispatch({ type: actions.ADDTOCART, payload: fooditem });
+    mainDispatch({ type: actions.PLUSPRICE, payload: fooditem.price });
   };
 
   return (
