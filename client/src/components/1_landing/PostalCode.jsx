@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import { useMain, actions } from '../utils/MainProvider';
+import { actions, useMain } from '../utils/MainProvider';
 
 const PostalCode = () => {
   const { mainState, mainDispatch } = useMain();
@@ -60,6 +60,7 @@ const PostalCode = () => {
           let trimAddress = values.items[0].title.length - 11;
           let addressString = values.items[0].title.substring(0, trimAddress);
           setAddress(addressString);
+          mainDispatch({ type: actions.SETADDRESS, payload: addressString });
         }
       };
 
@@ -69,7 +70,10 @@ const PostalCode = () => {
           { mode: 'cors' }
         );
         const json = await res.json();
-        Promise.all([res, json]).then((values) => updateAddress(values[1]));
+        Promise.all([res, json]).then((values) => {
+          updateAddress(values[1]);
+          mainDispatch({ type: actions.SETADDRESS, payload: values[1] });
+        });
       }
     };
     let timeout = setTimeout(() => {
@@ -77,7 +81,7 @@ const PostalCode = () => {
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [postal, setAddress]);
+  }, [postal, setAddress, mainDispatch]);
 
   return (
     <Container className="my-4 py-4 mx-auto shadow mb-5 bg-body rounded-2">
