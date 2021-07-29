@@ -40,17 +40,43 @@ Prerequisites:
 
 ## Wireframes
 
+### Landing Page
+![Landing Page Wireframe](/readmeImages/wireframe_landingPage.jpg)
 
+### Restaurant View
+![Restaurant Page Wireframe](/readmeImages/wireframe_restaurantPage.jpg)
 
+### Food Selection Page & Checkout
+![Food Page Wireframe](/readmeImages/wireframe_foodPage.jpg)
+
+### Signup Page
+![Signup Page Wireframe](/readmeImages/wireframe_signupPage.jpg)
 
 ## User Stories
-xxx
+1. The user should be able to log in and authenticate on the website, as well as create a user account. They should also be able to modify their account.
+
+2. The user should be able to filter and search for restaurants, and select food to order from them.
+
+3. The user should be able to checkout with their order, and leave reviews as needed.
+
+4. The user should be able to see their order history, as well as their past reviews.
+
+5. Unauthenticated users should be able to select the restaurants, but should not be able to check out ( @HyunJungOh0120 and @Sean994 please confirm )
 
 ### Planning and Development Process
-xxx
+1. Completed a basic preproject exercise, including writing out the user stories.
+2. Drew wireframes by hand, and brainstormed over Figma.
+3. Set up GitHub repository.
+    * Main branch only for finalized dev work.
+    * Additional branches are made for new features and changes
+    * Once confirmed with the team, additional branches are merged into main.
+4. Set up Telegram group for group communication, and Discord for after-school pair programming.
+5. Deployed to Heroku to test.
 
-### Problem-Solving Strategy
-xxx
+### Unsolved Problems / Major Hurdles
+* Custom Bootstrap CSS
+* Minor UI bugs
+* ???
 
 ### APIs Used
 - @Sean994 to fill up
