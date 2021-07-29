@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import OrderSideBar from '../5_order/OrderSideBar';
+import ShowReview from '../6_review/ShowReview';
 import FoodItemCard from './FoodItemCard';
 
 const RestaurantID = (props) => {
@@ -88,7 +89,7 @@ const RestaurantID = (props) => {
             </div>
           </TabPanel>
           <TabPanel>
-            <div className="tab-pane fade">hi</div>
+            <ShowReview id={restaurant._id} />
           </TabPanel>
         </Tabs>
       </div>
