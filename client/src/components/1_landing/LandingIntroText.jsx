@@ -6,7 +6,7 @@ import { Carousel, Image } from 'react-bootstrap';
 
 const LandingIntroText = () => {
   return (
-    <Carousel className="slide carousel-fade ">
+    <Carousel className="slide carousel-fade">
       <Carousel.Item style={{ height: '500px' }}>
         <Image
           src="https://images.unsplash.com/photo-1596785236251-71fa49ac5760"
@@ -15,11 +15,11 @@ const LandingIntroText = () => {
         />
 
         <Carousel.Caption>
-          <h1>Welcome to JIAK섬 (JIAKSEOM)!</h1>
-          <p>
+          <h1 className="geraldShadow">Welcome to JIAK섬 (JIAKSEOM)!</h1>
+          <h3 className="geraldShadow">
             Delivering a taste of Korea to all the 한국-ry (hungry) people out
             there.
-          </p>
+          </h3>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -30,11 +30,11 @@ const LandingIntroText = () => {
           fluid
         />
         <Carousel.Caption>
-          <h1>Who We Are</h1>
-          <p>
+          <h1 className="geraldShadow">Who We Are</h1>
+          <h3 className="geraldShadow">
             We are a delivery platform catering to consumers in Singapore, who
             share a love of Korean food.
-          </p>
+          </h3>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -45,14 +45,14 @@ const LandingIntroText = () => {
           fluid
         />
         <Carousel.Caption>
-          <h1>Our history</h1>
-          <p>
+          <h1 className="geraldShadow">Our history</h1>
+          <h4 className="geraldShadow">
             Founded in 2021 by a group of aspiring software engineers who share
             a common love for Korean food, but were disappointed by the lack of
             authentic Korean options on local food delivery platforms, JIAKSEOM
             was conceived to be the all-in-one destination for everyone wanting
             a taste of Korea delivered to their doorstep.
-          </p>
+          </h4>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

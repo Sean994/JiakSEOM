@@ -1,3 +1,4 @@
+
 .navBarDes {
    margin-right: 16px;
    margin-top: 10px;
@@ -18,3 +19,8 @@
 .historyname {
    text-align: center;
 }
+
+.geraldShadow {
+   color: white;
+   text-shadow: 2px 2px 4px #000000;
+ }
