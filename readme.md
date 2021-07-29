@@ -8,7 +8,7 @@ Please see presentation.md for a demo!
 
 ### Why the name JiakSEOM?
 
-![JiakSEOM image](/readmeImages/jiakseom.jpeg)
+![JiakSEOM image](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/jiakseom.jpeg)
 
 
 It's simple, really. _"Jiak"_, in Singlish, means "to eat", while _"섬" (seom)_, in Korean, means "island".
@@ -49,16 +49,16 @@ Refer to `API.md` for API documentation.
 ## Wireframes
 
 ### Landing Page
-![Landing Page Wireframe](/readmeImages/wireframe_landingPage.jpg)
+![Landing Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_landingPage.jpg)
 
 ### Restaurant View
-![Restaurant Page Wireframe](/readmeImages/wireframe_restaurantPage.jpg)
+![Restaurant Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_restaurantPage.jpg)
 
 ### Food Selection Page & Checkout
-![Food Page Wireframe](/readmeImages/wireframe_foodPage.jpg)
+![Food Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_foodPage.jpg)
 
 ### Signup Page
-![Signup Page Wireframe](/readmeImages/wireframe_signupPage.jpg)
+![Signup Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_signupPage.jpg)
 
 ## User Stories
 1. The user should be able to log in and authenticate on the website, as well as create a user account. They should also be able to modify their account.
