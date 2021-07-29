@@ -77,9 +77,7 @@ const NavBar = (props) => {
         <Button variant="light" onClick={handleShow}>
           <h6 className="navBarDes text-dark">
             Delivering to:{' '}
-            {mainState.user.address
-              ? mainState.user.address
-              : 'Click to input address'}
+            {mainState.address ? mainState.address : 'Click to input address'}
           </h6>
         </Button>
 
