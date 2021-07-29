@@ -64,7 +64,7 @@ const NavBar = (props) => {
                 </LinkContainer>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <LinkContainer to="/user/edit">
+                <LinkContainer to="/user/history">
                   <Nav.Link className="text-secondary">
                     <FontAwesomeIcon
                       icon={['fas', 'user-edit']}
