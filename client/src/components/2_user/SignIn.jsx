@@ -20,6 +20,7 @@ const SignIn = (props) => {
         password: event.target.password.value,
       })
       .then((res) => {
+        console.log('💚', res.data.user);
         if (res.status === 200) {
           mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
           setRedirectToReferrer(true);

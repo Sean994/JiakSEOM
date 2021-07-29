@@ -52,7 +52,7 @@ const NavBar = () => {
         {mainState.isAuthenticated && (
           <Nav>
             <h6 className="navBarDes text-dark">
-              Welcome, {mainState.user.first_name}🍉{' '}
+              Welcome, {mainState.user.username}🍉{' '}
             </h6>
             <NavDropdown
               title="User"
