@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, Nav, Navbar, Offcanvas } from 'react-bootstrap'; //! deleted container import
-import { LinkContainer } from 'react-router-bootstrap';
 import { useState } from 'react';
+import { Button, Nav, Navbar, Offcanvas, NavDropdown } from 'react-bootstrap'; //! deleted container import
+import { LinkContainer } from 'react-router-bootstrap';
 import PostalCode from './0_NavBarPostal.jsx';
 
 const NavBar = (props) => {
   const axios = require('axios').default;
-  const { user, setUser, setPostal, postal, address, setAddress, order } = props;
+  const { user, setUser, setPostal, postal, address, setAddress, order } =
+    props;
 
   // State logic for delivery offCanvas
   const [show, setShow] = useState(false);
@@ -50,48 +51,69 @@ const NavBar = (props) => {
         {user.username && (
           <Nav>
             <h6 className="navBarDes text-dark">Welcome, {user.username}🍉 </h6>
-            <LinkContainer to="/user/edit">
-              <Nav.Link className="text-secondary">
-                <FontAwesomeIcon
-                  icon={['fas', 'user-edit']}
-                  size="lg"
-                  className="me-1 text-warning"
-                />
-              </Nav.Link>
-            </LinkContainer>
+            <NavDropdown title="User" id="basic-nav-dropdown">
+              <NavDropdown.Item>
+                <LinkContainer to="/user/edit">
+                  <Nav.Link className="text-secondary">
+                    <FontAwesomeIcon
+                      icon={['fas', 'user-edit']}
+                      className="me-1 text-warning"
+                    />
+                    Edit Info
+                  </Nav.Link>
+                </LinkContainer>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <LinkContainer to="/user/edit">
+                  <Nav.Link className="text-secondary">
+                    <FontAwesomeIcon
+                      icon={['fas', 'user-edit']}
+                      className="me-1 text-warning"
+                    />
+                    Order History
+                  </Nav.Link>
+                </LinkContainer>
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
-          )}
-              <Button variant="light" onClick={handleShow}>
-                <h6 className="navBarDes text-dark">
-                  Delivering to: {(address === "") ? "Click to input address" : address}
-                </h6>
-              </Button>
+        )}
+        <Button variant="light" onClick={handleShow}>
+          <h6 className="navBarDes text-dark">
+            Delivering to: {address === '' ? 'Click to input address' : address}
+          </h6>
+        </Button>
 
-              <Offcanvas show={show} onHide={handleClose} placement="top">
-                <Offcanvas.Header closeButton>
-                  <Offcanvas.Title>Changing your location?</Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                  <PostalCode postal ={postal} setPostal={setPostal} address={address} setAddress={setAddress} handleClose={handleClose}/>
-                </Offcanvas.Body>
-              </Offcanvas>
-       
+        <Offcanvas show={show} onHide={handleClose} placement="top">
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Changing your location?</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <PostalCode
+              postal={postal}
+              setPostal={setPostal}
+              address={address}
+              setAddress={setAddress}
+              handleClose={handleClose}
+            />
+          </Offcanvas.Body>
+        </Offcanvas>
+
         <Nav>
           {!user.username ? (
             <LinkContainer to="/user/signin" align="right">
               <Button variant="warning">
                 <FontAwesomeIcon icon={['far', 'user']} className="me-2" />
                 <span>Sign In</span>
-                </Button>
-              </LinkContainer>
-            ) : (
-              <Button variant="warning" onClick={logOut}>
-                <FontAwesomeIcon
-                  icon={['fas', 'sign-out-alt']}
-                  className="me-1"
-                />
-                Sign Out
               </Button>
+            </LinkContainer>
+          ) : (
+            <Button variant="warning" onClick={logOut}>
+              <FontAwesomeIcon
+                icon={['fas', 'sign-out-alt']}
+                className="me-1"
+              />
+              Sign Out
+            </Button>
           )}
         </Nav>
         <Nav>

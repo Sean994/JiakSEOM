@@ -9,7 +9,11 @@ const ReviewBalloon = ({ review }) => {
 
   return (
     <div className="card bg-white px-4 py-2 border border-warning border-4 rounded-3  shadow">
-      <Rate value={review.rating} className="fs-4" disabled />
+      <Rate
+        value={review.rating ? review.rating : 0}
+        className="fs-4"
+        disabled
+      />
       <p className="my-3 fw-bold">{review.review}</p>
       <div className=" d-flex justify-content-between text-secondary">
         <p>
