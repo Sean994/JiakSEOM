@@ -61,11 +61,9 @@ const NavBar = (props) => {
             </LinkContainer>
           </Nav>
           )}
-          {address === '' || (
-            <>
               <Button variant="light" onClick={handleShow}>
                 <h6 className="navBarDes text-dark">
-                  Delivering to: {address?.substring(0, address.length - 11)}
+                  Delivering to: {(address === "") ? "Click to input address" : address}
                 </h6>
               </Button>
 
@@ -77,11 +75,7 @@ const NavBar = (props) => {
                   <PostalCode postal ={postal} setPostal={setPostal} address={address} setAddress={setAddress} handleClose={handleClose}/>
                 </Offcanvas.Body>
               </Offcanvas>
-            </>
-          )}
-          {user.username === undefined || (
-            <h6 className="navBarDes text-dark">Welcome, {user.username} </h6>
-       )}
+       
         <Nav>
           {!user.username ? (
             <LinkContainer to="/user/signin" align="right">

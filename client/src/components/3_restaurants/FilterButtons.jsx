@@ -5,7 +5,6 @@ const FilterButtons = (props) => {
     const toggleFilterRating = () => {
         setFilter(filter=>({...filter, "top-rated": !filter["top-rated"] }))
     }
-
     const toggleFilterFastDelivery = () => {
         setFilter(filter=>({...filter, "fast-delivery": !filter["fast-delivery"] }))
     }
@@ -15,13 +14,14 @@ const FilterButtons = (props) => {
     const toggleFilterDiscounts = () => {
         setFilter(filter=>({...filter, "has-discount": !filter["has-discount"] }))
     }
-    const toggleFilterCategory= () => {
+    const toggleFilterClear= () => {
         setFilter({
             "top-rated": false,
             "fast-delivery": false,
             "free-delivery": false,
             "has-discount": false,
             "category": "",
+            "category-name": "",
           })
     }
 
@@ -31,7 +31,7 @@ const FilterButtons = (props) => {
             <button onClick={toggleFilterFastDelivery} className="btn btn-danger m-2">Delivery time</button>
             <button onClick={toggleFilterFreeDelivery} className="btn btn-dark m-2">Free delivery</button>
             <button onClick={toggleFilterDiscounts} className="btn btn-info m-2">Discounts</button>
-            <button onClick={toggleFilterCategory} className="btn btn-warning m-2">Clear filters</button>
+            <button onClick={toggleFilterClear} className="btn btn-warning m-2">Clear filters</button>
         </div>
     )
 }
