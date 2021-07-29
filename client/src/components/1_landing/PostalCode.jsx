@@ -72,7 +72,6 @@ const PostalCode = () => {
         const json = await res.json();
         Promise.all([res, json]).then((values) => {
           updateAddress(values[1]);
-          mainDispatch({ type: actions.SETADDRESS, payload: values[1] });
         });
       }
     };
@@ -81,7 +80,7 @@ const PostalCode = () => {
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [postal, setAddress, mainDispatch]);
+  }, [postal, address, setAddress, mainDispatch]);
 
   return (
     <Container className="my-4 py-4 mx-auto shadow mb-5 bg-body rounded-2">
