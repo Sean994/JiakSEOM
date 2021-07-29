@@ -9,7 +9,7 @@ const LandingIntroText = () => {
     <Carousel className="slide carousel-fade">
       <Carousel.Item style={{ height: '500px' }}>
         <Image
-          src="https://images.unsplash.com/photo-1596785236251-71fa49ac5760"
+          src="https://images.unsplash.com/photo-1617283458655-1ef09d4f17f2"
           alt="Welcome to JiakSEOM"
           fluid
         />
@@ -40,7 +40,7 @@ const LandingIntroText = () => {
 
       <Carousel.Item style={{ height: '500px' }}>
         <Image
-          src="https://images.unsplash.com/photo-1521022887356-1db35c7bbf1f"
+          src="https://images.unsplash.com/photo-1603545959692-78ab733058c8"
           alt="History"
           fluid
         />
