@@ -64,7 +64,7 @@ const NavBar = (props) => {
                 />
                 Edit Info
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/user/edit">
+              <NavDropdown.Item as={Link} to="/user/history">
                 <FontAwesomeIcon
                   icon={['fas', 'user-edit']}
                   className="me-1 text-warning"
