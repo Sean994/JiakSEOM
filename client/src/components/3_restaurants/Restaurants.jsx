@@ -5,7 +5,7 @@ import axios from 'axios';
 import FilterButtons from './FilterButtons';
 import SearchBar from './SearchBar';
 
-const Restaurants = (props) => {
+const Restaurants = () => {
   const [categoryList, setCategoryList] = useState([]);
   const [filter, setFilter] = useState({
     'top-rated': false,
@@ -20,7 +20,7 @@ const Restaurants = (props) => {
     axios
       .get('/api/v1/categories', {})
       .then((res) => {
-        console.log(res.data.data.categories)
+        console.log(res.data.data.categories);
         setCategoryList(res.data.data.categories);
       })
       .catch((err) => {

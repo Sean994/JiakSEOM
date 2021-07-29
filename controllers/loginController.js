@@ -1,45 +1,48 @@
-const User = require('../models/userModel')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const User = require('../models/userModel');
 
 exports.login = async (req, res) => {
-    try { 
-    await User.findOne({username : req.body.username}, (error, foundUser) => {
-        if (error) {
-            console.log(error);
-            res.send("oops the db had a problem");
-            // res.status(400).json({error : error.messwage})
-        } else if (!foundUser) {
-            console.log("User not found")
-            res.send('No user found');
-            // res.status(400).json("no found user!")
-        } else {
-            if (bcrypt.compareSync(req.body.password, foundUser.password)){
-                req.session.currentUser = foundUser
-                console.log(foundUser)
-                res.status(200).json("logged in!")
-            } else {
-                console.log("Wrong password")
-                res.send('wrong password');
-                // res.status(400).json("wrong password my dude")
-            } 
-        }
-    })
+  try {
+    const foundUser = await User.findOne({ username: req.body.username });
+    if (!foundUser) {
+      throw new Error(
+        `Sorry, there's no user with this username : ${req.body.username}`
+      );
+    } else if (bcrypt.compareSync(req.body.password, foundUser.password)) {
+      req.session.currentUser = foundUser;
+
+      res.status(200).json({
+        status: 'success',
+        user: req.session.currentUser,
+      });
+    } else {
+      throw new Error('Wrong Password');
     }
- catch {
-        res.status(500).send("error my guy")
-    }
-}
+  } catch (err) {
+    console.log(err.message);
+    res.status(400).json({
+      status: 'fail',
+      error: err.message,
+    });
+  }
+};
 
 exports.logOut = async (req, res) => {
-    try { await req.session.destroy(() => {
-        res.status(201).send("Logged Out")
-    })
-    }
- catch {
-        res.status(500).send("error my guy")
-    }
-}
+  try {
+    await req.session.destroy(() => {
+      res.status(200).json({
+        status: 'success',
+        data: null,
+      });
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      error: err.message,
+    });
+  }
+};
 
-exports.sessions = async (req,res) => {
-    res.send(req.session.currentUser)
-}
+exports.sessions = async (req, res) => {
+  res.send(req.session.currentUser);
+};

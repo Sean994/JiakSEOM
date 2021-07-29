@@ -1,25 +1,31 @@
 // This component checks a postal code against an API, and presents an input form to the user.
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-
+import { useMain, actions } from './utils/MainProvider';
 
 const PostalCode = (props) => {
-  const { postal, setPostal, setAddress, address, handleClose } = props;
+  const { mainState, mainDispatch } = useMain();
+
+  const { handleClose } = props;
+  const [postal, setPostal] = useState(mainState.postal_code);
+  const [address, setAddress] = useState(mainState.address);
 
   const handleChange = (event) => {
     setPostal(event.target.value);
+    mainDispatch({ type: actions.SETPOSTAL, payload: event.target.value });
   };
 
+  console.log('postal', postal);
 
   const handleSubmit = (event) => {
     console.log(postal);
     event.preventDefault();
 
-    if (address !== "") {
-        handleClose()
+    if (address !== '') {
+      handleClose();
     } else {
-      alert("Wrong Address. Please try again.")
+      alert('Wrong Address. Please try again.');
     }
   };
 
@@ -51,9 +57,10 @@ const PostalCode = (props) => {
         if (values?.items?.[0]?.title === undefined) {
           console.log('address is wrong');
         } else {
-          let trimAddress = values.items[0].title.length-11
-          let addressString = values.items[0].title.substring(0, trimAddress)
+          let trimAddress = values.items[0].title.length - 11;
+          let addressString = values.items[0].title.substring(0, trimAddress);
           setAddress(addressString);
+          mainDispatch({ type: actions.SETADDRESS, payload: addressString });
         }
       };
 
@@ -71,7 +78,7 @@ const PostalCode = (props) => {
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [postal, setAddress]);
+  }, [postal, setAddress, mainDispatch]);
 
   return (
     <Container className="my-4 py-4 mx-auto shadow mb-5 bg-body rounded-2">
@@ -93,11 +100,7 @@ const PostalCode = (props) => {
             />
           </div>
           <div className="col-6 col-md-3 d-flex justify-content-center align-items-center ">
-            <Button
-              variant="danger"
-              type="submit"
-              className="btn-lg rounded-0"
-            >
+            <Button variant="danger" type="submit" className="btn-lg rounded-0">
               Change Address
             </Button>
 

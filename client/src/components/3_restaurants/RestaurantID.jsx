@@ -7,11 +7,13 @@ import 'react-tabs/style/react-tabs.css';
 import OrderSideBar from '../5_order/OrderSideBar';
 import ShowReview from '../6_review/ShowReview';
 import FoodItemCard from './FoodItemCard';
+import { useMain, actions } from '../utils/MainProvider';
 
 const RestaurantID = (props) => {
   let { id } = useParams();
   const [subTotal, setSubTotal] = useState(0);
   const { restaurant, setRestaurant, order, setOrder } = props;
+  const { mainState, mainDispatch } = useMain();
 
   useEffect(() => {
     if (restaurant._id !== id) {
@@ -25,12 +27,13 @@ const RestaurantID = (props) => {
             restaurant: restaurantResponse._id,
             orders: [],
           }));
+          mainDispatch({ type: actions.DELETEORDER });
         })
         .catch((err) => {
           console.log(err);
         });
     }
-  }, [id, setRestaurant, setOrder, restaurant._id]);
+  }, [id, setRestaurant, setOrder, restaurant._id, mainDispatch]);
 
   const discountRate = restaurant.discount_rate * 100;
 

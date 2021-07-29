@@ -1,11 +1,14 @@
-import { Link, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { actions, useMain } from '../utils/MainProvider';
+
 const axios = require('axios').default;
 
 const SignIn = (props) => {
   let history = useHistory();
 
-  const { setUser , setPostal, setOrder } = props;
+  const { mainDispatch } = useMain();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,32 +17,20 @@ const SignIn = (props) => {
         username: event.target.username.value,
         password: event.target.password.value,
       })
-      .then(function (response) {
-        console.log(response);
-        if (response.data === 'logged in!') {
-          axios.get('/user/signin').then((res) => {
-            console.log(res);
-            if (res.data) {
-              setUser(res.data);
-              setOrder((order)=>({...order, "user": res.data._id}))
-              setPostal(res.data.postal_code)
-            }
-          });
+      .then((res) => {
+        if (res.status === 200) {
+          console.log(res);
+          mainDispatch({ type: actions.SIGNIN, payload: res.data });
           history.push('/landing');
         }
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
   };
 
   return (
     <div className="container  p-4 ">
-      {/* <div class="col-md-6 mx-auto text-center">
-        <div class="header-title">
-          <h1 class="wv-heading--title">Sign in</h1>
-        </div>
-      </div> */}
       <div className="row ">
         <div className="col-md-4 mx-auto border border-warning  border-1 p-4 rounded-3 shadow">
           <div className="header-title text-center">
@@ -82,27 +73,27 @@ const SignIn = (props) => {
                   Sign In
                 </button>
               </div>
-              </form>
-              <div className="col-md-12 text-center my-3">
-                <div className="login-or">
-                  <hr className="hr-or" />
-                  <span className="span-or">New User?</span>
-                </div>
+            </form>
+            <div className="col-md-12 text-center my-3">
+              <div className="login-or">
+                <hr className="hr-or" />
+                <span className="span-or">New User?</span>
               </div>
-              <div className="form-group text-center">
-                <Link to="/user/signup">
-                  <button type="button" className=" btn btn-block  btn btn-info">
-                    <FontAwesomeIcon
-                      icon={['fas', 'user-plus']}
-                      className="me-1"
-                    />
-                    Sign Up
-                  </button>
-                </Link>
-              </div>
-              <p className="small mt-3">
-                By signing up, you will be one of our precious customers.
-              </p>
+            </div>
+            <div className="form-group text-center">
+              <Link to="/user/signup">
+                <button type="button" className=" btn btn-block  btn btn-info">
+                  <FontAwesomeIcon
+                    icon={['fas', 'user-plus']}
+                    className="me-1"
+                  />
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+            <p className="small mt-3">
+              By signing up, you will be one of our precious customers.
+            </p>
           </div>
         </div>
       </div>

@@ -1,27 +1,30 @@
 // This component checks a postal code against an API, and presents an input form to the user.
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import { useMain, actions } from '../utils/MainProvider';
 
+const PostalCode = () => {
+  const { mainState, mainDispatch } = useMain();
 
-const PostalCode = (props) => {
-  const { postal, setPostal, setAddress, address } = props;
+  const [postal, setPostal] = useState(mainState.postal_code);
+  const [address, setAddress] = useState(mainState.address);
+  const history = useHistory();
 
   const handleChange = (event) => {
     setPostal(event.target.value);
+    mainDispatch({ type: actions.SETPOSTAL, payload: event.target.value });
   };
 
-  let history = useHistory();
-
   const handleSubmit = (event) => {
-    console.log(postal);
     event.preventDefault();
+    console.log(postal);
 
-    if (address !== "") {
-      history.push(`/restaurants/all`)
+    if (address) {
+      history.push(`/restaurants/all`);
     } else {
-      alert("Wrong Address")
+      alert('Wrong Address');
     }
   };
 
@@ -31,6 +34,7 @@ const PostalCode = (props) => {
       timeout: 5000,
       maximumAge: 0,
     };
+
     const success = async (pos) => {
       var crd = await pos.coords;
       const res = await fetch(
@@ -47,33 +51,33 @@ const PostalCode = (props) => {
   };
 
   useEffect(() => {
-    console.log('firee')
-    const checkPostal = async () => {
-      const updateAddress = (values) => {
-        if (values?.items?.[0]?.title === undefined) {
-          console.log('address is wrong');
-        } else {
-          let trimAddress = values.items[0].title.length-11
-          let addressString = values.items[0].title.substring(0, trimAddress)
-          setAddress(addressString);
-        }
-      };
+    const updateAddress = (values) => {
+      if (values?.items?.[0]?.title === undefined) {
+        console.log('address is wrong');
+      } else {
+        const trimAddress = values.items[0].title.length - 11;
+        const addressString = values.items[0].title.substring(0, trimAddress);
+        setAddress(addressString);
+        mainDispatch({ type: actions.SETADDRESS, payload: addressString });
+      }
+    };
 
-      if (postal !== '') {
+    const checkPostal = async () => {
+      if (postal) {
         const res = await fetch(
           `https://geocode.search.hereapi.com/v1/geocode?qq=postalCode=${postal}&in=countryCode%3ASGP&apikey=uNAkp3A6Cxt2gEfx5jOBafT1FF53HP_uyjyrK0Q9K0s`,
           { mode: 'cors' }
         );
-        const json = await res.json();
-        Promise.all([res, json]).then((values) => updateAddress(values[1]));
+        const data = await res.json();
+        updateAddress(data[1]);
       }
     };
-    let timeout = setTimeout(() => {
+    const timeout = setTimeout(() => {
       checkPostal();
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [postal, setAddress]);
+  }, [postal, mainDispatch]);
 
   return (
     <Container className="my-4 py-4 mx-auto shadow mb-5 bg-body rounded-2">

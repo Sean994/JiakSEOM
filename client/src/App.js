@@ -12,6 +12,7 @@ import Restaurants from './components/3_restaurants/Restaurants';
 import CheckOut from './components/4_checkout/Checkout.jsx';
 import Reviews from './components/6_review/Reviews';
 import './styles/style.css';
+import { useMain } from './components/utils/MainProvider';
 
 function App() {
   const [restaurant, setRestaurant] = useState({});
@@ -24,7 +25,9 @@ function App() {
   const [postal, setPostal] = useState('');
   const [address, setAddress] = useState('');
 
-  //! store whol user info
+  const { mainState } = useMain();
+  console.log(mainState);
+
   useEffect(() => {
     axios.get('/user/signin').then((res) => {
       if (res.data) {

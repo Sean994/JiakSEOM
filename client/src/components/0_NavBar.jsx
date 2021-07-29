@@ -4,11 +4,11 @@ import { Button, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap'; /
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import PostalCode from './0_NavBarPostal.jsx';
+import { useMain, actions } from './utils/MainProvider.jsx';
 
 const NavBar = (props) => {
+  const { mainState, mainDispatch } = useMain();
   const axios = require('axios').default;
-  const { user, setUser, setPostal, postal, address, setAddress, order } =
-    props;
 
   // State logic for delivery offCanvas
   const [show, setShow] = useState(false);
@@ -18,9 +18,7 @@ const NavBar = (props) => {
 
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
-      setUser(() => '');
-      setPostal(() => '');
-      setAddress(() => '');
+      mainDispatch({ type: actions.SIGNOUT });
     });
     console.log('loggin out');
   };
@@ -49,9 +47,11 @@ const NavBar = (props) => {
             </Nav.Link>
           </LinkContainer>
         </Nav>
-        {user.username && (
+        {mainState.isAuthenticated && (
           <Nav>
-            <h6 className="navBarDes text-dark">Welcome, {user.username}🍉 </h6>
+            <h6 className="navBarDes text-dark">
+              Welcome, {mainState.user.first_name}🍉{' '}
+            </h6>
             <NavDropdown
               title="User"
               id="basic-nav-dropdown"
@@ -76,7 +76,10 @@ const NavBar = (props) => {
         )}
         <Button variant="light" onClick={handleShow}>
           <h6 className="navBarDes text-dark">
-            Delivering to: {address === '' ? 'Click to input address' : address}
+            Delivering to:{' '}
+            {mainState.user.address
+              ? mainState.user.address
+              : 'Click to input address'}
           </h6>
         </Button>
 
@@ -85,25 +88,20 @@ const NavBar = (props) => {
             <Offcanvas.Title>Changing your location?</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <PostalCode
-              postal={postal}
-              setPostal={setPostal}
-              address={address}
-              setAddress={setAddress}
-              handleClose={handleClose}
-            />
+            <PostalCode handleClose={handleClose} />
           </Offcanvas.Body>
         </Offcanvas>
 
         <Nav>
-          {!user.username ? (
+          {!mainState.isAuthenticated && (
             <LinkContainer to="/user/signin" align="right">
               <Button variant="warning">
                 <FontAwesomeIcon icon={['far', 'user']} className="me-2" />
                 <span>Sign In</span>
               </Button>
             </LinkContainer>
-          ) : (
+          )}
+          {mainState.isAuthenticated && (
             <Button variant="warning" onClick={logOut}>
               <FontAwesomeIcon
                 icon={['fas', 'sign-out-alt']}
@@ -114,22 +112,28 @@ const NavBar = (props) => {
           )}
         </Nav>
         <Nav>
-          <LinkContainer to="/checkout">
-            <Nav.Link className="text-secondary">
-              <FontAwesomeIcon
-                icon={['fas', 'shopping-basket']}
-                size="lg"
-                className="ms-4 text-warning"
-              />
-              <span className="badge text-danger">{order.orders.length}</span>
-            </Nav.Link>
-          </LinkContainer>
-        </Nav>
-        {/* <Nav>
+          {mainState.isAuthenticated && (
             <LinkContainer to="/checkout">
-              <Nav.Link className="text-secondary">checkout</Nav.Link>
+              <Nav.Link className="text-secondary">
+                <FontAwesomeIcon
+                  icon={['fas', 'shopping-basket']}
+                  size="lg"
+                  className="ms-4 text-warning"
+                />
+                <span className="badge text-danger">
+                  {mainState.order?.orders.length}
+                </span>
+              </Nav.Link>
             </LinkContainer>
-          </Nav> */}
+          )}{' '}
+          {!mainState.isAuthenticated && (
+            <FontAwesomeIcon
+              icon={['fas', 'shopping-basket']}
+              size="lg"
+              className="ms-4 text-warning"
+            />
+          )}
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );

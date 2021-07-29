@@ -2,18 +2,12 @@ import LandingFAQ from './LandingFAQ.jsx';
 import LandingIntroText from './LandingIntroText.jsx';
 import PostalCode from './PostalCode';
 
-const Landing = (props) => {
-  const { postal, setPostal, address, setAddress } = props;
+const Landing = () => {
   return (
     <div className="bg-light bg-gradient">
       <div className="container-fluid">
         <LandingIntroText />
-        <PostalCode
-          postal={postal}
-          setPostal={setPostal}
-          address={address}
-          setAddress={setAddress}
-        />
+        <PostalCode />
       </div>
       <div className="container-lg bg-warning p-5 rounded-4">
         <LandingFAQ />
