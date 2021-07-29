@@ -88,7 +88,7 @@ function App() {
             <CheckOut address={address} order={order} restaurant={restaurant} />
           </Route>
           <Route path="/review">
-            <Reviews />
+            <Reviews user={user} />
           </Route>
           <Redirect from="*" to="/" />
         </Switch>
