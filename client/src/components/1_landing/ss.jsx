@@ -1,25 +1,21 @@
 // This component checks a postal code against an API, and presents an input form to the user.
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import { useMain, actions } from '../utils/MainProvider';
 
-const PostalCode = () => {
-  const { mainState, mainDispatch } = useMain();
-
-  const [postal, setPostal] = useState(mainState.postal_code);
-  const [address, setAddress] = useState(mainState.address);
-  const history = useHistory();
+const PostalCode = (props) => {
+  const { postal, setPostal, setAddress, address } = props;
 
   const handleChange = (event) => {
     setPostal(event.target.value);
-    mainDispatch({ type: actions.SETPOSTAL, payload: event.target.value });
   };
 
+  let history = useHistory();
+
   const handleSubmit = (event) => {
-    event.preventDefault();
     console.log(postal);
+    event.preventDefault();
 
     if (address !== '') {
       history.push(`/restaurants/all`);
@@ -34,7 +30,6 @@ const PostalCode = () => {
       timeout: 5000,
       maximumAge: 0,
     };
-
     const success = async (pos) => {
       var crd = await pos.coords;
       const res = await fetch(
