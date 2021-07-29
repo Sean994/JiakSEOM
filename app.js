@@ -17,7 +17,8 @@ const menuItemRouter = require('./routes/menuItemRoute');
 const ordersRouter = require('./routes/ordersRoute');
 const reviewRouter = require('./routes/reviewRoute');
 
-const searchRouter = require('./routes/searchRoute');
+const searchRouter = require('./routes/searchRoute')
+const adsRouter = require('./routes/adsRoute');
 const userRouter = require('./routes/userRoute');
 const loginRouter = require('./routes/loginRoute');
 const errorHandler = require('./utils/errorHandler');
@@ -46,6 +47,7 @@ app.use('/api/v1/restaurants', restaurantRouter);
 app.use('/api/v1/menu-items', menuItemRouter);
 app.use('/api/v1/orders', ordersRouter);
 app.use('/api/v1/reviews', reviewRouter);
+app.use('/api/v1/ads', adsRouter);
 
 app.use('/api/v1/search', searchRouter);
 app.use('/user/signin', loginRouter);

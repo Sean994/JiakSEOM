@@ -34,10 +34,10 @@ const AddReview = () => {
         console.log(err);
       });
   };
-
+  
   return (
     <Container>
-      <h1>How did we do? Leave a review for {orderid}!</h1>
+      <h1>How did we do? Leave a review for {restaurant}!</h1>
 
       <Form onSubmit={postReviewHandler}>
         <Form.Group className="mb-3">
