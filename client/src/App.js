@@ -10,6 +10,7 @@ import UserHistory from './components/2_user/UserHistory';
 import RestaurantID from './components/3_restaurants/RestaurantID';
 import Restaurants from './components/3_restaurants/Restaurants';
 import CheckOut from './components/4_checkout/Checkout.jsx';
+import Reviews from './components/6_review/Reviews';
 import './styles/style.css';
 
 
@@ -17,10 +18,10 @@ function App() {
   const [restaurant, setRestaurant] = useState({});
   const [user, setUser] = useState('');
   const [order, setOrder] = useState({
-    "user": "",
-    "restaurant": "",
-    "orders": []
-  })
+    user: '',
+    restaurant: '',
+    orders: [],
+  });
   const [postal, setPostal] = useState('');
   const [address, setAddress] = useState('');
 
@@ -29,8 +30,8 @@ function App() {
     axios.get('/user/signin').then((res) => {
       if (res.data) {
         setUser(res.data);
-        setPostal(res.data.postal_code)
-        setOrder((order)=>({...order, "user": res.data._id}))
+        setPostal(res.data.postal_code);
+        setOrder((order) => ({ ...order, user: res.data._id }));
       }
     });
   }, []);
@@ -60,7 +61,11 @@ function App() {
             />
           </Route>
           <Route path="/user/signin">
-            <SignIn setUser={setUser} setPostal={setPostal} setOrder={setOrder}/>
+            <SignIn
+              setUser={setUser}
+              setPostal={setPostal}
+              setOrder={setOrder}
+            />
           </Route>
           <Route path="/user/signup">
             <SignUp />
@@ -75,17 +80,22 @@ function App() {
             <Restaurants />
           </Route>
           <Route path="/restaurants/:id">
-            <RestaurantID 
-            restaurant={restaurant} setRestaurant={setRestaurant}
-            order={order} setOrder={setOrder}
+            <RestaurantID
+              restaurant={restaurant}
+              setRestaurant={setRestaurant}
+              order={order}
+              setOrder={setOrder}
             />
           </Route>
           {/* if cookie with the session id => (loggedin) => link to checkout 
           if no cookie with the session id => link to login page */}
           <Route path="/checkout">
-            <CheckOut  address={address} order={order} restaurant={restaurant}/>
+            <CheckOut address={address} order={order} restaurant={restaurant} />
           </Route>
-          
+          <Route path="/review">
+            <Reviews />
+          </Route>
+          <Redirect from="*" to="/" />
         </Switch>
       </main>
     </div>
