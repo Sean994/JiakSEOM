@@ -38,7 +38,7 @@ const Protected = () => {
 
 function App() {
   const { mainState, mainDispatch } = useMain();
-  const [user, setUser] = useState('');
+  const [user] = useState('');
 
   console.log(mainState);
 
@@ -48,7 +48,7 @@ function App() {
         mainDispatch({ type: actions.SIGNIN, payload: res.data });
       }
     });
-  }, []);
+  }, [mainDispatch]);
 
   return (
     <div className="App">
@@ -68,7 +68,7 @@ function App() {
             <SignUp />
           </Route>
           <Route path="/user/edit">
-            <SignUp user={user} />
+            <SignUp />
           </Route>
           <Route path="/user/history">
             <UserHistory user={user} />
@@ -90,6 +90,9 @@ function App() {
           </Route>
 
           <PrivateRoute>
+            <Route path="/review">
+              <Reviews />
+            </Route>
             <Protected />
           </PrivateRoute>
 

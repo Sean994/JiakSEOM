@@ -1,9 +1,11 @@
 // New Signup component. This component allows a user to sign up for our amazing
 // Korean food delivery service.
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Alert, Button, Col, Form, Row } from 'react-bootstrap';
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { useMain } from '../utils/MainProvider';
+
 const axios = require('axios').default;
 
 const AlertDismissibleExample = ({ message }) => {
@@ -20,16 +22,11 @@ const AlertDismissibleExample = ({ message }) => {
   return <Button onClick={() => setShow(true)}>Show Alert</Button>;
 };
 
-const SignUp = ({ user }) => {
+const SignUp = () => {
+  const { mainState } = useMain();
+  const { user, isAuthenticated } = mainState;
   let history = useHistory();
   const [error, setError] = useState('');
-
-  useEffect(() => {
-    if (!user) {
-      <Redirect to="/landing" />;
-      // history.push('/user/signin');
-    }
-  }, [history, user]);
 
   const handleSubmit = (event) => {
     // handleSubmit uses axios to POST a form
@@ -97,7 +94,7 @@ const SignUp = ({ user }) => {
             <Form.Control
               type="text"
               name="first_name"
-              defaultValue={user && user.first_name}
+              defaultValue={isAuthenticated ? user.first_name : ''}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           </Form.Group>
@@ -107,7 +104,7 @@ const SignUp = ({ user }) => {
             <Form.Control
               type="text"
               name="last_name"
-              defaultValue={user && user.last_name}
+              defaultValue={isAuthenticated ? user.last_name : ''}
             />
           </Form.Group>
 
@@ -124,7 +121,7 @@ const SignUp = ({ user }) => {
               required
               type="text"
               name="username"
-              defaultValue={user && user.username}
+              defaultValue={isAuthenticated ? user.username : ''}
             />
           </Form.Group>
 
@@ -141,7 +138,7 @@ const SignUp = ({ user }) => {
               required
               type="tel"
               name="contact"
-              defaultValue={user && user.contact}
+              defaultValue={isAuthenticated ? user.contact : ''}
             />
           </Form.Group>
 
@@ -151,7 +148,7 @@ const SignUp = ({ user }) => {
               required
               type="email"
               name="email"
-              defaultValue={user && user.email}
+              defaultValue={isAuthenticated ? user.email : ''}
             />
           </Form.Group>
         </Row>
@@ -163,7 +160,7 @@ const SignUp = ({ user }) => {
               required
               type="address"
               name="address"
-              defaultValue={user && user.address}
+              defaultValue={isAuthenticated ? user.address : ''}
             />
           </Form.Group>
 
@@ -173,7 +170,7 @@ const SignUp = ({ user }) => {
               required
               type="number"
               name="postal_code"
-              defaultValue={user && user.postal_code}
+              defaultValue={isAuthenticated ? user.postal_code : ''}
             />
           </Form.Group>
         </Row>

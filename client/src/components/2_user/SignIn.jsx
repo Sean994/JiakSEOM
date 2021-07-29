@@ -21,8 +21,7 @@ const SignIn = (props) => {
       })
       .then((res) => {
         if (res.status === 200) {
-          console.log(res);
-          mainDispatch({ type: actions.SIGNIN, payload: res.data });
+          mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
           setRedirectToReferrer(true);
           history.push('/landing');
         }
