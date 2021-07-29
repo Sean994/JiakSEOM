@@ -20,6 +20,24 @@ exports.getAllUser = async (req, res, next) => {
   }
 };
 
+exports.getUserById = async (req, res, next) => {
+  try {
+    const Users = await User.findById(req.params.id);
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        Users,
+      },
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      error: `Can't find user.`,
+    });
+  }
+};
+
 exports.createUser = async (req, res, next) => {
   try {
     const password = await bcrypt.hashSync(
