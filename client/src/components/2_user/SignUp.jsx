@@ -31,11 +31,10 @@ const SignUp = ({ user }) => {
     }
   }, [history, user]);
 
-  console.log(user);
   const handleSubmit = (event) => {
     // handleSubmit uses axios to POST a form
     event.preventDefault();
-    if (!user) {
+    if (!user.username) {
       axios
         .post('/api/v1/user', {
           first_name: event.target.first_name.value,
@@ -71,10 +70,9 @@ const SignUp = ({ user }) => {
           birthday: event.target.birthday.value,
         })
         .then(function (response) {
-          console.log(response.data);
           if (response.data.status === 'success') {
-            console.log('User updated');
-            history.goBack();
+            console.log('User updated🎉', response.data);
+            //history.goBack();
           }
         })
         .catch(function (error) {
@@ -83,7 +81,7 @@ const SignUp = ({ user }) => {
     }
   };
 
-  // console.log('🍉', history);
+  console.log('🍉', user);
   return (
     <div className="container px-5">
       {user && <h1>Edit User </h1>}
