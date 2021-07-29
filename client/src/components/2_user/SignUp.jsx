@@ -72,7 +72,7 @@ const SignUp = ({ user }) => {
         .then(function (response) {
           if (response.data.status === 'success') {
             console.log('User updated🎉', response.data);
-            //history.goBack();
+            history.goBack();
           }
         })
         .catch(function (error) {
