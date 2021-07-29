@@ -47,6 +47,7 @@ exports.createReview = async (req, res, next) => {
       newReview,
     });
   } catch (err) {
+    console.log(err);
     next(new BaseError(err.name, httpStatusCodes.BAD_REQUEST, err.message));
   }
 };

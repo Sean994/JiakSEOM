@@ -21,10 +21,12 @@ const reviewSchema = new mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
-    orders : {
-      type : mongoose.Schema.Types.ObjectId,
-      ref : 'Orders'
-    }
+    orders: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Orders',
+      unique: true,
+      required: [true, 'Review must have orders id'],
+    },
   },
   { toJSON: { virtuals: true } },
   { toObject: { virtuals: true } },
