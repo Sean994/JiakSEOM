@@ -27,7 +27,7 @@ const HistoryRow = ({ order, index, user_id }) => {
       <td>
         {order.review.length === 0 ? (
           <Link
-            to={`/reviews?${user_id}&restaurant=${restaurantId}&orderid=${orderId}`}
+            to={`/review?user=${user_id}&restaurant=${restaurantId}&orderid=${orderId}`}
           >
             Review Now
           </Link>
