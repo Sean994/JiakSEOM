@@ -27,7 +27,7 @@ const SignUp = ({ user }) => {
   useEffect(() => {
     if (!user) {
       <Redirect to="/landing" />;
-      history.push('/user/signin');
+      // history.push('/user/signin');
     }
   }, [history, user]);
 

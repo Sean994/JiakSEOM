@@ -9,28 +9,27 @@ import FoodItemCard from './FoodItemCard';
 
 const RestaurantID = (props) => {
   let { id } = useParams();
-  const [restaurant, setRestaurant] = useState({});
-
-  //   const [restName, setRestName] =useState({
-  //       "english": "",
-  //       "korean": ""
-  //     })
-  //   const [foodList, setFoodList] = useState([]);
+  const [subTotal, setSubTotal] = useState(0);
+  const { restaurant, setRestaurant, order, setOrder } = props;
 
   useEffect(() => {
-    axios
-      .get(`/api/v1/restaurants/${id}`, {})
-      .then((res) => {
-        const restaurantResponse = res.data.restaurant;
-        console.log(restaurantResponse);
-        setRestaurant(restaurantResponse);
-        // setRestName({"english": restaurantResponse["name"], "korean": restaurantResponse["kor_name"]})
-        // setFoodList(restaurantResponse.menuItems);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [id]);
+    if (restaurant._id !== id) {
+      axios
+        .get(`/api/v1/restaurants/${id}`, {})
+        .then((res) => {
+          const restaurantResponse = res.data.restaurant;
+          setRestaurant(restaurantResponse);
+          setOrder((order) => ({
+            ...order,
+            restaurant: restaurantResponse._id,
+            orders: [],
+          }));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [id, setRestaurant, setOrder, restaurant._id]);
 
   const discountRate = restaurant.discount_rate * 100;
 
@@ -78,18 +77,29 @@ const RestaurantID = (props) => {
             <div className="container restContainer bg-warning p-4 rounded-3 active">
               {restaurant?.menuItems?.map((food) => (
                 <div key={food._id} className="row-2 mb-3">
-                  <FoodItemCard foodItem={food} />
+                  <FoodItemCard
+                    foodItem={food}
+                    order={order}
+                    setOrder={setOrder}
+                    setSubTotal={setSubTotal}
+                  />
                 </div>
               ))}
             </div>
           </TabPanel>
           <TabPanel>
-            <div className="tab-pane fade">hi</div>{' '}
+            <div className="tab-pane fade">hi</div>
           </TabPanel>
         </Tabs>
       </div>
       <div className="col-4 position-abolute right-0">
-        <OrderSideBar />
+        <OrderSideBar
+          restaurant={restaurant}
+          order={order}
+          setOrder={setOrder}
+          subTotal={subTotal}
+          setSubTotal={setSubTotal}
+        />
       </div>
     </div>
   );

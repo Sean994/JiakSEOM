@@ -1,28 +1,29 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 
-const CartItem = () => {
-  // item from props
-  const originPrice = 24; // default will be item.price props = item item.price
-
-  const [quantity, setQuantity] = useState(1);
-
-  //! props.function
-  const [price, setPrice] = useState(originPrice); // this will be origin price * quantity
+const CartItem = (props) => {
+  const {orderItem, order, setOrder, index, setSubTotal} = props
+  const [price, setPrice] = useState(orderItem.price*orderItem.quantity);
 
   useEffect(() => {
-    setPrice((prev) => originPrice * quantity);
-
-    //! props.function  to send up the info.
-  }, [quantity]);
+    setPrice((prev) => (orderItem.price*orderItem.quantity));
+  }, [orderItem.price, orderItem.quantity]);
 
   const plusHandler = () => {
-    setQuantity((prev) => prev + 1);
-    setPrice((prev) => originPrice);
+    let tempArray = order.orders
+    tempArray[index].quantity +=1
+    setOrder((order)=>({...order, "orders": tempArray}))
+    setSubTotal((prev)=> prev+tempArray[index].price)
   };
 
   const minusHandler = () => {
-    setQuantity((prev) => prev - 1);
+    let tempArray = order.orders
+    tempArray[index].quantity -=1
+    setSubTotal((prev)=> prev-tempArray[index].price)
+    if(tempArray[index].quantity===0){
+      tempArray.splice(index, 1)
+    }
+    setOrder((order)=>({...order, "orders": tempArray}))
   };
 
   return (
@@ -31,15 +32,15 @@ const CartItem = () => {
         <img
           className="img-thumbnail me-1"
           style={{ width: '4rem', height: '100%' }}
-          src="https://recipe1.ezmember.co.kr/cache/recipe/2015/11/03/ca654152bb5ed8a9521ec901ab5c34211.jpg"
+          src={orderItem.item_img}
           alt="item"
         />
-        <div className="half">Mega Max Chicken Meal</div>
+        <div className="half">{orderItem.name}</div>
       </div>
 
       <div className="col-3 offset-md-1 align-self-end px-1 ">
         <div className=" text-end me-1">
-          S$ <span id="itemPrice">{price}</span>
+          S$ <span id="itemPrice">{price.toFixed(2)}</span>
         </div>
         <div className="d-flex ">
           <button
@@ -47,14 +48,14 @@ const CartItem = () => {
             className="btn btn-white"
             onClick={minusHandler}
           >
-            {quantity === 1 && (
+            {orderItem.quantity=== 1 && (
               <FontAwesomeIcon size="sm" icon={['fas', 'trash-alt']} />
             )}
-            {quantity > 1 && (
+            {orderItem.quantity > 1 && (
               <FontAwesomeIcon size="sm" icon={['fas', 'minus']} />
             )}
           </button>
-          <span className="p-1">{quantity}</span>
+          <span className="p-1">{orderItem.quantity}</span>
           <button type="button" className="btn btn-white" onClick={plusHandler}>
             <FontAwesomeIcon size="sm" icon={['fas', 'plus']} />
           </button>
