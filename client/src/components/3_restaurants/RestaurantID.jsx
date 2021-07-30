@@ -24,14 +24,17 @@ const RestaurantID = (props) => {
         if (res.status !== 200) {
           throw new Error('Bad connection');
         } else {
-          setStatus('success');
+          setStatus('success')
           const restaurantRes = res.data.restaurant;
+          if(restaurant._id !== restaurantRes._id){
+            mainDispatch({ type: actions.DELETEORDER });
+          }
           setCurrRestaurant(restaurantRes);
           mainDispatch({
             type: actions.SETRESTAURANT,
             payload: restaurantRes,
           });
-          //mainDispatch({ type: actions.DELETEORDER });
+          
         }
       })
       .catch((err) => {
