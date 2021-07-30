@@ -99,9 +99,10 @@ const mainReducer = (state, action) => {
 
     case actions.MINUSCART:
       const deductedOrder = minusOrder(state.order, action.payload._id);
+      const newOrder = remove0Item(deductedOrder);
       return {
         ...state,
-        order: { ...deductedOrder },
+        order: { ...newOrder },
       };
 
     case actions.DELETEORDER:

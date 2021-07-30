@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { actions, useMain } from '../utils/MainProvider';
 import CartItem from './CartItem';
 
@@ -22,33 +22,31 @@ const OrderSideBar = (props) => {
   const { mainState, mainDispatch } = useMain();
   const { user, order, total_price, restaurant, isAuthenticated, isCheckOut } =
     mainState;
-
   const history = useHistory();
-  const { id } = useParams();
-
   const location = useLocation();
-  console.log('location: ', location);
-
-  console.log('id', id);
 
   useEffect(() => {
-    // if(id !== restaurant._id.toString()){
-    //   mainDispatch({type: actions.SETRESTAURANT, payload:  })
-    // }
-
-    if (!id) {
-      console.log('hey its final page');
+    const { pathname } = location;
+    if (pathname === `/restaurants/${restaurant._id.toString()}`) {
+      mainState.isCheckOut = false;
     }
-  }, [id]);
 
-  console.log('order', order);
+    if (pathname === '/checkout') {
+      mainState.isCheckOut = true;
+    }
+  }, [mainState, location, restaurant._id]);
+
   const checkOut = () => {
-    const orderArr = Object.keys(order);
-    if (orderArr.length === 0) {
-      return;
+    if (isAuthenticated) {
+      const orderArr = Object.keys(order);
+      if (orderArr.length === 0) {
+        return;
+      } else {
+        mainDispatch({ type: actions.CHECKOUT });
+        history.push('/checkout');
+      }
     } else {
-      mainDispatch({ type: actions.CHECKOUT });
-      history.push('/checkout');
+      history.push('/user/signin');
     }
   };
 
@@ -87,6 +85,8 @@ const OrderSideBar = (props) => {
       return cartArr;
     });
   };
+
+  const Button = () => {};
 
   return (
     <div
