@@ -81,8 +81,8 @@ const SignUp = () => {
   console.log('🍉', user);
   return (
     <div className="container px-5">
-      {user && <h1>Edit User </h1>}
-      {!user && <h1>New User</h1>}
+      {isAuthenticated && <h1>Edit User </h1>}
+      {!isAuthenticated && <h1>New User</h1>}
 
       <h3>Embark on a brand new journey of gastronomic happiness.</h3>
       {error && <AlertDismissibleExample message={error} />}
