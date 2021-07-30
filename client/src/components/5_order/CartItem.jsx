@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useMain, actions } from '../utils/MainProvider';
 
-const CartItem = ({ orderItem, setSubTotalPrice }) => {
+const CartItem = ({ orderItem }) => {
   const { mainDispatch } = useMain();
   const itemId = orderItem.item;
   const [oneItem, setOneItem] = useState('');
@@ -10,7 +10,7 @@ const CartItem = ({ orderItem, setSubTotalPrice }) => {
 
   const plusHandler = () => {
     mainDispatch({ type: actions.ADDTOCART, payload: oneItem });
-    setSubTotalPrice((prev) => prev + oneItem.price);
+
     mainDispatch({ type: actions.PLUSPRICE, payload: oneItem.price });
   };
   const minusHandler = () => {
