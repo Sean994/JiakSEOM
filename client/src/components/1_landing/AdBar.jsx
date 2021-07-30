@@ -24,12 +24,11 @@ const responsive = {
 
 export const Adbar = () => {
   const [ad, setAd] = useState([]);
+  
   useEffect(() => {
     axios.get('/api/v1/ads').then((res) => {
-      console.log(res.data.data);
       setAd(res.data.data);
     });
-    console.log(ad);
   }, []);
 
   return (

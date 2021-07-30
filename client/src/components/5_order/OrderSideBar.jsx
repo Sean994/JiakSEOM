@@ -27,7 +27,7 @@ const OrderSideBar = (props) => {
 
   useEffect(() => {
     const { pathname } = location;
-    if (pathname === `/restaurants/${restaurant._id.toString()}`) {
+    if (pathname === `/restaurants/${restaurant.toString()}`) {
       mainState.isCheckOut = false;
     }
 
