@@ -49,7 +49,7 @@ const AddReview = () => {
           <Form.Label>Rate for order: {orderid}!</Form.Label>
           <div className="mb-3">
             <Form.Check inline label="1" value={1} name="rate" type="radio" />
-            <Form.Check inline label="2" value={2} ame="rate" type="radio" />
+            <Form.Check inline label="2" value={2} name="rate" type="radio" />
             <Form.Check inline label="3" value={3} name="rate" type="radio" />
             <Form.Check inline label="4" value={4} name="rate" type="radio" />
             <Form.Check inline label="5" value={5} name="rate" type="radio" />
