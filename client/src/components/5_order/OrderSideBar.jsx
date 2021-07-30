@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { useHistory, useParams } from 'react-router-dom';
-import { useMain, actions } from '../utils/MainProvider';
+import { actions, useMain } from '../utils/MainProvider';
 import CartItem from './CartItem';
 
 const postOrderFormat = (orderObj) => {
@@ -41,24 +41,35 @@ const OrderSideBar = (props) => {
     }
   }, [id]);
 
+  console.log('order', order);
   const checkOut = () => {
-    mainDispatch({ type: actions.CHECKOUT });
-    history.push('/checkout');
+    const orderArr = Object.keys(order);
+    if (orderArr.length === 0) {
+      return;
+    } else {
+      mainDispatch({ type: actions.CHECKOUT });
+      history.push('/checkout');
+    }
   };
 
   const completeOrder = () => {
-    const axiosPostOrderArray = postOrderFormat(order);
-    axios
-      .post('/api/v1/orders', {
-        user: user._id,
-        restaurant: restaurant._id,
-        orders: axiosPostOrderArray,
-      })
-      .then((res) =>
-        history.push(
-          `/review?user=${user._id}&restaurant=${restaurant._id}&orderid=${res.data.newOrder._id}`
-        )
-      );
+    if (isAuthenticated) {
+      const axiosPostOrderArray = postOrderFormat(order);
+      mainDispatch({ type: actions.COMPLETEORDER });
+      axios
+        .post('/api/v1/orders', {
+          user: user._id,
+          restaurant: restaurant._id,
+          orders: axiosPostOrderArray,
+        })
+        .then((res) =>
+          history.push(
+            `/review?user=${user._id}&restaurant=${restaurant._id}&orderid=${res.data.newOrder._id}`
+          )
+        );
+    } else {
+      history.push('/user/signin');
+    }
   };
 
   // {a:1, b:2}

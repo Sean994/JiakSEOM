@@ -1,5 +1,4 @@
 import { createContext, useContext, useReducer } from 'react';
-import Cookies from 'js-cookie';
 
 const MainContext = createContext({});
 
@@ -37,6 +36,7 @@ const actions = {
   PLUSPRICE: 'PLUSPRICE',
   MINUSPRICE: 'MINUSPRICE',
   CHECKOUT: 'CHECKOUT',
+  COMPLETEORDER: 'COMPLETEORDER',
 };
 
 const addtoOrder = (order, itemId) => {
@@ -47,6 +47,14 @@ const addtoOrder = (order, itemId) => {
     obj[itemId] = 1;
   }
   return obj;
+};
+
+const remove0Item = (order) => {
+  const orderKeyArr = Object.keys(order);
+  const hasItem = orderKeyArr.filter((key) => order[key] !== 0);
+  const newObj = {};
+  hasItem.forEach((item) => (newObj[item] = order[item]));
+  return newObj;
 };
 
 const minusOrder = (order, itemId) => {
@@ -83,9 +91,10 @@ const mainReducer = (state, action) => {
 
     case actions.ADDTOCART:
       const updatedOrder = addtoOrder(state.order, action.payload._id);
+      const filteredOrder = remove0Item(updatedOrder);
       return {
         ...state,
-        order: { ...updatedOrder },
+        order: { ...filteredOrder },
       };
 
     case actions.MINUSCART:
@@ -133,6 +142,12 @@ const mainReducer = (state, action) => {
       return {
         ...state,
         isCheckOut: true,
+      };
+
+    case actions.COMPLETEORDER:
+      return {
+        ...state,
+        isCheckOut: false,
       };
 
     default:
