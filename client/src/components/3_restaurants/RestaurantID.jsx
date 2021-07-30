@@ -13,35 +13,34 @@ const RestaurantID = (props) => {
   const { mainState, mainDispatch } = useMain();
   const { id } = useParams();
   const [status, setStatus] = useState('idle');
-
   const { restaurant } = mainState;
-  const restaurantId = restaurant._id;
+  const [currRestaurant, setCurrRestaurant] = useState(restaurant);
+  const restaurantId = currRestaurant._id;
 
   useEffect(() => {
-    if (restaurantId !== id) {
-      axios
-        .get(`/api/v1/restaurants/${id}`, {})
-        .then((res) => {
-          if (res.status !== 200) {
-            throw new Error('Bad connection');
-          } else {
-            setStatus('success');
-            const restaurantRes = res.data.restaurant;
-            mainDispatch({
-              type: actions.SETRESTAURANT,
-              payload: restaurantRes,
-            });
-            mainDispatch({ type: actions.DELETEORDER });
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-          setStatus('error');
-        });
-    }
+    axios
+      .get(`/api/v1/restaurants/${id}`, {})
+      .then((res) => {
+        if (res.status !== 200) {
+          throw new Error('Bad connection');
+        } else {
+          setStatus('success');
+          const restaurantRes = res.data.restaurant;
+          setCurrRestaurant(restaurantRes);
+          mainDispatch({
+            type: actions.SETRESTAURANT,
+            payload: restaurantRes,
+          });
+          //mainDispatch({ type: actions.DELETEORDER });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        setStatus('error');
+      });
   }, [id, restaurantId, mainDispatch]);
 
-  const discountRate = restaurant.discount_rate * 100;
+  const discountRate = currRestaurant.discount_rate * 100;
 
   return (
     <>
@@ -55,15 +54,15 @@ const RestaurantID = (props) => {
                   height: '13rem',
                   width: '100%',
                   overflow: 'hidden',
-                  backgroundImage: `url(${restaurant?.image_cover})`,
+                  backgroundImage: `url(${currRestaurant?.image_cover})`,
                   backgroundPosition: 'center',
                 }}
               ></div>
               <div className="container p-3 px-5">
-                <h3 className="fw-bold">{restaurant?.name}</h3>
-                <h5 className="text-secondary"> {restaurant?.kor_name}</h5>
+                <h3 className="fw-bold">{currRestaurant?.name}</h3>
+                <h5 className="text-secondary"> {currRestaurant?.kor_name}</h5>
                 <div className="d-flex text-white align-item-center justify-content-starts">
-                  {restaurant.discount_rate && (
+                  {currRestaurant.discount_rate && (
                     <p className="bg-danger p-1 rounded-2 me-3">
                       DISCOUNT {discountRate}%
                     </p>
@@ -74,7 +73,8 @@ const RestaurantID = (props) => {
                       size="sm"
                       className="text-primary me-1"
                     />
-                    {restaurant?.ratingAverage}/5 ({restaurant?.ratingQuantity})
+                    {currRestaurant?.ratingAverage}/5 (
+                    {currRestaurant?.ratingQuantity})
                   </p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const RestaurantID = (props) => {
               </TabList>
               <TabPanel>
                 <div className="container restContainer bg-warning p-4 rounded-3 active">
-                  {restaurant?.menuItems?.map((food) => (
+                  {currRestaurant?.menuItems?.map((food) => (
                     <div key={food._id} className="row-2 mb-3">
                       <FoodItemCard foodItem={food} />
                     </div>
@@ -95,7 +95,7 @@ const RestaurantID = (props) => {
                 </div>
               </TabPanel>
               <TabPanel>
-                <ShowReview id={restaurant._id} />
+                <ShowReview id={currRestaurant._id} />
               </TabPanel>
             </Tabs>
           </div>

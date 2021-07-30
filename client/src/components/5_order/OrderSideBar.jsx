@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
 import { useHistory, useParams } from 'react-router-dom';
-import { useMain } from '../utils/MainProvider';
+import { useMain, actions } from '../utils/MainProvider';
 import CartItem from './CartItem';
 
 const postOrderFormat = (orderObj) => {
@@ -19,7 +19,7 @@ const postOrderFormat = (orderObj) => {
 };
 
 const OrderSideBar = (props) => {
-  const { mainState } = useMain();
+  const { mainState, mainDispatch } = useMain();
   const { user, order, total_price, restaurant, isAuthenticated, isCheckOut } =
     mainState;
 
@@ -29,7 +29,13 @@ const OrderSideBar = (props) => {
   const location = useLocation();
   console.log('location: ', location);
 
+  console.log('id', id);
+
   useEffect(() => {
+    // if(id !== restaurant._id.toString()){
+    //   mainDispatch({type: actions.SETRESTAURANT, payload:  })
+    // }
+
     if (!id) {
       console.log('hey its final page');
     }
