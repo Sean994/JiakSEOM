@@ -39,14 +39,17 @@ function App() {
   console.log('🍺', mainState);
 
   useEffect(() => {
-    axios.get('/user/signin').then((res) => {
-      if (res.status === 200) {
-      console.log(res)
-     
-    
-        mainDispatch({ type: actions.SIGNIN, payload: res.data });
-      }
-    });
+    const username = localStorage.getItem('username');
+
+    const password = localStorage.getItem('password');
+    axios
+      .post('/user/signin', { username: username, password: password })
+      .then((res) => {
+        if (res.status === 200) {
+          console.log(res);
+          mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
+        }
+      });
   }, [mainDispatch]);
 
   return (
