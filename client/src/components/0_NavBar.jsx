@@ -13,23 +13,25 @@ const NavBar = () => {
 
   // State logic for delivery offCanvas
   const [show, setShow] = useState(false);
-  const [cartNum, setCartNum] = useState(0)
+  const [cartNum, setCartNum] = useState(0);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  useEffect(()=> {
-    let temp = 0
+  useEffect(() => {
+    let temp = 0;
     for (const [key, value] of Object.entries(mainState.order)) {
-      console.log(key)
-      temp += value
-    } 
-    setCartNum(temp)
-  },[mainState.order])
+      console.log(key);
+      temp += value;
+    }
+    setCartNum(temp);
+  }, [mainState.order]);
 
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
       mainDispatch({ type: actions.SIGNOUT });
+      localStorage.removeItem('username');
+      localStorage.removeItem('password');
     });
     console.log('loggin out');
     history.push('/');
@@ -123,17 +125,17 @@ const NavBar = () => {
         </Nav>
         <Nav>
           {mainState.order && (
-            // <LinkContainer to="/checkout">
-            <Nav.Link className="text-secondary">
-              <FontAwesomeIcon
-                icon={['fas', 'shopping-basket']}
-                size="lg"
-                className="ms-4 text-warning"
-              />
-              <span className="badge text-danger">{cartNum}</span>
-            </Nav.Link>
-            // </LinkContainer>
-          )}{' '}
+            <LinkContainer to={`/restaurants/${mainState.restaurant._id}`}>
+              <Nav.Link className="text-secondary">
+                <FontAwesomeIcon
+                  icon={['fas', 'shopping-basket']}
+                  size="lg"
+                  className="ms-4 text-warning"
+                />
+                <span className="badge text-danger">{cartNum}</span>
+              </Nav.Link>
+            </LinkContainer>
+          )}
           {!mainState.isAuthenticated ?? !mainState.order ?? (
             <FontAwesomeIcon
               icon={['fas', 'shopping-basket']}

@@ -40,16 +40,24 @@ function App() {
 
   useEffect(() => {
     const username = localStorage.getItem('username');
-
     const password = localStorage.getItem('password');
-    axios
-      .post('/user/signin', { username: username, password: password })
-      .then((res) => {
-        if (res.status === 200) {
-          console.log(res);
-          mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
-        }
-      });
+
+    axios.get('/user/signin').then((res) => {
+      if (res.status === 200) {
+        axios
+          .post('/user/signin', { username: username, password: password })
+          .then((res) => {
+            if (res.status === 200) {
+              console.log(res);
+              mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
+            }
+          });
+      } else {
+        // localStorage.remove('username')
+        localStorage.removeItem('username');
+        localStorage.removeItem('password');
+      }
+    });
   }, [mainDispatch]);
 
   return (

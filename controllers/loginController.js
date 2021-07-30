@@ -45,8 +45,15 @@ exports.logOut = async (req, res) => {
 
 exports.sessions = async (req, res) => {
   // res.send(req.session.currentUser);
-  res.status(200).json({
-    status: 'success',
-    user: req.session.currentUser,
-  });
+  if (req.session.currentUser) {
+    res.status(200).json({
+      status: 'success',
+      user: req.session.currentUser,
+    });
+  } else {
+    res.status(400).json({
+      status: 'fail',
+      error: 'No session',
+    });
+  }
 };
