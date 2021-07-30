@@ -4,7 +4,7 @@ import { useMain } from '../utils/MainProvider'
 
 const UserHistory = (props) => {
     const { mainState } = useMain()
-    const {user, isAutenticated} = mainState
+    const {user} = mainState
     const firstName = user.first_name
     
     return (

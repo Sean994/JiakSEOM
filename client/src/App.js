@@ -21,7 +21,7 @@ const PrivateRoute = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={({ location }) => {
-        return mainState.isAuthenticated === 'true' ? (
+        return localStorage.getItem('isAuthenticated') === 'true' ? (
           children
         ) : (
           <Redirect
@@ -39,18 +39,15 @@ function App() {
   console.log('🍺', mainState);
 
   useEffect(() => {
-    const username = localStorage.getItem('username');
-
-    const password = localStorage.getItem('password');
-    axios
-      .post('/user/signin', { username: username, password: password })
-      .then((res) => {
-        if (res.status === 200) {
-          console.log(res);
-          mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
-        }
-      });
-  }, []);
+    axios.get('/user/signin').then((res) => {
+      if (res.status === 200) {
+      console.log(res)
+     
+    
+        mainDispatch({ type: actions.SIGNIN, payload: res.data });
+      }
+    });
+  }, [mainDispatch]);
 
   return (
     <div className="App">

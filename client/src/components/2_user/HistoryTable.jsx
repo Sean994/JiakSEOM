@@ -5,7 +5,7 @@ import { useMain } from '../utils/MainProvider'
 
 const HistoryTable = (props) => {
   const { mainState } = useMain()
-  const { user, isAuthenticated } = mainState
+  const { user } = mainState
   
   let url = `/api/v1/orders/${user._id}`;
   const [orderHistory, setOrderHistory] = useState();

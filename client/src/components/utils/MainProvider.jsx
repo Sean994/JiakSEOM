@@ -1,5 +1,4 @@
 import { createContext, useContext, useReducer } from 'react';
-import Cookies from 'js-cookie';
 
 const MainContext = createContext({});
 

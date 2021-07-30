@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import { useLocation } from 'react-router';
 import { useHistory, useParams } from 'react-router-dom';
-import { useMain, actions } from '../utils/MainProvider';
+import { useMain} from '../utils/MainProvider';
 import CartItem from './CartItem';
 
 const postOrderFormat = (orderObj) => {
@@ -19,8 +19,8 @@ const postOrderFormat = (orderObj) => {
 };
 
 const OrderSideBar = (props) => {
-  const { mainState, mainDispatch } = useMain();
-  const { user, order, total_price, restaurant, isAuthenticated, isCheckOut } =
+  const { mainState} = useMain();
+  const { user, order, total_price, restaurant, isAuthenticated } =
     mainState;
 
   const history = useHistory();

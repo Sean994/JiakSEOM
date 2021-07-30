@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import AddReview from './AddReview';
 
 const Reviews = () => {

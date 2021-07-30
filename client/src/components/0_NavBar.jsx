@@ -120,7 +120,7 @@ const NavBar = () => {
                 size="lg"
                 className="ms-4 text-warning"
               />
-              <span className="badge text-danger">{mainState.order && 1}</span>
+              <span className="badge text-danger">{Object.keys(mainState.order).length|| 1}</span>
             </Nav.Link>
             // </LinkContainer>
           )}{' '}
