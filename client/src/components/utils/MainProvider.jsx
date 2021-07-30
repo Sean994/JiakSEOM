@@ -34,6 +34,7 @@ const actions = {
   SETRESTAURANT: 'SETRESTAURANT',
   PLUSPRICE: 'PLUSPRICE',
   MINUSPRICE: 'MINUSPRICE',
+  RESETPRICE: 'RESETPRICE',
   CHECKOUT: 'CHECKOUT',
   COMPLETEORDER: 'COMPLETEORDER',
 };
@@ -126,6 +127,12 @@ const mainReducer = (state, action) => {
         ...state,
         total_price: state.total_price - action.payload,
       };
+
+      case actions.RESETPRICE:
+        return {
+          ...state,
+          total_price: 0,
+        };
 
     case actions.SETADDRESS:
       return {
