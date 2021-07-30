@@ -37,7 +37,7 @@ export const Adbar = () => {
       <Carousel responsive={responsive} slidesToSlide={2}>
         {ad.map((ad, index) => (
           <div className="card"  key={index}>
-            <img className="card-img-top" style={{height: "20rem"}} src={ad.image} alt="Card image cap" />
+            <img className="card-img-top" style={{height: "20rem"}} src={ad.image} alt={ad.description} />
             <div className="card-body">
               <h5 className="card-title">{ad.title}</h5>
               <p className="card-text">{ad.description} </p>

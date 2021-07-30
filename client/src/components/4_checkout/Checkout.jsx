@@ -10,7 +10,7 @@ const CheckOut = (props) => {
   const { mainDispatch } = useMain();
   useEffect(()=> {
      mainDispatch({ type: actions.CHECKOUT })
-  },[])
+  },[mainDispatch])
  
   return (
     <div className="container d-flex justify-content-between">
@@ -26,4 +26,4 @@ const CheckOut = (props) => {
   );
 };
 
-export default CheckOut;
+export default CheckOut; 

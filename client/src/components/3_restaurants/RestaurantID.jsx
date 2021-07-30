@@ -15,7 +15,6 @@ const RestaurantID = (props) => {
   const [status, setStatus] = useState('idle');
   const { restaurant } = mainState;
   const [currRestaurant, setCurrRestaurant] = useState(restaurant);
-  const restaurantId = currRestaurant._id;
 
   useEffect(() => {
     mainDispatch({ type: actions.COMPLETEORDER })
@@ -43,7 +42,7 @@ const RestaurantID = (props) => {
         console.log(err);
         setStatus('error');
       });
-  }, [id, restaurantId, mainDispatch]);
+  }, [id, restaurant._id, mainDispatch]);
 
   const discountRate = currRestaurant.discount_rate * 100;
 
