@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useMain, actions } from '../utils/MainProvider';
 
-const CartItem = ({ orderItem }) => {
+const CartItem = ({ orderItem, isCheckOut }) => {
   const { mainDispatch } = useMain();
   const itemId = orderItem.item;
   const [oneItem, setOneItem] = useState('');
@@ -52,7 +52,7 @@ const CartItem = ({ orderItem }) => {
         </div>
         <div className="d-flex ">
           {/* {final || ( */}
-          <button
+          {!isCheckOut && (<button
             type="button"
             className="btn btn-white"
             onClick={minusHandler}
@@ -63,14 +63,17 @@ const CartItem = ({ orderItem }) => {
             {orderItem.quantity > 1 && (
               <FontAwesomeIcon size="sm" icon={['fas', 'minus']} />
             )}
-          </button>
+          </button>)}
+          
           {/* )} */}
 
-          <span className="p-1">{orderItem.quantity}</span>
+          <span className="p-1">x{orderItem.quantity}</span>
           {/* {final || ( */}
-          <button type="button" className="btn btn-white" onClick={plusHandler}>
+
+          {!isCheckOut && (<button type="button" className="btn btn-white" onClick={plusHandler}>
             <FontAwesomeIcon size="sm" icon={['fas', 'plus']} />
-          </button>
+          </button>)}
+          
           {/* )} */}
         </div>
       </div>

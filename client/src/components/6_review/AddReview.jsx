@@ -32,7 +32,7 @@ const AddReview = () => {
       })
       .then((res) => {
         console.log(res.data);
-        history.push('/landing');
+        history.push('/user/history');
       })
 
       .catch((err) => {
@@ -46,7 +46,7 @@ const AddReview = () => {
 
       <Form onSubmit={postReviewHandler}>
         <Form.Group className="mb-3">
-          <Form.Label>Rate {orderid}!</Form.Label>
+          <Form.Label>Rate for order: {orderid}!</Form.Label>
           <div className="mb-3">
             <Form.Check inline label="1" value={1} name="rate" type="radio" />
             <Form.Check inline label="2" value={2} ame="rate" type="radio" />

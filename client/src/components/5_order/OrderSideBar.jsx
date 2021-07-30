@@ -25,16 +25,16 @@ const OrderSideBar = (props) => {
   const history = useHistory();
   const location = useLocation();
 
-  useEffect(() => {
-    const { pathname } = location;
-    if (pathname === `/restaurants/${restaurant.toString()}`) {
-      mainState.isCheckOut = false;
-    }
+  // useEffect(() => {
+  //   const { pathname } = location;
+  //   if (pathname === `/restaurants/${restaurant.toString()}`) {
+  //     mainState.isCheckOut = false;
+  //   }
 
-    if (pathname === '/checkout') {
-      mainState.isCheckOut = true;
-    }
-  }, [mainState, location, restaurant._id]);
+  //   if (pathname === '/checkout') {
+  //     mainState.isCheckOut = true;
+  //   }
+  // }, [mainState, location, restaurant._id]);
 
   const checkOut = () => {
     if (isAuthenticated) {
@@ -51,22 +51,29 @@ const OrderSideBar = (props) => {
   };
 
   const completeOrder = () => {
-    if (isAuthenticated) {
-      const axiosPostOrderArray = postOrderFormat(order);
-      mainDispatch({ type: actions.COMPLETEORDER });
-      axios
-        .post('/api/v1/orders', {
-          user: user._id,
-          restaurant: restaurant._id,
-          orders: axiosPostOrderArray,
-        })
-        .then((res) =>
-          history.push(
-            `/review?user=${user._id}&restaurant=${restaurant._id}&orderid=${res.data.newOrder._id}`
-          )
-        );
+    const orderArr = Object.keys(order);
+    if (orderArr.length === 0){
+      return;
     } else {
-      history.push('/user/signin');
+      if (isAuthenticated) {
+        const axiosPostOrderArray = postOrderFormat(order);
+        mainDispatch({ type: actions.COMPLETEORDER });
+        mainDispatch({ type: actions.DELETEORDER });
+        mainDispatch({ type: actions.RESETPRICE });
+        axios
+          .post('/api/v1/orders', {
+            user: user._id,
+            restaurant: restaurant._id,
+            orders: axiosPostOrderArray,
+          })
+          .then((res) =>
+            history.push(
+              `/review?user=${user._id}&restaurant=${restaurant._id}&orderid=${res.data.newOrder._id}`
+            )
+          );
+      } else {
+        history.push('/user/signin');
+      }
     }
   };
 
@@ -80,13 +87,11 @@ const OrderSideBar = (props) => {
     return cartObj.map((orderItem, index) => {
       const cartArr = [];
       if (orderItem.quantity > 0) {
-        cartArr.push(<CartItem key={index} orderItem={orderItem} />);
+        cartArr.push(<CartItem key={index} orderItem={orderItem} isCheckOut={isCheckOut}/>);
       }
       return cartArr;
     });
   };
-
-  const Button = () => {};
 
   return (
     <div
@@ -99,7 +104,6 @@ const OrderSideBar = (props) => {
           <span>{restaurant.preparation_time}</span>min
         </h6>
         <h5>Your order from: {restaurant?.name}</h5>
-        <h5>Total Cart Items: {}</h5>
       </div>
       <div className="bg-light container-fluid py-4 border-bottom">
         {CartItems(cartObj)}

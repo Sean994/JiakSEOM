@@ -18,6 +18,7 @@ const RestaurantID = (props) => {
   const restaurantId = currRestaurant._id;
 
   useEffect(() => {
+    mainDispatch({ type: actions.COMPLETEORDER })
     axios
       .get(`/api/v1/restaurants/${id}`, {})
       .then((res) => {
@@ -27,7 +28,8 @@ const RestaurantID = (props) => {
           setStatus('success')
           const restaurantRes = res.data.restaurant;
           if(restaurant._id !== restaurantRes._id){
-            mainDispatch({ type: actions.DELETEORDER });
+            mainDispatch({ type: actions.DELETEORDER })
+            mainDispatch({ type: actions.RESETPRICE })
           }
           setCurrRestaurant(restaurantRes);
           mainDispatch({
