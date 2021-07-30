@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap'; //! deleted container import
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
@@ -13,9 +13,19 @@ const NavBar = () => {
 
   // State logic for delivery offCanvas
   const [show, setShow] = useState(false);
+  const [cartNum, setCartNum] = useState(0)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  useEffect(()=> {
+    let temp = 0
+    for (const [key, value] of Object.entries(mainState.order)) {
+      console.log(key)
+      temp += value
+    } 
+    setCartNum(temp)
+  },[mainState.order])
 
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
@@ -120,7 +130,7 @@ const NavBar = () => {
                 size="lg"
                 className="ms-4 text-warning"
               />
-              <span className="badge text-danger">{mainState.order && 1}</span>
+              <span className="badge text-danger">{cartNum}</span>
             </Nav.Link>
             // </LinkContainer>
           )}{' '}
