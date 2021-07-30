@@ -24,9 +24,9 @@ const PaymentForm = () => {
       </div> */}
 
       <div class="d-grid gap-2">
-        <button type="submit" class="btn btn-warning">
+        {/* <button type="submit" class="btn btn-warning">
           PLACE ORDER
-        </button>
+        </button> */}
       </div>
     </form>
   );
