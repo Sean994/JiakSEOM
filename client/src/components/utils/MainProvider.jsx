@@ -36,6 +36,7 @@ const actions = {
   SETRESTAURANT: 'SETRESTAURANT',
   PLUSPRICE: 'PLUSPRICE',
   MINUSPRICE: 'MINUSPRICE',
+  CHECKOUT: 'CHECKOUT',
 };
 
 const addtoOrder = (order, itemId) => {
@@ -127,6 +128,11 @@ const mainReducer = (state, action) => {
       return {
         ...state,
         postal_code: action.payload,
+      };
+    case actions.CHECKOUT:
+      return {
+        ...state,
+        isCheckOut: true,
       };
 
     default:

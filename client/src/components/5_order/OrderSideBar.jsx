@@ -42,6 +42,7 @@ const OrderSideBar = (props) => {
   }, [id]);
 
   const checkOut = () => {
+    mainDispatch({ type: actions.CHECKOUT });
     history.push('/checkout');
   };
 
@@ -154,13 +155,14 @@ const OrderSideBar = (props) => {
           </tbody>
         </table>
       </div>
-      {isAuthenticated ? (
+      {isCheckOut && (
         <div className="d-grid gap-2">
           <button className="btn btn-danger p-3" onClick={completeOrder}>
             COMPLETE ORDER
           </button>
         </div>
-      ) : (
+      )}
+      {!isCheckOut && (
         <div className="d-grid gap-2">
           <button className="btn btn-danger p-3" onClick={checkOut}>
             CHECKOUT &amp; PAYMENT
