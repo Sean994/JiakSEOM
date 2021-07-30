@@ -1,4 +1,9 @@
+import { useMain } from '../utils/MainProvider';
+
 const PersonalDetailForm = () => {
+  const { mainState } = useMain();
+  const { user, isAuthenticated } = mainState;
+
   return (
     <form class="row g-1 m-3">
       <h4>
@@ -15,6 +20,7 @@ const PersonalDetailForm = () => {
           class="form-control"
           id="email"
           placeholder="Email"
+          defaultValue={isAuthenticated && user && user.email}
         />
         <div className="row">
           <div class="col-6">
@@ -26,6 +32,7 @@ const PersonalDetailForm = () => {
               class="form-control"
               id="first_name"
               placeholder="First Name"
+              defaultValue={isAuthenticated && user && user.first_name}
             />
           </div>
           <div class="col-6">
@@ -37,6 +44,7 @@ const PersonalDetailForm = () => {
               class="form-control"
               id="last_name"
               placeholder="Last Name"
+              defaultValue={isAuthenticated && user && user.last_name}
             />
           </div>
         </div>
@@ -49,6 +57,7 @@ const PersonalDetailForm = () => {
             class="form-control"
             id="contact"
             placeholder="Mobile Number"
+            defaultValue={isAuthenticated && user && user.contact}
           />
         </div>
       </div>

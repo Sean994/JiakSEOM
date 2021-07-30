@@ -6,14 +6,17 @@ import { MainProvider } from './components/utils/MainProvider';
 import './fontawesome';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { CookiesProvider } from 'react-cookie';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainProvider>
-      <Router>
-        <App />
-      </Router>
-    </MainProvider>
+    <CookiesProvider>
+      <MainProvider>
+        <Router>
+          <App />
+        </Router>
+      </MainProvider>
+    </CookiesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

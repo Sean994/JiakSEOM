@@ -1,6 +1,6 @@
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import NavBar from './components/0_NavBar';
 import Landing from './components/1_landing/Landing';
@@ -16,11 +16,12 @@ import './styles/style.css';
 
 const PrivateRoute = ({ children, ...rest }) => {
   const { mainState } = useMain();
+  console.log(mainState.isAuthenticated);
   return (
     <Route
       {...rest}
       render={({ location }) => {
-        return mainState.isAuthenticated === true ? (
+        return localStorage.getItem('isAuthenticated') === 'true' ? (
           children
         ) : (
           <Redirect
@@ -32,15 +33,10 @@ const PrivateRoute = ({ children, ...rest }) => {
   );
 };
 
-const Protected = () => {
-  return <div>Hi protected </div>;
-};
-
 function App() {
   const { mainState, mainDispatch } = useMain();
-  const [user] = useState('');
 
-  console.log(mainState);
+  console.log('🍺', mainState);
 
   useEffect(() => {
     axios.get('/user/signin').then((res) => {
@@ -67,12 +63,7 @@ function App() {
           <Route path="/user/signup">
             <SignUp />
           </Route>
-          <Route path="/user/edit">
-            <SignUp />
-          </Route>
-          <Route path="/user/history">
-            <UserHistory user={user} />
-          </Route>
+
           <Route exact path="/restaurants/all">
             <Restaurants />
           </Route>
@@ -82,18 +73,22 @@ function App() {
           {/* if cookie with the session id => (loggedin) => link to checkout 
           if no cookie with the session id => link to login page */}
 
-          <Route path="/checkout">
-            <CheckOut />
-          </Route>
-          <Route path="/review">
-            <Reviews user={user} />
-          </Route>
-
           <PrivateRoute>
+            <Route path="/user/history">
+              <UserHistory />
+            </Route>
             <Route path="/review">
               <Reviews />
             </Route>
-            <Protected />
+            <Route path="/user/edit">
+              <SignUp />
+            </Route>
+            <Route path="/review">
+              <Reviews />
+            </Route>
+            <Route path="/checkout">
+              <CheckOut />
+            </Route>
           </PrivateRoute>
 
           <Redirect from="*" to="/" />

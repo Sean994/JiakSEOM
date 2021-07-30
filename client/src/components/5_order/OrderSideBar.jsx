@@ -20,19 +20,18 @@ const postOrderFormat = (orderObj) => {
 
 const OrderSideBar = (props) => {
   const { mainState } = useMain();
-  const { user, order, total_price, restaurant, isAuthenticated } = mainState;
+  const { user, order, total_price, restaurant, isAuthenticated, isCheckOut } =
+    mainState;
 
-  const [final, setFinal] = useState(false);
   const history = useHistory();
   const { id } = useParams();
 
   const location = useLocation();
-  //console.log(location);
+  console.log('location: ', location);
 
   useEffect(() => {
     if (!id) {
       console.log('hey its final page');
-      setFinal(true);
     }
   }, [id]);
 
@@ -58,8 +57,6 @@ const OrderSideBar = (props) => {
   // {a:1, b:2}
   // [{a:1}, {b:2}]
   //[{item: id, quantity: 3}]
-
-  console.log('🍉', order);
 
   const cartObj = postOrderFormat(order);
 

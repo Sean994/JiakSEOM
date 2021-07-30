@@ -1,6 +1,8 @@
-const DeliveryDetailForm = ({address}) => {
-  //! submit => api call to post orders
-  //! userid , restaurantid, chosen MENU Array [ {itemid : quantity }, {itemid : quantity }  ]
+import { useMain } from '../utils/MainProvider';
+
+const DeliveryDetailForm = () => {
+  const { mainState } = useMain();
+  const { address } = mainState;
 
   return (
     <form class="row g-1 m-3">
@@ -18,6 +20,7 @@ const DeliveryDetailForm = ({address}) => {
           class="form-control"
           id="address"
           placeholder="Street Address"
+          defaultValue={address ? address : ''}
         />
       </div>
       <div class="col-12">
@@ -39,15 +42,3 @@ const DeliveryDetailForm = ({address}) => {
 };
 
 export default DeliveryDetailForm;
-
-//_id: 60fe3215d6932e1093b56253,
-// first_name: 'HyunJung',
-// last_name: 'Oh',
-// contact: 81713726,
-// email: 'hyunjung.agnes.oh@gmail.com',
-// username: 'hjolauren',
-// password: '$2b$08$1Apu1OTFGWU/uDmV.bPVDu1sZL22agZTx1JoxQ2VndwqpEivjD78a',
-// address: '111 paris ris grove',
-// postal_code: 518170,
-// birthday: '20 Jan 1993',
-// __v: 0

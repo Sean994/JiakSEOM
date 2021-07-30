@@ -20,6 +20,7 @@ const NavBar = () => {
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
       mainDispatch({ type: actions.SIGNOUT });
+      localStorage.removeItem('isAuthenticated');
     });
     console.log('loggin out');
     history.push('/');
@@ -112,21 +113,19 @@ const NavBar = () => {
           )}
         </Nav>
         <Nav>
-          {mainState.isAuthenticated && (
-            <LinkContainer to="/checkout">
-              <Nav.Link className="text-secondary">
-                <FontAwesomeIcon
-                  icon={['fas', 'shopping-basket']}
-                  size="lg"
-                  className="ms-4 text-warning"
-                />
-                <span className="badge text-danger">
-                  {mainState.order && 1}
-                </span>
-              </Nav.Link>
-            </LinkContainer>
+          {mainState.order && (
+            // <LinkContainer to="/checkout">
+            <Nav.Link className="text-secondary">
+              <FontAwesomeIcon
+                icon={['fas', 'shopping-basket']}
+                size="lg"
+                className="ms-4 text-warning"
+              />
+              <span className="badge text-danger">{mainState.order && 1}</span>
+            </Nav.Link>
+            // </LinkContainer>
           )}{' '}
-          {!mainState.isAuthenticated && (
+          {!mainState.isAuthenticated ?? !mainState.order ?? (
             <FontAwesomeIcon
               icon={['fas', 'shopping-basket']}
               size="lg"

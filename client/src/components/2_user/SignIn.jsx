@@ -3,15 +3,17 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { actions, useMain } from '../utils/MainProvider';
 import { Redirect, useLocation } from 'react-router';
+//import { useCookies } from 'react-cookie';
 
 const axios = require('axios').default;
 
 const SignIn = (props) => {
+  //const [cookies, setCookie] = useCookies(['user-cookie']);
   const { state } = useLocation();
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
   const { mainDispatch } = useMain();
   const history = useHistory();
-
+  //console.log(cookies);
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
@@ -23,6 +25,8 @@ const SignIn = (props) => {
         console.log('💚', res.data.user);
         if (res.status === 200) {
           mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
+          // setCookie('user', res.data.user, { path: '/', expires: 2 });
+          localStorage.setItem('isAuthenticated', 'true');
           setRedirectToReferrer(true);
           history.push('/landing');
         }

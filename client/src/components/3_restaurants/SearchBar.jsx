@@ -30,7 +30,7 @@ const SearchBar = (props) => {
       <form onSubmit={submitHandler} className="row g-3">
         <div className="col-md-2">
           <select className="form-select" name="select">
-            <option selected>Restaurant Name</option>
+            <option defaultValue>Restaurant Name</option>
             <option>Menu Item</option>
           </select>
         </div>

@@ -1,9 +1,11 @@
 import { createContext, useContext, useReducer } from 'react';
+import Cookies from 'js-cookie';
 
 const MainContext = createContext({});
 
 const mainInfo = {
   isAuthenticated: false,
+  isCheckOut: false,
   user: {
     _id: '',
     username: '',
