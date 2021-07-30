@@ -18,32 +18,31 @@ const RestaurantID = (props) => {
   const restaurantId = currRestaurant._id;
 
   useEffect(() => {
-    mainDispatch({ type: actions.COMPLETEORDER })
+    mainDispatch({ type: actions.COMPLETEORDER });
     axios
       .get(`/api/v1/restaurants/${id}`, {})
       .then((res) => {
         if (res.status !== 200) {
           throw new Error('Bad connection');
         } else {
-          setStatus('success')
+          setStatus('success');
           const restaurantRes = res.data.restaurant;
-          if(restaurant._id !== restaurantRes._id){
-            mainDispatch({ type: actions.DELETEORDER })
-            mainDispatch({ type: actions.RESETPRICE })
+          if (restaurant._id !== restaurantRes._id) {
+            mainDispatch({ type: actions.DELETEORDER });
+            mainDispatch({ type: actions.RESETPRICE });
           }
           setCurrRestaurant(restaurantRes);
           mainDispatch({
             type: actions.SETRESTAURANT,
             payload: restaurantRes,
           });
-          
         }
       })
       .catch((err) => {
         console.log(err);
         setStatus('error');
       });
-  }, [id, restaurantId, mainDispatch]);
+  }, [id, restaurantId, mainDispatch, restaurant._id]);
 
   const discountRate = currRestaurant.discount_rate * 100;
 

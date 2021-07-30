@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router';
+import React from 'react';
+//import { useLocation } from 'react-router';
 import { useHistory } from 'react-router-dom';
 import { actions, useMain } from '../utils/MainProvider';
 import CartItem from './CartItem';
@@ -23,7 +23,7 @@ const OrderSideBar = (props) => {
   const { user, order, total_price, restaurant, isAuthenticated, isCheckOut } =
     mainState;
   const history = useHistory();
-  const location = useLocation();
+  //const location = useLocation();
 
   // useEffect(() => {
   //   const { pathname } = location;
@@ -52,7 +52,7 @@ const OrderSideBar = (props) => {
 
   const completeOrder = () => {
     const orderArr = Object.keys(order);
-    if (orderArr.length === 0){
+    if (orderArr.length === 0) {
       return;
     } else {
       if (isAuthenticated) {
@@ -87,7 +87,9 @@ const OrderSideBar = (props) => {
     return cartObj.map((orderItem, index) => {
       const cartArr = [];
       if (orderItem.quantity > 0) {
-        cartArr.push(<CartItem key={index} orderItem={orderItem} isCheckOut={isCheckOut}/>);
+        cartArr.push(
+          <CartItem key={index} orderItem={orderItem} isCheckOut={isCheckOut} />
+        );
       }
       return cartArr;
     });

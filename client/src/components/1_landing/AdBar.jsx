@@ -24,7 +24,7 @@ const responsive = {
 
 export const Adbar = () => {
   const [ad, setAd] = useState([]);
-  
+
   useEffect(() => {
     axios.get('/api/v1/ads').then((res) => {
       setAd(res.data.data);
@@ -36,13 +36,20 @@ export const Adbar = () => {
       <h1>Ad Space</h1>
       <Carousel responsive={responsive} slidesToSlide={2}>
         {ad.map((ad, index) => (
-          <div className="card"  key={index}>
-            <img className="card-img-top" style={{height: "20rem"}} src={ad.image} alt="Card image cap" />
+          <div className="card" key={index}>
+            <img
+              className="card-img-top"
+              style={{ height: '20rem' }}
+              src={ad.image}
+              alt="Card cap"
+            />
             <div className="card-body">
               <h5 className="card-title">{ad.title}</h5>
               <p className="card-text">{ad.description} </p>
             </div>
-            <a href={ad.link} class="btn btn-primary">Visit</a>
+            <a href={ad.link} class="btn btn-primary">
+              Visit
+            </a>
           </div>
         ))}
       </Carousel>
