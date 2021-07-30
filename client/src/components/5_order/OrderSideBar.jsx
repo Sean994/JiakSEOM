@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React from 'react';
-//import { useLocation } from 'react-router';
+// import { useLocation } from 'react-router';
 import { useHistory } from 'react-router-dom';
 import { actions, useMain } from '../utils/MainProvider';
 import CartItem from './CartItem';
@@ -23,7 +23,7 @@ const OrderSideBar = (props) => {
   const { user, order, total_price, restaurant, isAuthenticated, isCheckOut } =
     mainState;
   const history = useHistory();
-  //const location = useLocation();
+  // const location = useLocation();
 
   // useEffect(() => {
   //   const { pathname } = location;

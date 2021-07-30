@@ -41,7 +41,7 @@ export const Adbar = () => {
               className="card-img-top"
               style={{ height: '20rem' }}
               src={ad.image}
-              alt="Card cap"
+              alt={ad.description}
             />
             <div className="card-body">
               <h5 className="card-title">{ad.title}</h5>
