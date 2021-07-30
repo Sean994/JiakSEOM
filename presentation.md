@@ -16,5 +16,11 @@
 ## Click 'Complete Order' to move to the checkout page.
 ![step6](https://raw.githubusercontent.com/Sean994/teamKorea/main/presentationImages/step6.png)
 
+## The Checkout Page. Click 'Complete Order' to checkout.
+![step6](https://raw.githubusercontent.com/Sean994/teamKorea/main/presentationImages/step7.png)
+
+## Don't forget to leave a review!
+![step6](https://raw.githubusercontent.com/Sean994/teamKorea/main/presentationImages/step8.png)
+
 
 
