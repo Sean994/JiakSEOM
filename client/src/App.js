@@ -16,12 +16,12 @@ import './styles/style.css';
 
 const PrivateRoute = ({ children, ...rest }) => {
   const { mainState } = useMain();
-  console.log(mainState.isAuthenticated);
+
   return (
     <Route
       {...rest}
       render={({ location }) => {
-        return localStorage.getItem('isAuthenticated') === 'true' ? (
+        return mainState.isAuthenticated === true ? (
           children
         ) : (
           <Redirect
@@ -63,7 +63,7 @@ function App() {
           <Route path="/landing">
             <Landing />
           </Route>
-          <Route path="/user/signin">
+          <Route exact path="/user/signin">
             <SignIn />
           </Route>
           <Route path="/user/signup">
@@ -80,18 +80,19 @@ function App() {
           if no cookie with the session id => link to login page */}
 
           <PrivateRoute>
+            <Route path="/user/edit">
+              <SignUp />
+              {/* <Reviews /> */}
+            </Route>
+
             <Route path="/user/history">
               <UserHistory />
             </Route>
+
             <Route path="/review">
               <Reviews />
             </Route>
-            <Route path="/user/edit">
-              <SignUp />
-            </Route>
-            <Route path="/review">
-              <Reviews />
-            </Route>
+
             <Route path="/checkout">
               <CheckOut />
             </Route>
