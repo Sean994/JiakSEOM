@@ -26,7 +26,8 @@ const SignIn = (props) => {
         if (res.status === 200) {
           mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
           // setCookie('user', res.data.user, { path: '/', expires: 2 });
-          localStorage.setItem('isAuthenticated', 'true');
+          localStorage.setItem('username', event.target.username.value);
+          localStorage.setItem('password', event.target.password.value);
           setRedirectToReferrer(true);
           history.push('/landing');
         }

@@ -20,7 +20,6 @@ const NavBar = () => {
   const logOut = () => {
     axios.delete('/user/signin', {}).then((res) => {
       mainDispatch({ type: actions.SIGNOUT });
-      localStorage.removeItem('isAuthenticated');
     });
     console.log('loggin out');
     history.push('/');
