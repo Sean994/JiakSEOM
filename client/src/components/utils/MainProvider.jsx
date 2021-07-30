@@ -97,7 +97,7 @@ const mainReducer = (state, action) => {
     case actions.DELETEORDER:
       return {
         ...state,
-        cart: [],
+        order: {},
       };
     case actions.SETRESTAURANT:
       return {
