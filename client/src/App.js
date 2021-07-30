@@ -40,8 +40,10 @@ function App() {
 
   useEffect(() => {
     axios.get('/user/signin').then((res) => {
-      console.log(res);
       if (res.status === 200) {
+      console.log(res)
+     
+    
         mainDispatch({ type: actions.SIGNIN, payload: res.data });
       }
     });

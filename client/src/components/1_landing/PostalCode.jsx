@@ -51,7 +51,6 @@ const PostalCode = () => {
   };
 
   useEffect(() => {
-    console.log('firee');
     const checkPostal = async () => {
       const updateAddress = (values) => {
         if (values?.items?.[0]?.title === undefined) {
