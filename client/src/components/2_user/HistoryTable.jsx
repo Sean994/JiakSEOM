@@ -1,8 +1,13 @@
 import HistoryRow from './HistoryRow';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useMain } from '../utils/MainProvider'
+
 const HistoryTable = (props) => {
-  let url = `/api/v1/orders/${props.user._id}`;
+  const { mainState } = useMain()
+  const { user, isAuthenticated } = mainState
+  
+  let url = `/api/v1/orders/${user._id}`;
   const [orderHistory, setOrderHistory] = useState();
 
   useEffect(() => {
@@ -10,7 +15,7 @@ const HistoryTable = (props) => {
   }, [url]);
 
   return (
-      <div className = "container">
+
     <table class="table table-bordered table-hover">
       <thead>
         <tr class="table-dark">
@@ -28,14 +33,13 @@ const HistoryTable = (props) => {
               <HistoryRow
                 order={order}
                 index={index}
-                user_id={props.user._id}
+                user_id={user._id}
               />
             </tr>
           );
         })}
       </tbody>
     </table>
-    </div>
   );
 };
 export default HistoryTable;

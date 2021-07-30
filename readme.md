@@ -4,9 +4,11 @@ A food delivery platform catered specifically for South Korean cuisine.
 ## Description
 We set out to build an online food delivery app, specifically tailored towards Korean restaurants. We were introduced to a mobile app and website called [Yellowsing](https://yellowsing.com/) which was built for Korean expatriates in Singapore, but were frustrated to discover that it did not have an in-app delivery option. We opted to solve that ourselves by building a food delivery platform with a slick interface, enabling anyone to get a taste of Korea at the click of a button!
 
+Please see presentation.md for a demo!
+
 ### Why the name JiakSEOM?
 
-![JiakSEOM image](/readmeImages/jiakseom.jpeg)
+![JiakSEOM image](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/jiakseom.jpeg)
 
 
 It's simple, really. _"Jiak"_, in Singlish, means "to eat", while _"섬" (seom)_, in Korean, means "island".
@@ -19,12 +21,16 @@ Hence, we thought it best to juxtapose both Singlish and Korean together by comb
 * Javascript
 * React
     * React Router
+    * React Tabs
 * Express
 * Mongoose
 * MongoDB
 * Bootstrap
     * React Bootstrap
 * Query-String
+* Font-Awesome
+* Axios
+
 
 
 ## Installation instructions
@@ -43,16 +49,16 @@ Refer to `API.md` for API documentation.
 ## Wireframes
 
 ### Landing Page
-![Landing Page Wireframe](/readmeImages/wireframe_landingPage.jpg)
+![Landing Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_landingPage.jpg)
 
 ### Restaurant View
-![Restaurant Page Wireframe](/readmeImages/wireframe_restaurantPage.jpg)
+![Restaurant Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_restaurantPage.jpg)
 
 ### Food Selection Page & Checkout
-![Food Page Wireframe](/readmeImages/wireframe_foodPage.jpg)
+![Food Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_foodPage.jpg)
 
 ### Signup Page
-![Signup Page Wireframe](/readmeImages/wireframe_signupPage.jpg)
+![Signup Page Wireframe](https://raw.githubusercontent.com/Sean994/teamKorea/main/readmeImages/wireframe_signupPage.jpg)
 
 ## User Stories
 1. The user should be able to log in and authenticate on the website, as well as create a user account. They should also be able to modify their account.
@@ -81,8 +87,7 @@ Refer to `API.md` for API documentation.
 * ???
 
 ### APIs Used
-- HERE API
-- 
+- HERE geolocation API
 
 ### Acknowledgments
 * Images from [Unsplash](https://unsplash.com/)
