@@ -2,6 +2,8 @@
 
 A food delivery platform catered specifically for South Korean cuisine, built with Reactjs, Express, MongoDB.
 
+[Jiak-섬](https://jiakseom.herokuapp.com/landing)
+
 <br>
 
 ## ✏️ Description
