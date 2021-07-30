@@ -16,7 +16,6 @@ const mainInfo = {
     postal_code: '',
     birthday: '',
   },
-  cart: [],
   order: {},
   total_price: 0,
   restaurant: '',
