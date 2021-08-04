@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Redirect, useLocation } from 'react-router';
 import { Link, useHistory } from 'react-router-dom';
 import { actions, useMain } from '../utils/MainProvider';
-import { Redirect, useLocation } from 'react-router';
 //import { useCookies } from 'react-cookie';
 
 const axios = require('axios').default;
@@ -27,8 +27,6 @@ const SignIn = (props) => {
           mainDispatch({ type: actions.SIGNIN, payload: res.data.user });
           // setCookie('user', res.data.user, { path: '/', expires: 2 });
           localStorage.setItem('isAuthenticated', 'true');
-          localStorage.setItem('username', event.target.username.value);
-          localStorage.setItem('password', event.target.password.value);
           setRedirectToReferrer(true);
           history.push('/landing');
         }
